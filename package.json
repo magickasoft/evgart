@@ -1,0 +1,30 @@
+{
+  "name": "madjoylab",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "postinstall": "./node_modules/.bin/husky install",
+    "build": "./node_modules/.bin/turbo run build",
+    "dev": "./node_modules/.bin/turbo run dev",
+    "lint": "./node_modules/.bin/turbo run lint",
+    "prettier": "./node_modules/.bin/prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.4.4",
+    "@commitlint/config-conventional": "17.4.4",
+    "@commitlint/prompt-cli": "17.4.4",
+    "eslint-config-custom": "*",
+    "prettier": "2.8.4",
+    "husky": "^8.0.3",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "packageManager": "yarn@1.22.19"
+}
