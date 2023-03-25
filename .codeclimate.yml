@@ -1,0 +1,17 @@
+engines:
+  eslint:
+    enabled: true
+    channel: "eslint-4"
+    config:
+      config: .eslintrc.js
+      extensions:
+      - .js
+      - .jsx
+
+exclude_paths:
+- .github/
+- .husky/
+
+checks:
+ similar-code:
+    enabled: false
