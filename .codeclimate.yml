@@ -21,6 +21,7 @@ exclude_paths:
 - .github/
 - .husky/
 - "**/*.js"
+- "**/*.d.ts"
 
 checks:
   argument-count:
