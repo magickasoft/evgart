@@ -4,6 +4,9 @@ plugins:
   eslint:
     enabled: true
     channel: "eslint-8"
+    checks:
+      complexity:
+        enabled: true
     config:
       config: .eslintrc.js
       extensions:
