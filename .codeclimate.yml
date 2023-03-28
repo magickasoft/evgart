@@ -1,13 +1,14 @@
 version: "2" 
-# engines:
-#   eslint:
-#     enabled: true
-#     channel: "eslint-8"
-#     config:
-#       config: .eslintrc.js
-#       extensions:
-#       - .ts
-#       - .tsx
+
+plugins:
+  eslint:
+    enabled: true
+    channel: "eslint-8"
+    config:
+      config: .eslintrc.js
+      extensions:
+      - .js
+      - .jsx
 
 exclude_paths:
 - .github/
