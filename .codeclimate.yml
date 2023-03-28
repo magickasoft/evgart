@@ -1,12 +1,13 @@
-engines:
-  eslint:
-    enabled: true
-    channel: "eslint-8"
-    config:
-      config: .eslintrc.js
-      extensions:
-      - .ts
-      - .tsx
+version: "2" 
+# engines:
+#   eslint:
+#     enabled: true
+#     channel: "eslint-8"
+#     config:
+#       config: .eslintrc.js
+#       extensions:
+#       - .ts
+#       - .tsx
 
 exclude_paths:
 - .github/
@@ -14,5 +15,11 @@ exclude_paths:
 - "**/*.js"
 
 checks:
- similar-code:
+  similar-code:
     enabled: true
+    config:
+      threshold: 45
+  identical-code:
+    enabled: true
+    config:
+      threshold: 45
