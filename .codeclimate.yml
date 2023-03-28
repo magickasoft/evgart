@@ -7,8 +7,12 @@ plugins:
     config:
       config: .eslintrc.js
       extensions:
+      - .ts
+      - .tsx
+      - .es6
       - .js
       - .jsx
+      - .mjs
 
 exclude_paths:
 - .github/
