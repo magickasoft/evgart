@@ -1,21 +1,21 @@
 version: "2" 
 
-plugins:
-  eslint:
-    enabled: true
-    channel: "eslint-8"
-    checks:
-      complexity:
-        enabled: true
-    # config:
-    #   config: .eslintrc.js
-    #   extensions:
-    #   - .ts
-    #   - .tsx
-    #   - .es6
-    #   - .js
-    #   - .jsx
-    #   - .mjs
+# plugins:
+#   eslint:
+#     enabled: true
+#     channel: "eslint-8"
+#     checks:
+#       complexity:
+#         enabled: true
+#     config:
+#       config: .eslintrc.js
+#       extensions:
+#       - .ts
+#       - .tsx
+#       - .es6
+#       - .js
+#       - .jsx
+#       - .mjs
 
 exclude_paths:
 - .github/
