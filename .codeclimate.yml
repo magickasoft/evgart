@@ -7,10 +7,13 @@ engines:
       extensions:
       - .js
       - .jsx
+      - .ts
+      - .tsx
 
 exclude_paths:
 - .github/
 - .husky/
+- "**/*.js"
 
 checks:
  similar-code:
