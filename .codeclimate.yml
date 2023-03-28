@@ -10,8 +10,8 @@ plugins:
     config:
       config: .eslintrc.js
       extensions:
-      - .ts
-      # - .tsx
+      # - .ts
+      - .tsx
       - .es6
       - .js
       - .jsx
