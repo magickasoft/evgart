@@ -48,7 +48,7 @@
     "yup": "1.0.2"
   },
   "devDependencies": {
-    "@babel/core": "7.21.3",
+    "@babel/core": "7.21.4",
     "@types/color": "3.0.3",
     "@types/lodash": "4.14.192",
     "@types/node": "18.15.11",
@@ -61,6 +61,6 @@
     "picocolors": "1.0.0",
     "serve": "14.2.0",
     "tsconfig": "*",
-    "typescript": "5.0.2"
+    "typescript": "5.0.3"
   }
 }
