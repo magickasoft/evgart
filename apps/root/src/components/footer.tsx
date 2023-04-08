@@ -193,7 +193,6 @@ const socialLinkItems = [
 const linkItems = [
   {label: 'Footer.link1', href: '/#intro', to: 'intro', id: 'intro'},
   {label: 'Footer.link2', href: '/#services', to: 'services', id: 'services'},
-  {label: 'Footer.link3', href: '/#benefits', to: 'benefits', id: 'benefits'},
   {label: 'Footer.link4', href: '/#techStacks', to: 'techStacks', id: 'techStacks'},
   {label: 'Footer.link5', href: '/#workWithUs', to: 'workWithUs', id: 'workWithUs'},
   {label: 'Footer.link6', href: '/#clients', to: 'clients', id: 'clients'},

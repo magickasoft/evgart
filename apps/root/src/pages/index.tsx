@@ -5,7 +5,7 @@ import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import React from 'react';
 import {Events, scrollSpy} from 'react-scroll';
 
-import {Benefits, Clients, Intro, Services, TechStacks, WorkWithUs} from '../components';
+import {Clients, Intro, Services, TechStacks, WorkWithUs} from '../components';
 
 type Props = {
   // Add custom props here
@@ -55,7 +55,6 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       </Head>
       <Intro />
       <Services />
-      <Benefits />
       <TechStacks />
       <WorkWithUs />
       <Clients />
