@@ -2,7 +2,7 @@ import SC from '@emotion/styled';
 import React from 'react';
 import {Link} from 'react-scroll';
 
-const RSLink = SC(Link)`
+const RSLink = SC.div`
   cursor: pointer;
 `;
 
@@ -16,8 +16,9 @@ const defailtProps = {
 };
 
 export const ScrollLink = ({children, ...props}: any) => (
-  // @ts-ignore
-  <RSLink rel="canonical" {...defailtProps} {...props}>
-    {children}
+  <RSLink>
+    <Link rel="canonical" {...defailtProps} {...props}>
+      {children}
+    </Link>
   </RSLink>
 );

@@ -8,11 +8,11 @@
     "lint": "eslint \"**/*.ts*\""
   },
   "devDependencies": {
-    "@types/react": "18.0.38",
-    "eslint": "8.39.0",
+    "@types/react": "18.2.21",
+    "eslint": "8.48.0",
     "eslint-config-custom": "*",
     "react": "18.2.0",
     "tsconfig": "*",
-    "typescript": "5.0.4"
+    "typescript": "5.2.2"
   }
 }

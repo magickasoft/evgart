@@ -152,7 +152,7 @@ const Li = SC.li`
   text-align: -webkit-match-parent;
 `;
 
-const NavLink = SC(Link)`
+const NavLink = SC.div`
   cursor: pointer !important;
   color: #22262A;
   font-size: 14px;
@@ -198,13 +198,6 @@ const linkItems = [
   {label: 'Footer.link6', href: '/#clients', to: 'clients', id: 'clients'},
 ];
 
-type LinkProps = {
-  label?: any;
-  href?: string;
-  id?: string;
-  to?: string;
-};
-
 type SocialLinkProps = {
   label?: any;
   href?: string;
@@ -227,11 +220,12 @@ export const Footer = () => {
         </Contacts>
         <Nav>
           <Ul>
-            {linkItems.map(({label, ...props}: LinkProps, index) => (
+            {linkItems.map(({label, ...props}: any, index) => (
               <Li key={index}>
-                {/*// @ts-ignore*/}
-                <NavLink {...linkProps} {...props}>
-                  {t(label)}
+                <NavLink>
+                  <Link {...linkProps} {...props}>
+                    {t(label)}
+                  </Link>
                 </NavLink>
               </Li>
             ))}

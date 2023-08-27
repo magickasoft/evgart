@@ -95,13 +95,7 @@ export const TechCard = ({items = []}: TechCardProps) => (
         <Caption>
           <Title>{o?.label}</Title>
         </Caption>
-        {Boolean(o?.list?.length) && (
-          <Ul>
-            {o?.list.map((o: any, i: number) => (
-              <Li key={i}>{o}</Li>
-            ))}
-          </Ul>
-        )}
+        {Boolean(o?.list?.length) && <Ul>{o?.list.map((o: any, i: number) => <Li key={i}>{o}</Li>)}</Ul>}
       </Container>
     ))}
   </>
