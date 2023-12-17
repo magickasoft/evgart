@@ -54,6 +54,7 @@ const App = ({Component, emotionCache = clientSideEmotionCache, pageProps}: any)
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="max-image-preview:large" />
+        <meta name="selfwork.ru" content="yPNRxy8hvJZM09awafRV5OISIDa8inoa7qNJBdS2tUQB1RVPha" />
         <title>{t('SEO.title')}</title>
         <meta name="description" content={t('SEO.description')} />
         <meta name="keywords" content={t('SEO.keywords')} />
