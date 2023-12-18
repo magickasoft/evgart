@@ -57,16 +57,19 @@ const slideData = [
   {
     label: 'HomePage.Services.serviceLabel4',
     desc: 'HomePage.Services.serviceDesc4',
+    price: '5000 ₽',
     benefits: [],
   },
   {
     label: 'HomePage.Services.serviceLabel5',
     desc: 'HomePage.Services.serviceDesc5',
+    price: '5000 ₽',
     benefits: [],
   },
   {
     label: 'HomePage.Services.serviceLabel6',
     desc: 'HomePage.Services.serviceDesc6',
+    price: '7500 ₽',
     benefits: [],
   },
   {

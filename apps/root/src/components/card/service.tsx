@@ -89,19 +89,41 @@ const BenefitLabel = SC.div`
   }
 `;
 
+const Price = SC.div`
+  -webkit-line-clamp: 10;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0 0 5px;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  word-break: break-word;
+  @media ${minDevice.tablet} {
+    font-size: 22px;
+    line-height: 31px;
+  }
+  @media ${minDevice.laptop} {
+    font-size: 26px;
+  }
+`;
+
 type ServiceCardProps = {
   label?: any;
   desc?: any;
+  price?: any;
   benefits?: any;
   index?: number;
 };
 
-export const ServiceCard = ({label, desc, benefits, index = 0}: ServiceCardProps) => {
+export const ServiceCard = ({label, desc, price, benefits, index = 0}: ServiceCardProps) => {
   const {t} = useTranslation('common');
   return (
     <Container index={index}>
       <Title>{t(label)}</Title>
       <Desc>{t(desc)}</Desc>
+      {price && <Price>{price}</Price>}
       {Boolean(benefits?.length) && <BenefitLabel>{t('HomePage.Services.benefit')}</BenefitLabel>}
       {benefits.map((o: any, i: number) => (
         <Content key={i}>
