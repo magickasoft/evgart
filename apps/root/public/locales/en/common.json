@@ -85,6 +85,9 @@
     }
   },
   "Footer": {
+    "policyLink1": "Contract offer",
+    "policyLink2": "Privacy Policy",
+    "policyLink3": "Terms of use",
     "socialLink1": "facebook",
     "socialLink2": "vc",
     "socialLink3": "youtube",

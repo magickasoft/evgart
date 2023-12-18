@@ -100,6 +100,15 @@ const Social = SC.div`
   }
 `;
 
+const Policy = SC.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  @media ${minDevice.tablet} {
+    margin-left: auto;
+  }
+`;
+
 const SocialLink = SC.a`
   color: #181818;
   font-size: 14px;
@@ -198,6 +207,12 @@ const linkItems = [
   {label: 'Footer.link6', href: '/#clients', to: 'clients', id: 'clients'},
 ];
 
+const policyLinkItems = [
+  {label: 'Footer.policyLink1', target: '_blank', href: 'https://docs.google.com/document/d/1i-YNTa4inMWjgTSgWV4McR41_IUBHNxWfPFwXk2j-4I/edit'},
+  {label: 'Footer.policyLink2', target: '_blank', href: 'https://docs.google.com/document/d/1vYxitbo4WDQPG-Xw4CaADPFFjqt1s1RQCHTv_Ph6NqA/edit'},
+  {label: 'Footer.policyLink3', target: '_blank', href: 'https://docs.google.com/document/d/1xtBRcUstvJ-ayEplxVBzdK2PxzlyoYWXKvOuxYC9VJk/edit'},
+];
+
 type SocialLinkProps = {
   label?: any;
   href?: string;
@@ -218,6 +233,13 @@ export const Footer = () => {
           </Email>
           <A href="tel://+79601195445">+7 960 119 54 45</A>
         </Contacts>
+        <Policy>
+            {policyLinkItems.map(({label, ...props}: SocialLinkProps, index) => (
+              <SocialLink key={index} {...props}>
+                {t(label)}
+              </SocialLink>
+            ))}
+        </Policy>
         <Nav>
           <Ul>
             {linkItems.map(({label, ...props}: any, index) => (

@@ -85,6 +85,9 @@
     }
   },
   "Footer": {
+    "policyLink1": "Договор оферта",
+    "policyLink2": "Политика конфиденциальности",
+    "policyLink3": "Пользовательское соглашение",
     "socialLink1": "facebook",
     "socialLink2": "vc",
     "socialLink3": "youtube",
