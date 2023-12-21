@@ -34,14 +34,14 @@ const Copyright = SC.div`
   }
 `;
 
-// const Brand = SC.div`
-//   padding: 0.25rem 0 0;
-//   font-size: 1rem;
-//   line-height: 1.5rem;
-//   @media ${minDevice.tablet} {
-//     padding: 0;
-//   }
-// `;
+const Brand = SC.div`
+  padding: 0.25rem 0 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  @media ${minDevice.tablet} {
+    padding: 0;
+  }
+`;
 
 const A = SC.a`
   transition: .25s ease;
@@ -236,9 +236,11 @@ export const Footer = () => {
   return (
     <Container>
       <Content>
-        {/* <Brand>ИП Мирошниченко Надежда Александровна</Brand>
-        <Brand>ИНН 366412065886</Brand>
-        <Brand>ОГРНИП 322366800104235</Brand> */}
+        <Brand>ИП Мирошниченко Надежда Александровна</Brand>
+        <Brand>ИНН: 366412065886</Brand>
+        <Brand>ОГРНИП: 322366800104235</Brand>
+        <Brand>Телефон: +7 960 119 54 45</Brand>
+        <Brand>Почта: hello@madjoylab.ru</Brand>
         <Contacts>
           <Email>
             <A href="mailto:hello@madjoylab.ru">hello@madjoylab.ru</A>
