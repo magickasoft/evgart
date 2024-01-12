@@ -70,5 +70,6 @@ const App = ({Component, emotionCache = clientSideEmotionCache, pageProps}: any)
   );
 };
 const AppYM = withYM(YA_METRIKA_ID, Router)(App);
+const AppWithTranslation: any = appWithTranslation(AppYM, nextI18NextConfig);
 
-export default appWithTranslation(AppYM, nextI18NextConfig);
+export default AppWithTranslation;
