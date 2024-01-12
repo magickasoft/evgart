@@ -1,7 +1,7 @@
 // @ts-ignore
 import withYM from 'next-ym';
 
-export const YA_METRIKA_ID = process.env.yaMetrikaId;
+export const YA_METRIKA_ID = process.env.YA_METRIKA_ID;
 export const env = process.env.NODE_ENV;
 
 export const reachGoal = (name: any) => {

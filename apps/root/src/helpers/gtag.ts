@@ -1,4 +1,4 @@
-export const GA_MEASUREMENT_ID = process.env.gaMeasurementId;
+export const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID;
 export const env = process.env.NODE_ENV;
 
 export const pageview = (url: any) => {

@@ -52,9 +52,6 @@ module.exports = (phase) => {
 
   return withBundleAnalyzer({
     ...defaultConfig,
-    env: {
-      gaMeasurementId: 'G-835YWDPG94',
-      yaMetrikaId: '91144813',
-    },
+    env: {},
   });
 };
