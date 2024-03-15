@@ -211,17 +211,20 @@ const policyLinkItems = [
   {
     label: 'Footer.policyLink1',
     target: '_blank',
-    href: 'https://docs.google.com/document/d/1i-YNTa4inMWjgTSgWV4McR41_IUBHNxWfPFwXk2j-4I/edit',
+    href: 'https://docs.google.com/document/d/1pZ1jaqecw49tQwmpZnZ_Jn-PVZk7Ne8XqJWP9ubtuaQ/edit',
+    // href: 'https://docs.google.com/document/d/1i-YNTa4inMWjgTSgWV4McR41_IUBHNxWfPFwXk2j-4I/edit',
   },
   {
     label: 'Footer.policyLink2',
     target: '_blank',
-    href: 'https://docs.google.com/document/d/1vYxitbo4WDQPG-Xw4CaADPFFjqt1s1RQCHTv_Ph6NqA/edit',
+    href: 'https://docs.google.com/document/d/1bccksYZ2fCbnsc_ffGtw2i88svHYNHWaEnyee6vj1Gc/edit',
+    // href: 'https://docs.google.com/document/d/1vYxitbo4WDQPG-Xw4CaADPFFjqt1s1RQCHTv_Ph6NqA/edit',
   },
   {
     label: 'Footer.policyLink3',
     target: '_blank',
-    href: 'https://docs.google.com/document/d/1xtBRcUstvJ-ayEplxVBzdK2PxzlyoYWXKvOuxYC9VJk/edit',
+    href: 'https://docs.google.com/document/d/1ziErA3MxZF9gngUIXRC56u3nEiJYEkGbOvWCCc1bRdI/edit',
+    // href: 'https://docs.google.com/document/d/1xtBRcUstvJ-ayEplxVBzdK2PxzlyoYWXKvOuxYC9VJk/edit',
   },
 ];
 
@@ -236,11 +239,15 @@ export const Footer = () => {
   return (
     <Container>
       <Content>
-        <Brand>ИП Мирошниченко Надежда Александровна</Brand>
+        <Brand>Шмаков Евгений Сергеевич</Brand>
+        <Brand>ИНН: 540863710354</Brand>
+        <Brand>Телефон: +7 960 119 54 45</Brand>
+        <Brand>Почта: hello@madjoylab.ru</Brand>
+        {/* <Brand>ИП Мирошниченко Надежда Александровна</Brand>
         <Brand>ИНН: 366412065886</Brand>
         <Brand>ОГРНИП: 322366800104235</Brand>
         <Brand>Телефон: +7 960 119 54 45</Brand>
-        <Brand>Почта: hello@madjoylab.ru</Brand>
+        <Brand>Почта: hello@madjoylab.ru</Brand> */}
         <Contacts>
           <Email>
             <A href="mailto:hello@madjoylab.ru">hello@madjoylab.ru</A>
