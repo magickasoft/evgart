@@ -14,7 +14,7 @@ const Container = SC.div`
   }
 `;
 
-const Brand = SC.h3`
+const Brand = SC.h1`
   font-weight: 400;
   margin: 0 0 12px 0;
   font-size: 56px;

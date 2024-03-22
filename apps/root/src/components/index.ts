@@ -8,6 +8,7 @@ export {Header} from './header';
 export {InputPhone} from './inputPhone';
 export {Intro} from './intro';
 export {Page} from './page';
+export {PrivacyPolicy} from './privacy-policy';
 export {Select} from './select';
 export {Services} from './services';
 export {TechStacks} from './techstacks';
