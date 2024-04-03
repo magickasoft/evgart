@@ -20,8 +20,7 @@ const Img = SC(Icon)`
 `;
 
 export const LocaleSwitcher = () => {
-  const router = useRouter();
-  const {locale, locales, pathname, query, asPath} = router;
+  const {locale, locales, pathname, query, asPath} = useRouter();
   const list = (locales || []).filter(l => l !== locale);
 
   return (
