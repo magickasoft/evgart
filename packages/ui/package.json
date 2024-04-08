@@ -8,7 +8,7 @@
     "lint": "eslint \"**/*.ts*\""
   },
   "devDependencies": {
-    "@types/react": "18.2.73",
+    "@types/react": "18.2.74",
     "eslint": "8.57.0",
     "eslint-config-custom": "*",
     "react": "18.2.0",
