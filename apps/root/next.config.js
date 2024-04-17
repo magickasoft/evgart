@@ -49,7 +49,6 @@ module.exports = (phase) => {
     phase === PHASE_PRODUCTION_BUILD && process.env.STAGING === '1';
 
   console.log(`isDev:${isDev}  isProd:${isProd}   isStaging:${isStaging}`)
-  console.log(`YA_METRIKA_ID:${process.env.YA_METRIKA_ID}  GA_MEASUREMENT_ID:${process.env.GA_MEASUREMENT_ID}`)
 
   return withBundleAnalyzer({
     ...defaultConfig,
