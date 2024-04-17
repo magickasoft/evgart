@@ -14,13 +14,13 @@
     "prettier": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@commitlint/cli": "19.2.1",
-    "@commitlint/config-conventional": "19.1.0",
-    "@commitlint/prompt-cli": "19.2.0",
+    "@commitlint/cli": "19.2.2",
+    "@commitlint/config-conventional": "19.2.2",
+    "@commitlint/prompt-cli": "19.2.2",
     "eslint-config-custom": "*",
     "husky": "9.0.11",
     "prettier": "3.2.5",
-    "turbo": "1.13.0"
+    "turbo": "1.13.2"
   },
   "engines": {
     "node": ">=14.0.0"
