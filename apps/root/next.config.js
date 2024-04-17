@@ -54,8 +54,8 @@ module.exports = (phase) => {
   return withBundleAnalyzer({
     ...defaultConfig,
     env: {
-      YA_METRIKA_ID: process.env.YA_METRIKA_ID, // ?? '91144813',
-      GA_MEASUREMENT_ID: process.env.GA_MEASUREMENT_ID, // ?? 'G-835YWDPG94',
+      YA_METRIKA_ID: process.env.YA_METRIKA_ID,
+      GA_MEASUREMENT_ID: process.env.GA_MEASUREMENT_ID,
     },
   });
 };
