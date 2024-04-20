@@ -256,9 +256,7 @@ export const Footer = () => {
             {linkItems.map(({label, ...props}: any, index) => (
               <Li key={index}>
                 <NavLink>
-                  <a {...props}>
-                    {t(label)}
-                  </a>
+                  <a {...props}>{t(label)}</a>
                 </NavLink>
               </Li>
             ))}

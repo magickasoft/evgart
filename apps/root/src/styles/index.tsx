@@ -20,7 +20,7 @@ export const GlobalStyle = (props: any) => (
       html {
         scroll-behavior: smooth;
       }
-      
+
       @media screen and (prefers-reduced-motion: reduce) {
         html {
           scroll-behavior: auto;

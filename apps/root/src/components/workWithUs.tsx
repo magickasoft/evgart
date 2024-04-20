@@ -138,18 +138,18 @@ export const WorkWithUs = (props: any) => {
   const {t} = useTranslation('common');
   return (
     <Container id="workWithUs">
-    <Content>
-      <RightColumn>
-        <H3>{t('HomePage.WorkWithUs.title')}</H3>
-        <SvgWrap>
-          <Img alt="work-with-us" src="/static/icon-work-with-us.svg" loading="eager" />
-        </SvgWrap>
-        <Text>{t('HomePage.WorkWithUs.text')}</Text>
-        <Link target="_blank" href="https://forms.gle/cTnRi66ieWaJudhS9">
-          {t('HomePage.WorkWithUs.link')}
-        </Link>
-      </RightColumn>
-    </Content>
-  </Container>
+      <Content>
+        <RightColumn>
+          <H3>{t('HomePage.WorkWithUs.title')}</H3>
+          <SvgWrap>
+            <Img alt="work-with-us" src="/static/icon-work-with-us.svg" loading="eager" />
+          </SvgWrap>
+          <Text>{t('HomePage.WorkWithUs.text')}</Text>
+          <Link target="_blank" href="https://forms.gle/cTnRi66ieWaJudhS9">
+            {t('HomePage.WorkWithUs.link')}
+          </Link>
+        </RightColumn>
+      </Content>
+    </Container>
   );
 };
