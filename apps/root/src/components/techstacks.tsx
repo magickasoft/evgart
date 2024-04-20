@@ -1,7 +1,6 @@
 import SC from '@emotion/styled';
 import {useTranslation} from 'next-i18next';
 import React from 'react';
-import {Element} from 'react-scroll';
 
 import {ibmplexsans400, maxDevice} from '../styles';
 import {TechCard} from './card';
@@ -315,17 +314,15 @@ const defaultResponsive = [
 export const TechStacks = (props: any) => {
   const {t} = useTranslation('common');
   return (
-    <Element name="techStacks">
-      <Container>
-        <Content>
-          <H3>{t('HomePage.TechStacks.title')}</H3>
-        </Content>
-        <CustomSlider responsive={defaultResponsive}>
-          {slideData.map((o, i) => (
-            <TechCard key={i} {...o} />
-          ))}
-        </CustomSlider>
-      </Container>
-    </Element>
+    <Container id="techStacks">
+      <Content>
+        <H3>{t('HomePage.TechStacks.title')}</H3>
+      </Content>
+      <CustomSlider responsive={defaultResponsive}>
+        {slideData.map((o, i) => (
+          <TechCard key={i} {...o} />
+        ))}
+      </CustomSlider>
+    </Container>
   );
 };

@@ -1,7 +1,6 @@
 import SC from '@emotion/styled';
 import {useTranslation} from 'next-i18next';
 import React from 'react';
-import {Element} from 'react-scroll';
 
 import {ibmplexsans400, maxDevice} from '../styles';
 import {ClientCard} from './card';
@@ -79,17 +78,15 @@ const slideData = [
 export const Clients = (props: any) => {
   const {t} = useTranslation('common');
   return (
-    <Element name="clients">
-      <Container>
-        <Content>
-          <H3>{t('HomePage.Clients.title')}</H3>
-        </Content>
-        <CustomSlider>
-          {slideData.map((o, i) => (
-            <ClientCard key={i} {...o} />
-          ))}
-        </CustomSlider>
-      </Container>
-    </Element>
+    <Container id="clients">
+      <Content>
+        <H3>{t('HomePage.Clients.title')}</H3>
+      </Content>
+      <CustomSlider>
+        {slideData.map((o, i) => (
+          <ClientCard key={i} {...o} />
+        ))}
+      </CustomSlider>
+    </Container>
   );
 };

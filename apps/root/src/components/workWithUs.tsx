@@ -1,7 +1,6 @@
 import SC from '@emotion/styled';
 import {useTranslation} from 'next-i18next';
 import React from 'react';
-import {Element} from 'react-scroll';
 
 import {ibmplexsans400, maxDevice, minDevice} from '../styles';
 
@@ -138,21 +137,19 @@ const Img = SC.img``;
 export const WorkWithUs = (props: any) => {
   const {t} = useTranslation('common');
   return (
-    <Element name="workWithUs">
-      <Container>
-        <Content>
-          <RightColumn>
-            <H3>{t('HomePage.WorkWithUs.title')}</H3>
-            <SvgWrap>
-              <Img alt="work-with-us" src="/static/icon-work-with-us.svg" loading="eager" />
-            </SvgWrap>
-            <Text>{t('HomePage.WorkWithUs.text')}</Text>
-            <Link target="_blank" href="https://forms.gle/cTnRi66ieWaJudhS9">
-              {t('HomePage.WorkWithUs.link')}
-            </Link>
-          </RightColumn>
-        </Content>
-      </Container>
-    </Element>
+    <Container id="workWithUs">
+    <Content>
+      <RightColumn>
+        <H3>{t('HomePage.WorkWithUs.title')}</H3>
+        <SvgWrap>
+          <Img alt="work-with-us" src="/static/icon-work-with-us.svg" loading="eager" />
+        </SvgWrap>
+        <Text>{t('HomePage.WorkWithUs.text')}</Text>
+        <Link target="_blank" href="https://forms.gle/cTnRi66ieWaJudhS9">
+          {t('HomePage.WorkWithUs.link')}
+        </Link>
+      </RightColumn>
+    </Content>
+  </Container>
   );
 };

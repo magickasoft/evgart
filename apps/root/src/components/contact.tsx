@@ -1,6 +1,5 @@
 import SC from '@emotion/styled';
 import React from 'react';
-import {Element} from 'react-scroll';
 
 import {maxDevice, theme} from '../styles';
 import {Label, Text} from './common';
@@ -22,15 +21,13 @@ const Content = SC.div`
 `;
 
 export const Contact = (props: any) => (
-  <Element name="contact">
-    <Container>
-      <Content>
-        <Label color={theme.colors.Black}>НЕ НАШЛИ ПОДХОДЯЩУЮ КВАРТИРУ?</Label>
-        <Text color={theme.colors.Black}>
-          На сайте представлен не весь каталог. Оставьте заявку и мы подберем вам идеальную квартиру бесплатно!
-        </Text>
-      </Content>
-      <ContactForm />
-    </Container>
-  </Element>
+  <Container id="contact">
+    <Content>
+      <Label color={theme.colors.Black}>НЕ НАШЛИ ПОДХОДЯЩУЮ КВАРТИРУ?</Label>
+      <Text color={theme.colors.Black}>
+        На сайте представлен не весь каталог. Оставьте заявку и мы подберем вам идеальную квартиру бесплатно!
+      </Text>
+    </Content>
+    <ContactForm />
+  </Container>
 );

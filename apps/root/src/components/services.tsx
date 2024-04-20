@@ -1,7 +1,6 @@
 import SC from '@emotion/styled';
 import {useTranslation} from 'next-i18next';
 import React from 'react';
-import {Element} from 'react-scroll';
 
 import {ibmplexsans400, maxDevice} from '../styles';
 import {ServiceCard} from './card';
@@ -118,17 +117,15 @@ const defaultResponsive = [
 export const Services = (props: any) => {
   const {t} = useTranslation('common');
   return (
-    <Element name="services">
-      <Container>
-        <Content>
-          <H3>{t('HomePage.Services.title')}</H3>
-        </Content>
-        <CustomSlider centerMode={false} responsive={defaultResponsive}>
-          {slideData.map((o, i) => (
-            <ServiceCard index={i} key={i} {...o} />
-          ))}
-        </CustomSlider>
-      </Container>
-    </Element>
+    <Container id="services">
+      <Content>
+        <H3>{t('HomePage.Services.title')}</H3>
+      </Content>
+      <CustomSlider centerMode={false} responsive={defaultResponsive}>
+        {slideData.map((o, i) => (
+          <ServiceCard index={i} key={i} {...o} />
+        ))}
+      </CustomSlider>
+    </Container>
   );
 };

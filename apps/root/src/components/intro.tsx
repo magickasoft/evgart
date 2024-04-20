@@ -1,7 +1,6 @@
 import SC from '@emotion/styled';
 import {useTranslation} from 'next-i18next';
 import React from 'react';
-import {Element} from 'react-scroll';
 
 import {ibmplexsans400, maxDevice} from '../styles';
 import {CompaniesList} from './companiesList';
@@ -33,13 +32,11 @@ const Brand = SC.h1`
 export const Intro = (props: any) => {
   const {t} = useTranslation('common');
   return (
-    <Element name="intro">
-      <section>
-        <Container>
-          <Brand>{t('HomePage.Intro.title')}</Brand>
-        </Container>
-        <CompaniesList />
-      </section>
-    </Element>
+    <section id="intro">
+      <Container>
+        <Brand>{t('HomePage.Intro.title')}</Brand>
+      </Container>
+      <CompaniesList />
+    </section>
   );
 };

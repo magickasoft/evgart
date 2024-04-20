@@ -3,7 +3,6 @@ import Head from 'next/head';
 import {useTranslation} from 'next-i18next';
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import React from 'react';
-import {Events, scrollSpy} from 'react-scroll';
 
 import {Clients, Intro, Services, TechStacks, WorkWithUs} from '../components';
 
@@ -13,22 +12,6 @@ type Props = {
 
 const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const {t} = useTranslation('common');
-  React.useEffect(() => {
-    Events.scrollEvent.register('begin', function (to, element) {
-      console.log('begin', to);
-    });
-
-    Events.scrollEvent.register('end', function (to, element) {
-      console.log('end', to);
-    });
-
-    scrollSpy.update();
-
-    return () => {
-      Events.scrollEvent.remove('begin');
-      Events.scrollEvent.remove('end');
-    };
-  }, []);
 
   return (
     <>

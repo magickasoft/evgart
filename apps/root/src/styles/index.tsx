@@ -17,10 +17,20 @@ export const GlobalStyle = (props: any) => (
   <Global
     {...props}
     styles={css`
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      @media screen and (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+
       html,
       body {
-        //background: linear-gradient(-45deg, #7dc6e3, #f3d7df, #ffffff, #73ccb6);
-        //background-size: 400% 400%;
+        // background: linear-gradient(-45deg, #7dc6e3, #f3d7df, #ffffff, #73ccb6);
+        // background-size: 400% 400%;
         animation: gradient 15s ease infinite;
         transition: 0s;
         font-size: 1.125rem;

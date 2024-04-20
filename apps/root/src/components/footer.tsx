@@ -1,7 +1,6 @@
 import SC from '@emotion/styled';
 import {useTranslation} from 'next-i18next';
 import React from 'react';
-import {Link} from 'react-scroll';
 
 import {ibmplexsans400, maxDevice, minDevice} from '../styles';
 
@@ -177,15 +176,6 @@ const NavLink = SC.div`
   }
 `;
 
-const linkProps = {
-  activeClass: 'active',
-  hashSpy: true,
-  spy: true,
-  smooth: true,
-  duration: 500,
-  offset: 50,
-};
-
 const socialLinkItems = [
   {label: 'Footer.socialLink1', target: '_blank', href: 'https://www.facebook.com/groups/505514035070734'},
   {label: 'Footer.socialLink2', target: '_blank', href: 'https://vc.ru/s/1479203-madjoylab'},
@@ -200,11 +190,11 @@ const socialLinkItems = [
 ];
 
 const linkItems = [
-  {label: 'Footer.link1', href: '/#intro', to: 'intro', id: 'intro'},
-  {label: 'Footer.link2', href: '/#services', to: 'services', id: 'services'},
-  {label: 'Footer.link4', href: '/#techStacks', to: 'techStacks', id: 'techStacks'},
-  {label: 'Footer.link5', href: '/#workWithUs', to: 'workWithUs', id: 'workWithUs'},
-  {label: 'Footer.link6', href: '/#clients', to: 'clients', id: 'clients'},
+  {label: 'Footer.link1', href: '/#intro'},
+  {label: 'Footer.link2', href: '/#services'},
+  {label: 'Footer.link4', href: '/#techStacks'},
+  {label: 'Footer.link5', href: '/#workWithUs'},
+  {label: 'Footer.link6', href: '/#clients'},
 ];
 
 const policyLinkItems = [
@@ -266,9 +256,9 @@ export const Footer = () => {
             {linkItems.map(({label, ...props}: any, index) => (
               <Li key={index}>
                 <NavLink>
-                  <Link {...linkProps} {...props}>
+                  <a {...props}>
                     {t(label)}
-                  </Link>
+                  </a>
                 </NavLink>
               </Li>
             ))}
