@@ -1,4 +1,3 @@
-
 /**
  * A function that retrieves a nested property from an object based on a given path.
  *
