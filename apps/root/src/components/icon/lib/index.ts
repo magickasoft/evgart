@@ -6,7 +6,7 @@ import {flags} from './flags';
 import {telegram} from './telegram';
 import {whatsApp} from './whatsApp';
 
-export default {
+const icons = {
   flags,
   notFound,
   arrowDown,
@@ -15,3 +15,5 @@ export default {
   whatsApp,
   telegram,
 };
+
+export default icons;
