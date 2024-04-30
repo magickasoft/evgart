@@ -1,5 +1,6 @@
 import axios from 'axios';
-import {isPlainObject, pick} from 'lodash';
+
+import {isPlainObject} from '../utils/isPlainObject';
 
 const createAxiosInstance = (config = {}) => {
   const instance = axios.create({
@@ -23,8 +24,8 @@ const createAxiosInstance = (config = {}) => {
     response => response,
     err => {
       if (!axios.isCancel(err)) {
-        // ignore request canceling
-        throw pick(err.response, ['data', 'status']);
+        const {data, status} = err.response;
+        throw new Error(`Error ${status}: ${JSON.stringify(data)}`);
       }
     },
   );
@@ -32,4 +33,4 @@ const createAxiosInstance = (config = {}) => {
   return instance;
 };
 
-export const API = createAxiosInstance({baseURL: process.env.baseURL || '/api/'});
+export const API = createAxiosInstance({baseURL: process.env.baseURL ?? '/api/'});

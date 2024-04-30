@@ -6,7 +6,7 @@
  * @param {any} defaultValue - The default value to return if the property is not found
  * @return {any} The value of the nested property or the default value
  */
-export const get = (obj: any, path: string, defaultValue = undefined): any => {
+export function get(obj: any, path: string, defaultValue: any = undefined): any {
   const pathParts = path.split(/[,[\].]+/);
 
   let result = obj;
@@ -19,4 +19,4 @@ export const get = (obj: any, path: string, defaultValue = undefined): any => {
   }
 
   return result === undefined ? defaultValue : result;
-};
+}
