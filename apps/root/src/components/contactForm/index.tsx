@@ -2,7 +2,7 @@ import Box from '@mui/material/Box';
 import {Formik} from 'formik';
 import React from 'react';
 
-import {contact} from '../../api';
+import {contact} from '../../api/contact';
 import {event} from '../../helpers/gtag';
 import {reachGoal} from '../../helpers/ym';
 import {Button} from '../button';

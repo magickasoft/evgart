@@ -1,36 +1,20 @@
-import axios from 'axios';
+import axios, {CreateAxiosDefaults} from 'axios';
 
-import {isPlainObject} from '../utils/isPlainObject';
-
-const createAxiosInstance = (config = {}) => {
-  const instance = axios.create({
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-    },
-    withCredentials: true,
-    responseType: 'json',
-    transformRequest(data) {
-      if (isPlainObject(data)) {
-        return JSON.stringify(data);
-      }
-
-      return data;
-    },
-    ...config,
-  });
-
-  instance.interceptors.response.use(
-    response => response,
-    err => {
-      if (!axios.isCancel(err)) {
-        const {data, status} = err.response;
-        throw new Error(`Error ${status}: ${JSON.stringify(data)}`);
-      }
-    },
-  );
-
-  return instance;
+const axiosConfig: CreateAxiosDefaults = {
+  baseURL: process.env.baseURL ?? '/api/',
+  responseType: 'json',
+  withCredentials: true,
+  headers: {
+    'Content-Type': 'application/json',
+    Accept: 'application/json',
+  },
 };
 
-export const API = createAxiosInstance({baseURL: process.env.baseURL ?? '/api/'});
+const axiosClient = axios.create(axiosConfig);
+
+axiosClient.interceptors.response.use(
+  response => response,
+  error => Promise.reject(new Error(error)),
+);
+
+export const API = axiosClient;
