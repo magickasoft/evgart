@@ -2,7 +2,7 @@ import React from 'react';
 
 export const arrowBack = ({color = '#777777', ...rest}: any) => (
   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...rest}>
-    <path fill="none" d="M0 0h24v24H0z"/>
-    <path d="M17.77 3.77 16 2 6 12l10 10 1.77-1.77L9.54 12z" fill={color}/>
+    <path fill="none" d="M0 0h24v24H0z" />
+    <path d="M17.77 3.77 16 2 6 12l10 10 1.77-1.77L9.54 12z" fill={color} />
   </svg>
 );
