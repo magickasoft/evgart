@@ -11,7 +11,7 @@ type IconProps = {
   height?: any;
 };
 
-export const Icon = ({name, size, width = 22, height = 22, color, ...rest}: IconProps) => {
+export const Icon = ({name, size, width = 24, height = 24, color, ...rest}: IconProps) => {
   if (!name) {
     return null;
   }

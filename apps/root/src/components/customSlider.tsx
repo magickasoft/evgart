@@ -2,11 +2,11 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import SC from '@emotion/styled';
-import {ArrowBackIos, ArrowForwardIos} from '@mui/icons-material';
 import React from 'react';
 import Slider from 'react-slick';
 
 import {maxDevice} from '../styles';
+import {Icon} from './icon';
 
 const Controls = SC.div`
   display: flex;
@@ -20,6 +20,9 @@ const Controls = SC.div`
 const Btn = SC.div`
   height: 2.5rem;
   width: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 type CustomSliderProps = {
@@ -31,18 +34,22 @@ type CustomSliderProps = {
   responsive?: any;
 };
 
+const sliderOptions = {
+  className: 'center',
+  centerMode: true,
+  infinite: true,
+  autoplay: false,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
+
 export const CustomSlider = ({withControls = true, initialSlide = 0, children, ...props}: CustomSliderProps) => {
   const slider: any = React.useRef();
   const [hasSetPosition, setHasSetPosition] = React.useState(false);
 
-  const settings = {
-    className: 'center',
-    centerMode: true,
-    infinite: true,
-    autoplay: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+  const options = {
     initialSlide,
+    ...sliderOptions,
     ...props,
   };
 
@@ -58,14 +65,14 @@ export const CustomSlider = ({withControls = true, initialSlide = 0, children, .
       {withControls && (
         <Controls>
           <Btn onClick={slider.current?.slickPrev}>
-            <ArrowBackIos />
+            <Icon name="arrowBack" />
           </Btn>
           <Btn onClick={slider.current?.slickNext}>
-            <ArrowForwardIos />
+            <Icon name="arrowForward" />
           </Btn>
         </Controls>
       )}
-      <Slider ref={slider} {...settings}>
+      <Slider ref={slider} {...options}>
         {children}
       </Slider>
     </>

@@ -1,15 +1,10 @@
-export {Button} from './button';
 export {Clients} from './clients';
 export {Label, Section, Text} from './common';
-export {Contact} from './contact';
-export {ContactForm} from './contactForm';
 export {Footer} from './footer';
 export {Header} from './header';
-export {InputPhone} from './inputPhone';
 export {Intro} from './intro';
 export {Page} from './page';
 export {PrivacyPolicy} from './privacy-policy';
-export {Select} from './select';
 export {Services} from './services';
 export {TechStacks} from './techstacks';
 export {WorkWithUs} from './workWithUs';

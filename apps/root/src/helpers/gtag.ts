@@ -22,3 +22,5 @@ export const event = ({action, category, label, value}: any) => {
     });
   }
 };
+
+// event({action: 'submit_form', category: 'contact_phone', label: '+79999999999'});

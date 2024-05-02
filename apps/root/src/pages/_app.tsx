@@ -1,6 +1,4 @@
 import {CacheProvider} from '@emotion/react';
-import {CssBaseline} from '@mui/material';
-import {ThemeProvider} from '@mui/material/styles';
 import {Analytics} from '@vercel/analytics/react';
 import Head from 'next/head';
 import Router, {useRouter} from 'next/router';
@@ -14,7 +12,6 @@ import {createEmotionCache} from '../helpers/createEmotionCache';
 import {GA_MEASUREMENT_ID, pageview} from '../helpers/gtag';
 import {withYM, YA_METRIKA_ID} from '../helpers/ym';
 import {GlobalStyle} from '../styles';
-import theme from '../styles/theme';
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -59,13 +56,10 @@ const App = ({Component, emotionCache = clientSideEmotionCache, pageProps}: any)
         <meta name="description" content={t('SEO.description')} />
         <meta name="keywords" content={t('SEO.keywords')} />
       </Head>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
-        <Analytics />
-      </ThemeProvider>
+      <Header />
+      <Component {...pageProps} />
+      <Footer />
+      <Analytics />
     </CacheProvider>
   );
 };

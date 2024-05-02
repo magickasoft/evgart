@@ -4,7 +4,6 @@ import React from 'react';
 
 import i18nextConfig from '../../next-i18next.config';
 import {createEmotionCache} from '../helpers/createEmotionCache';
-import theme from '../styles/theme';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: any) {
@@ -42,7 +41,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang={currentLocale}>
         <Head>
-          <meta name="theme-color" content={theme.palette.primary.main} />
+          <meta name="theme-color" content="#007FFF" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         </Head>

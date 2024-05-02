@@ -12,4 +12,6 @@ export const reachGoal = (name: any) => {
   }
 };
 
+// reachGoal('contact_phone');
+
 export {withYM};
