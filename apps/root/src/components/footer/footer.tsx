@@ -3,20 +3,7 @@ import React from 'react';
 
 import {links, policyLinks} from './constants';
 import {LinkProps} from './footer.d';
-import {
-  A,
-  Brand,
-  Contacts,
-  Container,
-  Content,
-  Email,
-  Li,
-  Nav,
-  NavLink,
-  Policy,
-  SocialLink,
-  Ul,
-} from './footer.sc';
+import {A, Brand, Contacts, Container, Content, Email, Li, Nav, NavLink, Policy, SocialLink, Ul} from './footer.sc';
 import {Copyright} from './сopyright';
 
 /**

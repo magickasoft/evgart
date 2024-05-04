@@ -23,7 +23,7 @@ const Container = SC.div`
  * @returns {JSX.Element} - The rendered Links component.
  */
 export const Links = ({list = [], ...props}: LinksProps): JSX.Element => {
-  const { t } = useTranslation('common');
+  const {t} = useTranslation('common');
 
   return (
     <Container {...props}>
