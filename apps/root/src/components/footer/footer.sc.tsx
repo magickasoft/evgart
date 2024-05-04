@@ -21,16 +21,6 @@ export const Content = SC.div`
   }
 `;
 
-export const Copyright = SC.div`
-  padding: 1rem 0 0;
-  color: #7f7f7f;
-  font-size: 1rem;
-  line-height: 1.375rem;
-  @media ${minDevice.tablet} {
-    padding: 0;
-  }
-`;
-
 export const Brand = SC.div`
   padding: 0.25rem 0 0;
   font-size: 1rem;
@@ -77,24 +67,6 @@ export const Contacts = SC.div`
 
 export const Email = SC.div`
   padding: 0 3rem 0 0;
-`;
-
-export const Note = SC.div`
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-between;
-  position: relative;
-  @media ${minDevice.tablet} {
-    flex-direction: row;
-  }
-`;
-
-export const Social = SC.div`
-  display: flex;
-  flex-wrap: wrap;
-  @media ${minDevice.tablet} {
-    margin-left: auto;
-  }
 `;
 
 export const Policy = SC.div`

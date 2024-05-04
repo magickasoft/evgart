@@ -1,7 +1,7 @@
 import {useTranslation} from 'next-i18next';
 import React from 'react';
 
-import {links, policyLinks, socialLinks} from './constants';
+import {links, policyLinks} from './constants';
 import {LinkProps} from './footer.d';
 import {
   A,
@@ -9,17 +9,15 @@ import {
   Contacts,
   Container,
   Content,
-  Copyright,
   Email,
   Li,
   Nav,
   NavLink,
-  Note,
   Policy,
-  Social,
   SocialLink,
   Ul,
 } from './footer.sc';
+import {Copyright} from './сopyright';
 
 /**
  * Renders the Footer component with contact information, policy links, navigation links, and social links.
@@ -48,16 +46,16 @@ export const Footer = (props: any): JSX.Element => {
           <A href="tel://+79601195445">+7 960 119 54 45</A>
         </Contacts>
         <Policy>
-          {policyLinks.map(({label, ...props}: LinkProps, index) => (
-            <SocialLink key={index} {...props}>
+          {policyLinks.map(({label, ...props}: LinkProps) => (
+            <SocialLink key={label} {...props}>
               {t(label)}
             </SocialLink>
           ))}
         </Policy>
         <Nav>
           <Ul>
-            {links.map(({label, ...props}: LinkProps, index) => (
-              <Li key={index}>
+            {links.map(({label, ...props}: LinkProps) => (
+              <Li key={label}>
                 <NavLink>
                   <a {...props}>{t(label)}</a>
                 </NavLink>
@@ -65,16 +63,7 @@ export const Footer = (props: any): JSX.Element => {
             ))}
           </Ul>
         </Nav>
-        <Note>
-          <Copyright>© madjoylab, {new Date().getFullYear()}</Copyright>
-          <Social>
-            {socialLinks.map(({label, ...props}: LinkProps, index) => (
-              <SocialLink key={index} {...props}>
-                {t(label)}
-              </SocialLink>
-            ))}
-          </Social>
-        </Note>
+        <Copyright />
       </Content>
     </Container>
   );

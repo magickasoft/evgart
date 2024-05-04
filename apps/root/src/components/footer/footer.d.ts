@@ -3,3 +3,8 @@ export type LinkProps = {
   href: string;
   target?: string;
 };
+
+export type LinksProps = {
+  list: Array<LinkProps>;
+  style?: React.CSSProperties;
+};
