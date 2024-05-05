@@ -1,3 +1,12 @@
+import {point768, point1024, point1440, point2560} from '../slider';
+
+export const responsive = [
+  point2560(3,2),
+  point1440(2,1),
+  point1024(2,1),
+  point768(1,1)
+];
+
 export const slides = [
   {
     items: [
@@ -238,36 +247,5 @@ export const slides = [
         list: ['CEO', 'CMO', 'CFO', 'CAO', 'CIO', 'CVO', 'COO', 'CSO', 'CTO'],
       },
     ],
-  },
-];
-
-export const responsive = [
-  {
-    breakpoint: 2560,
-    settings: {
-      slidesToShow: 3,
-      slidesToScroll: 2,
-    },
-  },
-  {
-    breakpoint: 1440,
-    settings: {
-      slidesToShow: 2,
-      slidesToScroll: 1,
-    },
-  },
-  {
-    breakpoint: 1024,
-    settings: {
-      slidesToShow: 2,
-      slidesToScroll: 1,
-    },
-  },
-  {
-    breakpoint: 768,
-    settings: {
-      slidesToShow: 1,
-      slidesToScroll: 1,
-    },
   },
 ];

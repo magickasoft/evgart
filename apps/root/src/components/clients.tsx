@@ -4,7 +4,7 @@ import React from 'react';
 
 import {ibmplexsans400, maxDevice} from '../styles';
 import {ClientCard} from './card';
-import {CustomSlider} from './customSlider';
+import {Slider} from './slider';
 
 const Container = SC.section`
   overflow: hidden;
@@ -82,11 +82,11 @@ export const Clients = (props: any) => {
       <Content>
         <H3>{t('HomePage.Clients.title')}</H3>
       </Content>
-      <CustomSlider>
+      <Slider>
         {slideData.map((o, i) => (
           <ClientCard key={i} {...o} />
         ))}
-      </CustomSlider>
+      </Slider>
     </Container>
   );
 };

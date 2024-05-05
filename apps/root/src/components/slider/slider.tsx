@@ -3,10 +3,10 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import SC from '@emotion/styled';
 import React from 'react';
-import Slider from 'react-slick';
+import RSlider from 'react-slick';
 
-import {maxDevice} from '../styles';
-import {Icon} from './icon';
+import {maxDevice} from '../../styles';
+import {Icon} from '../icon';
 
 const Controls = SC.div`
   display: flex;
@@ -25,7 +25,7 @@ const Btn = SC.div`
   justify-content: center;
 `;
 
-type CustomSliderProps = {
+type SliderProps = {
   title?: any;
   initialSlide?: number;
   children?: any;
@@ -43,7 +43,7 @@ const sliderOptions = {
   slidesToScroll: 1,
 };
 
-export const CustomSlider = ({withControls = true, initialSlide = 0, children, ...props}: CustomSliderProps) => {
+export const Slider = ({withControls = true, initialSlide = 0, children, ...props}: SliderProps) => {
   const slider: any = React.useRef();
   const [hasSetPosition, setHasSetPosition] = React.useState(false);
 
@@ -72,9 +72,9 @@ export const CustomSlider = ({withControls = true, initialSlide = 0, children, .
           </Btn>
         </Controls>
       )}
-      <Slider ref={slider} {...options}>
+      <RSlider ref={slider} {...options}>
         {children}
-      </Slider>
+      </RSlider>
     </>
   );
 };
