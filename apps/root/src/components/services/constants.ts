@@ -1,11 +1,6 @@
 import {point768, point1024, point1440, point2560} from '../slider';
 
-export const responsive = [
-  point2560(3,1),
-  point1440(3,1),
-  point1024(2,1),
-  point768(1,1)
-];
+export const responsive = [point2560(3, 1), point1440(3, 1), point1024(2, 1), point768(1, 1)];
 
 export const slides = [
   {
