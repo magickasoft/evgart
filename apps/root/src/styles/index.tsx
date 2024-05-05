@@ -4,7 +4,7 @@ import React from 'react';
 
 import {colors, formatterColor} from './colors';
 
-export {maxDevice, minDevice, size} from './device';
+export {breakpoint, maxDevice, minDevice} from './device';
 
 export const theme = {
   colors,
