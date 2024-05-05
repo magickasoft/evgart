@@ -3,7 +3,7 @@ import {useTranslation} from 'next-i18next';
 import React from 'react';
 
 import {minDevice} from '../../styles';
-import {LinkProps, LinksProps} from './footer.d';
+import {LinkProps, LinksProps} from './links.d';
 
 const Container = SC.div`
   display: flex;

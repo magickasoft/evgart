@@ -3,7 +3,7 @@ import {useTranslation} from 'next-i18next';
 import React from 'react';
 
 import {minDevice} from '../../styles';
-import {LinkProps, LinksProps} from './footer.d';
+import {LinkProps, LinksProps} from './links.d';
 
 const Container = SC.nav`
   display: none;
@@ -46,6 +46,14 @@ const Link = SC.div`
   }
 `;
 
+/**
+ * Renders a list of navigation links with translated labels.
+ *
+ * @param {LinksProps} props - The props for the NavLinks component.
+ * @param {LinkProps[]} props.list - The list of navigation links to render.
+ * @param {React.HTMLAttributes<HTMLDivElement>} [props.props] - The additional props for the container.
+ * @returns {JSX.Element} - The rendered NavLinks component.
+ */
 export const NavLinks = ({list = [], ...props}: LinksProps): JSX.Element => {
   const {t} = useTranslation('common');
 

@@ -22,15 +22,6 @@ export const Content = SC.div`
   }
 `;
 
-export const Brand = SC.div`
-  padding: 0.25rem 0 0;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  @media ${minDevice.tablet} {
-    padding: 0;
-  }
-`;
-
 export const A = SC.a`
   transition: .25s ease;
   transition-property: background-position,border,color,left,margin,padding,right,opacity;

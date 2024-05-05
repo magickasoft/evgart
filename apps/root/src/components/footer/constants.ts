@@ -19,7 +19,7 @@ export const links = [
   {label: 'Footer.link6', href: '/#clients'},
 ];
 
-export const policyLinks = [
+export const docsLinks = [
   {
     label: 'Footer.policyLink1',
     target: '_blank',
@@ -38,4 +38,14 @@ export const policyLinks = [
     href: 'https://docs.google.com/document/d/1ziErA3MxZF9gngUIXRC56u3nEiJYEkGbOvWCCc1bRdI/edit',
     // href: 'https://docs.google.com/document/d/1xtBRcUstvJ-ayEplxVBzdK2PxzlyoYWXKvOuxYC9VJk/edit',
   },
+];
+
+export const details = [
+  'Шмаков Евгений Сергеевич',
+  'ИНН: 540863710354',
+  // 'ИП Мирошниченко Надежда Александровна',
+  // 'ИНН: 366412065886',
+  // 'ОГРНИП: 322366800104235',
+  'Телефон: +7 960 119 54 45',
+  'Почта: hello@madjoylab.ru',
 ];
