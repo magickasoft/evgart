@@ -1,4 +1,4 @@
-export const size = {
+export const breakpoint = {
   mobileS: '320px',
   mobileM: '375px',
   mobileL: '425px',
@@ -8,24 +8,17 @@ export const size = {
   desktop: '2560px',
 };
 
-export const minDevice = {
-  mobileS: `(min-width: ${size.mobileS})`,
-  mobileM: `(min-width: ${size.mobileM})`,
-  mobileL: `(min-width: ${size.mobileL})`,
-  tablet: `(min-width: ${size.tablet})`,
-  laptop: `(min-width: ${size.laptop})`,
-  laptopL: `(min-width: ${size.laptopL})`,
-  desktop: `(min-width: ${size.desktop})`,
-  desktopL: `(min-width: ${size.desktop})`,
-};
+export const mediaQuery = (property: string) => ({
+  mobileS: `(${property}: ${breakpoint.mobileS})`,
+  mobileM: `(${property}: ${breakpoint.mobileM})`,
+  mobileL: `(${property}: ${breakpoint.mobileL})`,
+  tablet: `(${property}: ${breakpoint.tablet})`,
+  laptop: `(${property}: ${breakpoint.laptop})`,
+  laptopL: `(${property}: ${breakpoint.laptopL})`,
+  desktop: `(${property}: ${breakpoint.desktop})`,
+  desktopL: `(${property}: ${breakpoint.desktop})`,
+});
 
-export const maxDevice = {
-  mobileS: `(max-width: ${size.mobileS})`,
-  mobileM: `(max-width: ${size.mobileM})`,
-  mobileL: `(max-width: ${size.mobileL})`,
-  tablet: `(max-width: ${size.tablet})`,
-  laptop: `(max-width: ${size.laptop})`,
-  laptopL: `(max-width: ${size.laptopL})`,
-  desktop: `(max-width: ${size.desktop})`,
-  desktopL: `(max-width: ${size.desktop})`,
-};
+export const minDevice = mediaQuery('min-width');
+
+export const maxDevice = mediaQuery('max-width');
