@@ -2,8 +2,8 @@ import {useTranslation} from 'next-i18next';
 import React from 'react';
 
 import {links, policyLinks} from './constants';
-import {LinkProps} from './footer.d';
-import {A, Brand, Contacts, Container, Content, Email, Li, Nav, NavLink, Policy, SocialLink, Ul} from './footer.sc';
+import {A, Brand, Contacts, Container, Content, Docs, Email} from './footer.sc';
+import {NavLinks} from './nav-links';
 import {Copyright} from './сopyright';
 
 /**
@@ -32,24 +32,8 @@ export const Footer = (props: any): JSX.Element => {
           </Email>
           <A href="tel://+79601195445">+7 960 119 54 45</A>
         </Contacts>
-        <Policy>
-          {policyLinks.map(({label, ...props}: LinkProps) => (
-            <SocialLink key={label} {...props}>
-              {t(label)}
-            </SocialLink>
-          ))}
-        </Policy>
-        <Nav>
-          <Ul>
-            {links.map(({label, ...props}: LinkProps) => (
-              <Li key={label}>
-                <NavLink>
-                  <a {...props}>{t(label)}</a>
-                </NavLink>
-              </Li>
-            ))}
-          </Ul>
-        </Nav>
+        <Docs list={policyLinks} />
+        <NavLinks list={links} />
         <Copyright />
       </Content>
     </Container>

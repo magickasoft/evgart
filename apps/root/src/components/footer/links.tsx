@@ -4,13 +4,39 @@ import React from 'react';
 
 import {minDevice} from '../../styles';
 import {LinkProps, LinksProps} from './footer.d';
-import {SocialLink} from './footer.sc';
 
 const Container = SC.div`
   display: flex;
   flex-wrap: wrap;
   @media ${minDevice.tablet} {
     margin-left: auto;
+  }
+`;
+
+const Link = SC.a`
+  color: #181818;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  margin: 0 15px 0 0;
+  background-image: linear-gradient(-90deg,#181818 0%,#181818 49.99%,#FD0009 50%,#FE00DD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: 100%;
+  background-size: 200%;
+  
+  &:hover {
+    background-position: 0;
+  }
+  
+  @media ${minDevice.tablet} {
+    font-size: rem(16px);
+    margin: rem(0 0 0 20px);
+  }
+
+  @media ${minDevice.laptop} {
+    font-size: 14px;
+    font-weight: normal;
   }
 `;
 
@@ -28,9 +54,9 @@ export const Links = ({list = [], ...props}: LinksProps): JSX.Element => {
   return (
     <Container {...props}>
       {list.map(({label, ...restProps}: LinkProps) => (
-        <SocialLink key={label} {...restProps}>
+        <Link key={label} {...restProps}>
           {t(label)}
-        </SocialLink>
+        </Link>
       ))}
     </Container>
   );
