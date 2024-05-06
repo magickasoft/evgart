@@ -7,13 +7,9 @@ import {Icon} from './icon';
 import {LocaleSwitcher} from './localeSwitcher';
 import {ScrollIndicator} from './scrollIndicator';
 
-type ContainerProps = {
-  active: boolean;
-};
-
-const Container = SC.header<ContainerProps>`
+const Container = SC.header`
   font-family: ${ibmplexsans400.style.fontFamily};
-  background: ${({active}) => (active ? '#ffffff05' : '#ffffff05')};
+  background: #ffffff05;
   z-index: 9998;
   position: fixed;
   top: 0;
@@ -58,29 +54,11 @@ const Row = SC.div`
   flex-direction: row;
 `;
 
-const useScroll = () => {
-  const [active, setActive] = React.useState(false);
-
-  const onScroll = () => {
-    setActive(window?.scrollY >= 400);
-  };
-
-  React.useEffect(() => {
-    window?.addEventListener('scroll', onScroll);
-
-    return () => window?.removeEventListener('scroll', onScroll);
-  }, []);
-
-  return [active];
-};
-
 export const Header = (props: any) => {
-  const [active] = useScroll();
-
   return (
     <>
       <ScrollIndicator />
-      <Container active={active}>
+      <Container>
         <Text>
           <strong>madjoylab</strong>
         </Text>

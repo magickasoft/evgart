@@ -14,6 +14,7 @@ const Container = SC.div<ContainerProps>`
   background-color: #181818;
   height: 4px;
   width: ${({width}) => `${width}%` || '0%'};
+  transition: width 0.1s;
 `;
 
 const useScroll = () => {
