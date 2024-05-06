@@ -4,7 +4,7 @@ import React from 'react';
 
 import {Meta, PrivacyPolicy} from '../components';
 
-type Props = {
+type PrivacyPolicyPageProps = {
   // Add custom props here
 };
 
@@ -17,7 +17,7 @@ const PrivacyPolicyPage = (_props: InferGetStaticPropsType<typeof getStaticProps
   );
 };
 
-export const getStaticProps: GetStaticProps<Props> = async ({locale}) => ({
+export const getStaticProps: GetStaticProps<PrivacyPolicyPageProps> = async ({locale}) => ({
   props: {
     ...(await serverSideTranslations(locale ?? 'ru', ['common'])),
   },

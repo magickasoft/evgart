@@ -4,7 +4,7 @@ import React from 'react';
 
 import {Clients, Intro, Meta, Services, TechStacks, WorkWithUs} from '../components';
 
-type Props = {
+type HomePageProps = {
   // Add custom props here
 };
 
@@ -21,7 +21,7 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<Props> = async ({locale}) => ({
+export const getStaticProps: GetStaticProps<HomePageProps> = async ({locale}) => ({
   props: {
     ...(await serverSideTranslations(locale ?? 'ru', ['common'])),
   },

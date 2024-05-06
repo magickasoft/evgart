@@ -56,7 +56,7 @@ const Img = SC.div`
   justify-content: flex-end;
 `;
 
-type Props = {
+type NotFoundPageProps = {
   // Add custom props here
 };
 
@@ -80,7 +80,7 @@ const NotFoundPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) =>
   );
 };
 
-export const getStaticProps: GetStaticProps<Props> = async ({locale}) => ({
+export const getStaticProps: GetStaticProps<NotFoundPageProps> = async ({locale}) => ({
   props: {
     ...(await serverSideTranslations(locale ?? 'ru', ['common'])),
   },
