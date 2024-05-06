@@ -1,8 +1,5 @@
 import {notFound} from './404';
-import {arrowBack} from './arrowBack';
-import {arrowDown} from './arrowDown';
-import {arrowForward} from './arrowForward';
-import {arrowUp} from './arrowUp';
+import {arrowBack, arrowDown, arrowForward, arrowUp} from './arrows';
 import {flags} from './flags';
 import {telegram, whatsApp} from './messengers';
 

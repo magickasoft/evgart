@@ -1,10 +1,10 @@
 import React from 'react';
 
-export const template = ({color, paths = [], ...rest}: any) => (
+export const template = ({color = '#777777', paths = [], ...rest}: any) => (
   <svg viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg" {...rest}>
     <g fill={color} fillRule="nonzero">
-      {paths.map((path: any) => (
-        <path key={path} d={path} />
+      {paths.map((path: string, i: number) => (
+        <path key={i} d={path} />
       ))}
     </g>
   </svg>
