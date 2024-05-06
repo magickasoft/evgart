@@ -69,10 +69,10 @@ export const Header = (props: any) => {
             <Link href="mailto:hello@madjoylab.ru">hello@madjoylab.ru</Link>
           </Label>
           <Link href="https://t.me/madjoylab">
-            <SCIcon name="telegram" size={32} />
+            <SCIcon name="telegram" size={32} color="#0087D0" />
           </Link>
           <Link href="https://wa.me/79601195445">
-            <SCIcon name="whatsApp" size={32} />
+            <SCIcon name="whatsApp" size={32} color="#27D061" />
           </Link>
         </Row>
       </Container>
