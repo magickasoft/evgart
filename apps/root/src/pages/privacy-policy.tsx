@@ -1,8 +1,8 @@
 import type {GetStaticProps, InferGetStaticPropsType} from 'next';
-import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import React from 'react';
 
 import {Meta, PrivacyPolicy} from '../components';
+import {baseStaticProps} from '../helpers/baseStaticProps';
 
 type PrivacyPolicyPageProps = {
   // Add custom props here
@@ -17,10 +17,6 @@ const PrivacyPolicyPage = (_props: InferGetStaticPropsType<typeof getStaticProps
   );
 };
 
-export const getStaticProps: GetStaticProps<PrivacyPolicyPageProps> = async ({locale}) => ({
-  props: {
-    ...(await serverSideTranslations(locale ?? 'ru', ['common'])),
-  },
-});
+export const getStaticProps: GetStaticProps<PrivacyPolicyPageProps> = baseStaticProps;
 
 export default PrivacyPolicyPage;

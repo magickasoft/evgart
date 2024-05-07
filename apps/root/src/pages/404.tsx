@@ -2,10 +2,10 @@ import SC from '@emotion/styled';
 import type {GetStaticProps, InferGetStaticPropsType} from 'next';
 import Link from 'next/link';
 import {useTranslation} from 'next-i18next';
-import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 
 import {Page} from '../components';
 import {Icon} from '../components/icon';
+import {baseStaticProps} from '../helpers/baseStaticProps';
 import {maxDevice} from '../styles';
 
 const Title = SC.div`
@@ -80,10 +80,6 @@ const NotFoundPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) =>
   );
 };
 
-export const getStaticProps: GetStaticProps<NotFoundPageProps> = async ({locale}) => ({
-  props: {
-    ...(await serverSideTranslations(locale ?? 'ru', ['common'])),
-  },
-});
+export const getStaticProps: GetStaticProps<NotFoundPageProps> = baseStaticProps;
 
 export default NotFoundPage;

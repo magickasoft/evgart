@@ -1,8 +1,8 @@
 import type {GetStaticProps, InferGetStaticPropsType} from 'next';
-import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import React from 'react';
 
 import {Clients, Intro, Meta, Services, TechStacks, WorkWithUs} from '../components';
+import {baseStaticProps} from '../helpers/baseStaticProps';
 
 type HomePageProps = {
   // Add custom props here
@@ -21,10 +21,6 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<HomePageProps> = async ({locale}) => ({
-  props: {
-    ...(await serverSideTranslations(locale ?? 'ru', ['common'])),
-  },
-});
+export const getStaticProps: GetStaticProps<HomePageProps> = baseStaticProps;
 
 export default HomePage;
