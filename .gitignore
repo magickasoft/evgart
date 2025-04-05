@@ -34,3 +34,4 @@ yarn-error.log*
 apps/web/pages/index.tsx
 .vercel
 .env*.local
+.qodo
