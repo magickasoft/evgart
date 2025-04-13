@@ -29,6 +29,7 @@ const App = ({Component, emotionCache = clientSideEmotionCache, pageProps}: any)
     };
   }, [router.events]);
 
+  
   return (
     <CacheProvider value={emotionCache}>
       <Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
