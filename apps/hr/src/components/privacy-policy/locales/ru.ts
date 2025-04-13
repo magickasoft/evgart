@@ -1,4 +1,4 @@
-import type {Document} from '../privacy-policy.d';
+import type {Document} from '../privacy-policy';
 import {Block, H2, H3} from '../privacy-policy.sc';
 
 export const ru: Document = [
