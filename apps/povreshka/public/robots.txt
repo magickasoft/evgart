@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://evgart-povreshka.ru
+
+# Sitemaps
+Sitemap: https://evgart-povreshka.ru/sitemap.xml
