@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://madjoylab.ru
+Host: https://evgart-hr.ru
 
 # Sitemaps
-Sitemap: https://madjoylab.ru/sitemap.xml
+Sitemap: https://evgart-hr.ru/sitemap.xml

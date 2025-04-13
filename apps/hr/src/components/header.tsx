@@ -60,18 +60,18 @@ export const Header = (props: any) => {
       <ScrollIndicator />
       <Container>
         <Text>
-          <strong>madjoylab</strong>
+          <strong>HR</strong>
         </Text>
         <Row>
           <LocaleSwitcher />
           <Label>
-            <Link href="tel://+79601195445">+7 960 119 54 45</Link>
-            <Link href="mailto:hello@madjoylab.ru">hello@madjoylab.ru</Link>
+            <Link href="tel://+79537647035">+7 953 764 70 35</Link>
+            <Link href="mailto:sjs-master@yandex.ru">sjs-master@yandex.ru</Link>
           </Label>
-          <Link href="https://t.me/madjoylab">
+          <Link href="https://t.me/magickasoft">
             <SCIcon name="telegram" size={32} color="#0087D0" />
           </Link>
-          <Link href="https://wa.me/79601195445">
+          <Link href="https://wa.me/79537647035">
             <SCIcon name="whatsApp" size={32} color="#27D061" />
           </Link>
         </Row>

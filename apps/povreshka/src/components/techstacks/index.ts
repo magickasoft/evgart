@@ -1,1 +1,0 @@
-export {TechStacks} from './techstacks';
