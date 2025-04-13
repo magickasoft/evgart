@@ -3,7 +3,7 @@ import {useTranslation} from 'next-i18next';
 import React from 'react';
 
 import {minDevice} from '../../styles';
-import {LinkProps, LinksProps} from './links.d';
+import {LinkProps, LinksProps} from './links';
 
 const Container = SC.nav`
   display: none;

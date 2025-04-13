@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://povreshka.ru
+
+# Sitemaps
+Sitemap: https://povreshka.ru/sitemap.xml

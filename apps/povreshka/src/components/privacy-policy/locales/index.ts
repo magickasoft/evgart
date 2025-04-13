@@ -1,4 +1,4 @@
-import type {Documents} from '../privacy-policy.d';
+import type {Documents} from '../privacy-policy';
 import {ru} from './ru';
 
 export const docs: Documents = {
