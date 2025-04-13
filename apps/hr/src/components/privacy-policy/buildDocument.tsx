@@ -1,4 +1,4 @@
-import type {ComponentContentPair, Document} from './privacy-policy';
+import type {ComponentContentPair, Document} from './privacy-policy.d';
 
 /**
  * Builds a React node array from the given Document array.

@@ -6,12 +6,12 @@ import Script from 'next/script';
 import {appWithTranslation, useTranslation} from 'next-i18next';
 import React from 'react';
 
-import nextI18NextConfig from '../../next-i18next.config.js';
-import {Footer, Header} from '../components/index.js';
-import {createEmotionCache} from '../helpers/createEmotionCache.js';
-import {GA_MEASUREMENT_ID, pageview} from '../helpers/gtag.js';
-import {withYM, YA_METRIKA_ID} from '../helpers/ym.js';
-import {GlobalStyle} from '../styles/index.js';
+import nextI18NextConfig from '../../next-i18next.config';
+import {Footer, Header} from '../components/';
+import {createEmotionCache} from '../helpers/createEmotionCache';
+import {GA_MEASUREMENT_ID, pageview} from '../helpers/gtag';
+import {withYM, YA_METRIKA_ID} from '../helpers/ym';
+import {GlobalStyle} from '../styles/';
 
 const clientSideEmotionCache = createEmotionCache();
 

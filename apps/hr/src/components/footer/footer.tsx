@@ -19,9 +19,9 @@ export const Footer = (props: any): JSX.Element => {
         <Details list={details} />
         <Contacts>
           <Email>
-            <A href="mailto:hello@madjoylab.ru">hello@madjoylab.ru</A>
+            <A href="mailto:sjs-master@yandex.ru">sjs-master@yandex.ru</A>
           </Email>
-          <A href="tel://+79601195445">+7 960 119 54 45</A>
+          <A href="tel://+79537647035">+7 953 764 70 35</A>
         </Contacts>
         <Docs list={docsLinks} />
         <NavLinks list={links} />

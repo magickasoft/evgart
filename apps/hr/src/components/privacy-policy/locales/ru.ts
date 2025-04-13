@@ -1,4 +1,4 @@
-import type {Document} from '../privacy-policy';
+import type {Document} from '../privacy-policy.d';
 import {Block, H2, H3} from '../privacy-policy.sc';
 
 export const ru: Document = [
@@ -209,7 +209,7 @@ export const ru: Document = [
     Block,
     [
       '7.1. Оператор имеет право вносить изменения в настоящую Политику. При внесении изменений в заголовке Политики указывается дата последнего обновления редакции. Новая редакция Политики вступает в силу с момента ее размещения на сайте Оператора, если иное не предусмотрено новой редакцией Политики.',
-      '7.2. Действующая электронная версия Политики хранится — на сайте Оператора по адресу <a target="_blank" href="https://madjoylab.ru/#clients" title="">https://madjoylab.ru/#clients</a>',
+      '7.2. Действующая электронная версия Политики хранится — на сайте Оператора по адресу <a target="_blank" href="https://evgart-hr.ru/#clients" title="">https://evgart-hr.ru/#clients</a>',
     ],
   ],
 ];
