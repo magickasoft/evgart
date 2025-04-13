@@ -7,7 +7,7 @@ import {appWithTranslation, useTranslation} from 'next-i18next';
 import React from 'react';
 
 import nextI18NextConfig from '../../next-i18next.config';
-import {Footer, Header} from '../components/';
+import {Footer, Header} from '../components/index';
 import {createEmotionCache} from '../helpers/createEmotionCache';
 import {GA_MEASUREMENT_ID, pageview} from '../helpers/gtag';
 import {withYM, YA_METRIKA_ID} from '../helpers/ym';
