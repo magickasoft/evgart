@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://evgart-povreshka.ru
+Host: https://povreshka.vercel.app
 
 # Sitemaps
-Sitemap: https://evgart-povreshka.ru/sitemap.xml
+Sitemap: https://povreshka.vercel.app/sitemap.xml
