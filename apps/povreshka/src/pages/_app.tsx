@@ -52,6 +52,7 @@ const App = ({Component, emotionCache = clientSideEmotionCache, pageProps}: any)
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="max-image-preview:large" />
         <meta name="selfwork.ru" content="yPNRxy8hvJZM09awafRV5OISIDa8inoa7qNJBdS2tUQB1RVPha" />
+        <meta name="google-site-verification" content="TZaq4O0W5T8D0npL-4SYDoVgvvVPLqiz2XvuL3_1pFQ" />
         <title>{t('SEO.title')}</title>
         <meta name="description" content={t('SEO.description')} />
         <meta name="keywords" content={t('SEO.keywords')} />
