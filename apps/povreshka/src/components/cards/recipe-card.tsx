@@ -1,9 +1,8 @@
 import SC from '@emotion/styled';
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
 
-import {maxDevice, minDevice} from '../../styles';
+import { minDevice } from '../../styles';
 
 const Card = SC.div`
   background-color: #f7f5f6;
@@ -77,28 +76,27 @@ const Characteristic = SC.div`
   color: #333;
 `;
 
-export const RecipeCard = (props: { 
-    name: string,
-    img: string | null,
-    title: string,
-    description: string,
-    time: number,
-    level: number,
-    rating: number }) => {
+export const RecipeCard = (props: {
+  name: string;
+  img: string | null;
+  title: string;
+  description: string;
+  time: number;
+  level: number;
+  rating: number;
+}) => {
   return (
     <Card>
-        <ImageBlock>
-        {props.img ? <Image width="300" height="150" src={props.img} alt="icon" /> : null}
-        </ImageBlock>
-        <Content>
-            <Title>{props.title}</Title>
-            <Description>{props.description}</Description>
-            <Characteristic>
-                <span>Время: {props.time} минут</span>
-                <span>Сложность: {props.level}</span>
-                <span>Рейтинг: {props.rating}</span>
-            </Characteristic>
-        </Content>
+      <ImageBlock>{props.img ? <Image width="300" height="150" src={props.img} alt="icon" /> : null}</ImageBlock>
+      <Content>
+        <Title>{props.title}</Title>
+        <Description>{props.description}</Description>
+        <Characteristic>
+          <span>Время: {props.time} минут</span>
+          <span>Сложность: {props.level}</span>
+          <span>Рейтинг: {props.rating}</span>
+        </Characteristic>
+      </Content>
     </Card>
   );
 };

@@ -62,7 +62,6 @@ const CenterBlock = SC.nav`
   }
 `;
 
-
 const RightBlock = SC.div`
   display: flex;
   align-items: center;
@@ -93,12 +92,14 @@ export const Header = () => {
           </Text>
         </LeftBlock>
         <CenterBlock>
-          <div><a href="/">Главная</a></div>
-          <div><a href="/categories">Категории</a></div>
+          <div>
+            <a href="/">Главная</a>
+          </div>
+          <div>
+            <a href="/categories">Категории</a>
+          </div>
         </CenterBlock>
-        <RightBlock>
-          {/* <SearchInput /> */}
-        </RightBlock>
+        <RightBlock>{/* <SearchInput /> */}</RightBlock>
       </Container>
     </>
   );
