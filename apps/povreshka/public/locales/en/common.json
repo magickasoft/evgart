@@ -1,106 +1,106 @@
 {
   "SEO": {
-    "title": "Madjoylab - we create IT teams for technology projects",
-    "description": "Madjoylab - IT recruitment, outsourcing, IT Executive Search and career consulting. We successfully select the best IT personnel of any level and specialization. Extensive base of candidates, guarantees.",
-    "keywords": "Digital agency, madjoylab studio, Website design, Application design, Application development, Website development, SMM services, Design school, Development school, madjoylab design, madjoylab dev"
+    "title": "Povr-Eshka — delicious recipes for every day",
+    "description": "Povr-Eshka is a website with simple and tasty recipes for every day. Breakfasts, lunches, dinners, desserts, and drinks — cook with pleasure!",
+    "keywords": "recipes, cooking, home cooking, homemade food, step-by-step recipes, Povr-Eshka"
   },
   "NotFoundPage": {
     "title": "This page \ndoes not exist",
-    "text": "You followed the wrong link, or this page has been removed.",
-    "link": "Start from the home page"
+    "text": "It looks like you followed a wrong link or the page has been removed.",
+    "link": "Back to homepage"
   },
   "HomePage": {
     "SEO": {
-      "title": "Madjoylab - IT recruitment, outsourcing, IT Executive Search and career consulting",
-      "description": "Madjoylab - IT recruitment, outsourcing, IT Executive Search and career consulting. We successfully select the best IT personnel of any level and specialization. Extensive base of candidates, guarantees.",
-      "keywords": "Digital agency, madjoylab studio, Website design, Application design, Application development, Website development, SMM services, Design school, Development school, madjoylab design, madjoylab dev",
-      "og" : {
-        "title": "Madjoylab - IT recruitment, outsourcing, IT Executive Search and career consulting",
-        "description": "Madjoylab - IT recruitment, outsourcing, IT Executive Search and career consulting. We successfully select the best IT personnel of any level and specialization. Extensive base of candidates, guarantees.",
+      "title": "Povr-Eshka — recipes with step-by-step photos and videos",
+      "description": "On Povr-Eshka you’ll find the best recipes with step-by-step photos, clear instructions, and useful tips. Cook at home with love and flavor!",
+      "keywords": "recipes, step-by-step recipes, cooking, food, dinner, lunch, breakfast, Povr-Eshka",
+      "og": {
+        "title": "Povr-Eshka — cooking recipes with photos and videos",
+        "description": "Cook with love! The best recipes for homemade dishes, sweets, drinks, and snacks on Povr-Eshka.",
         "type": "website",
         "locale": "en_EN",
-        "url": "http://madjoylab.ru/en/",
-        "site_name": "Mad Joy Lab",
-        "image": "/cover.png"  
+        "url": "https://povaryoshka.ru/",
+        "site_name": "Povr-Eshka",
+        "image": "/og-cover.png"
       },
-      "twitter" : {
-        "image": "/cover.png",
-        "title": "Madjoylab - IT recruitment, outsourcing, IT Executive Search and career consulting",
-        "description": "Madjoylab - IT recruitment, outsourcing, IT Executive Search and career consulting. We successfully select the best IT personnel of any level and specialization. Extensive base of candidates, guarantees.",
+      "twitter": {
+        "image": "/og-cover.png",
+        "title": "Povr-Eshka — cooking delicious meals every day!",
+        "description": "Step-by-step recipes, cooking tips, and meal ideas for every day. Cook with ease with Povr-Eshka!",
         "card": "summary_large_image",
-        "url": "http://madjoylab.ru/en/"
+        "url": "https://povaryoshka.ru/"
       }
     },
     "Intro": {
-      "title": "We create IT teams for technology projects"
+      "title": "Cooking delicious meals every day!"
     },
     "Services": {
-      "title": "Services",
-      "benefit": "Advantages",
-      "serviceLabel1": "Recruitment of IT personnel",
-      "serviceDesc1": "Closing individual positions, as well as selecting a team for a startup or department",
-      "serviceLabel2": "Outsourcing of developers and project teams",
-      "serviceDesc2": "Integration into the client's team",
-      "serviceLabel3": "IT Executive Search",
-      "serviceDesc3": "Selection of senior managers and rare IT specialists",
-      "serviceLabel4": "Career counseling",
-      "serviceDesc4": "We help beginners, experienced experts and those who want to change direction in achieving career goals",
-      "serviceLabel5": "Conducting technical interviews",
-      "serviceDesc5": "We will speak the language of an IT candidate and form an independent opinion on competencies",
-      "serviceLabel6": "Finished resume",
-      "serviceDesc6": "A resume that will reveal you as a professional with any work experience",
-      "serviceLabel7": "Preparing candidates for technical interviews",
-      "serviceDesc7": "We will help you develop the skill of successfully passing interviews and make the best impression on the employer",
-      "serviceLabel8": "Mentoring of technical specialists",
-      "serviceDesc8": "Upgrade your skills with one-to-one lessons with experienced mentors"
+      "title": "Recipe categories",
+      "benefit": "Why people choose us",
+      "serviceLabel1": "Breakfasts",
+      "serviceDesc1": "Light and hearty meals for a perfect start of the day",
+      "serviceLabel2": "Lunches",
+      "serviceDesc2": "Tasty ideas for family lunch",
+      "serviceLabel3": "Dinners",
+      "serviceDesc3": "Simple and quick evening recipes",
+      "serviceLabel4": "Desserts",
+      "serviceDesc4": "Sweet treats you can’t resist",
+      "serviceLabel5": "Drinks",
+      "serviceDesc5": "Homemade compotes, lemonades, and warming teas",
+      "serviceLabel6": "Snacks",
+      "serviceDesc6": "Ideas for holidays and quick bites",
+      "serviceLabel7": "Step-by-step recipes",
+      "serviceDesc7": "Detailed instructions with photos and videos",
+      "serviceLabel8": "Helpful tips",
+      "serviceDesc8": "Cooking lifehacks and preparation secrets"
     },
     "TechStacks": {
-      "title": "Technology"
+      "title": "World cuisines"
     },
     "WorkWithUs": {
-      "title": "Work with us",
-      "text": "People are the most valuable asset of our business, so we create the most comfortable and productive environment for our employees. Become part of our team and work on a project that you will share with others with interest.",
-      "link": "Join the team"
+      "title": "Submit your recipes",
+      "text": "Want to share your favorite recipe? Send it to us — and thousands of users will see it!",
+      "link": "Send a recipe"
     },
     "Clients": {
-      "title": "Clients about us",
-      "clientDesc1": "A cool team of professionals, quickly adapting to periodically changing customer requirements, performing the tasks in a quality and timely manner",
-      "clientExecutive1": "Kovtun Anastasia",
-      "clientPosition1": "Project Manager",
-      "clientDesc2": "madjoylab promptly provided mobile and backend developers, which made it possible to strengthen the team and accelerate the development of projects in a targeted manner",
-      "clientExecutive2": "Oleg Borisov",
-      "clientPosition2": "Project Manager",
-      "clientDesc3": "During the work on the project, the developers led by madjoylab showed themselves as a team of professionals who successfully solved all the tasks assigned to them and achieved the goal of the project",
-      "clientExecutive3": "Dmitry Butyanov",
-      "clientPosition3": "PBE",
-      "clientDesc4": "The guys from madjoylab developed a massive system that required extremely high technical expertise and allowed us to take the service on board aircraft to a new level.",
-      "clientExecutive4": "Alexander Lukash",
-      "clientPosition4": "Product owner",
-      "clientDesc5": "The design solutions proposed by the team's specialists for the implementation of the required functionality made it possible to obtain a high-quality product with a convenient user interface. All assigned tasks were completed on time and in full.",
-      "clientExecutive5": "Belimov Alexander",
-      "clientPosition5": "Project Director",
-      "clientDesc6": "During the cooperation on a number of projects, madjoylab has established itself as a reliable partner, always striving to solve the tasks in the most efficient way, to select the necessary resources.",
-      "clientExecutive6": "Kirill Makarkin",
-      "clientPosition6": "Head of digitalization projectså"
+      "title": "Readers’ reviews",
+      "clientDesc1": "I really love your site! Everything is clear, simple, and always turns out delicious.",
+      "clientExecutive1": "Irina V.",
+      "clientPosition1": "Housewife",
+      "clientDesc2": "I cook your recipes almost every day — my family is thrilled!",
+      "clientExecutive2": "Alexey M.",
+      "clientPosition2": "Father of two",
+      "clientDesc3": "Great site, I especially like the video recipes — it’s become easier to cook.",
+      "clientExecutive3": "Natalia S.",
+      "clientPosition3": "Beginner cook",
+      "clientDesc4": "Your recipes save me when I don't know what to cook for dinner.",
+      "clientExecutive4": "Olga K.",
+      "clientPosition4": "Office manager",
+      "clientDesc5": "The search is very convenient, and the ingredients are always simple — no need to hunt for rare stuff.",
+      "clientExecutive5": "Roman I.",
+      "clientPosition5": "Student",
+      "clientDesc6": "Now I cook more often and with joy. Thank you for the inspiration!",
+      "clientExecutive6": "Svetlana L.",
+      "clientPosition6": "Blogger"
     }
   },
   "PrivacyPolicyPage": {
-    "title": "MADJOYLAB Privacy Policy"
+    "title": "Povr-Eshka Privacy Policy"
   },
   "Footer": {
-    "policyLink1": "Contract offer",
+    "policyLink1": "User Agreement",
     "policyLink2": "Privacy Policy",
-    "policyLink3": "Terms of use",
+    "policyLink3": "Recipe Usage Terms",
     "socialLink1": "facebook",
-    "socialLink2": "vc",
+    "socialLink2": "instagram",
     "socialLink3": "youtube",
-    "socialLink4": "career.habr",
-    "socialLink5": "vkontakte",
-    "socialLink6": "yandex.dzen",
+    "socialLink4": "pinterest",
+    "socialLink5": "vk",
+    "socialLink6": "yandex zen",
     "link1": "Home",
-    "link2": "Services",
-    "link4": "Technology",
-    "link5": "Work with us",
-    "link6": "Clients about us"
+    "link2": "Categories",
+    "link4": "World Cuisines",
+    "link5": "Submit a Recipe",
+    "link6": "Reviews"
   }
 }

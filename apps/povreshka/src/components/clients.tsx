@@ -3,7 +3,7 @@ import {useTranslation} from 'next-i18next';
 import React from 'react';
 
 import {ibmplexsans400, maxDevice} from '../styles';
-import {ClientCard} from './card';
+import {ClientCard} from './cards';
 import {Slider} from './slider';
 
 const Container = SC.section`

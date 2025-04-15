@@ -1,7 +1,7 @@
 import {useTranslation} from 'next-i18next';
 import React from 'react';
 
-import {ServiceCard} from '../card';
+import {ServiceCard} from '../cards';
 import {Slider} from '../slider';
 import {responsive, slides} from './constants';
 import {Container, Content, H3} from './services.sc';
