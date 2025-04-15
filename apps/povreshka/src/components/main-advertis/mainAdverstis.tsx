@@ -1,10 +1,8 @@
 import React from 'react';
 
-import { Container, Content, H3 } from './mainAdvertis.sc';
-
+import {Container, Content, H3} from './mainAdvertis.sc';
 
 export const MainAdvertis = (props: any) => {
-  
   return (
     <Container id="mainAdvertis">
       <Content>
@@ -13,4 +11,3 @@ export const MainAdvertis = (props: any) => {
     </Container>
   );
 };
-

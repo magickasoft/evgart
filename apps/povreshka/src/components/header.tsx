@@ -1,13 +1,13 @@
 import SC from '@emotion/styled';
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 
-import { ibmplexsans400, maxDevice } from '../styles';
-import { Text } from './common';
-import { ScrollIndicator } from './scrollIndicator';
-import { SearchInput } from './search-input';
+import {ibmplexsans400, maxDevice} from '../styles';
+import {Text} from './common';
+import {ScrollIndicator} from './scrollIndicator';
+import {SearchInput} from './search-input';
 
-const Container = SC.header<{ scrolled: boolean }>`
+const Container = SC.header<{scrolled: boolean}>`
   font-family: ${ibmplexsans400.style.fontFamily};
   background: #ffffff;
   z-index: 9998;
@@ -28,7 +28,7 @@ const Container = SC.header<{ scrolled: boolean }>`
     height: 3.5rem;
   }
 
-  border-bottom: ${({ scrolled }) => (scrolled ? '1px solid #d0d0d0' : '1px solid #ffffff')};
+  border-bottom: ${({scrolled}) => (scrolled ? '1px solid #d0d0d0' : '1px solid #ffffff')};
 `;
 
 const LeftBlock = SC.div`
