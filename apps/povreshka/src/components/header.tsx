@@ -35,7 +35,33 @@ const LeftBlock = SC.div`
   display: flex;
   align-items: center;
   gap: 10px;
+  width: fit-content;
 `;
+
+const CenterBlock = SC.nav`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 24px;
+  align-items: center;
+  width: 100%;
+
+  a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #333333;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #ff6f61;
+    }
+
+    @media ${maxDevice.tablet} {
+      font-size: 14px;
+    }
+  }
+`;
+
 
 const RightBlock = SC.div`
   display: flex;
@@ -66,8 +92,12 @@ export const Header = () => {
             <strong>Повар-Ешка</strong>
           </Text>
         </LeftBlock>
+        <CenterBlock>
+          <div><a href="/">Главная</a></div>
+          <div><a href="/categories">Категории</a></div>
+        </CenterBlock>
         <RightBlock>
-          <SearchInput />
+          {/* <SearchInput /> */}
         </RightBlock>
       </Container>
     </>
