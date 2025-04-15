@@ -1,0 +1,1 @@
+export {MainAdvertis} from './mainAdverstis';

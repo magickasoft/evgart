@@ -34,8 +34,8 @@ export const Copyright = (): JSX.Element => {
   const currentYear = new Date().getFullYear();
   return (
     <Container>
-      <Label>© hr, {currentYear}</Label>
-      <Links list={socialLinks} />
+      <Label>© Повар-Ешка, {currentYear}</Label>
+      {/* <Links list={socialLinks} /> */}
     </Container>
   );
 };

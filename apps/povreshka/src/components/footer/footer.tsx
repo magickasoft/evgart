@@ -16,15 +16,15 @@ export const Footer = (props: any): JSX.Element => {
   return (
     <Container>
       <Content>
-        <Details list={details} />
-        <Contacts>
+        {/* <Details list={details} /> */}
+        {/* <Contacts>
           <Email>
             <A href="mailto:sjs-master@yandex.ru">sjs-master@yandex.ru</A>
           </Email>
           <A href="tel://+79537647035">+7 953 764 70 35</A>
-        </Contacts>
+        </Contacts> */}
         <Docs list={docsLinks} />
-        <NavLinks list={links} />
+        {/* <NavLinks list={links} /> */}
         <Copyright />
       </Content>
     </Container>

@@ -1,15 +1,15 @@
 import SC from '@emotion/styled';
-import React from 'react';
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
 
-import {ibmplexsans400, maxDevice} from '../styles';
-import {Text} from './common';
-import {Icon} from './icon';
-import {LocaleSwitcher} from './localeSwitcher';
-import {ScrollIndicator} from './scrollIndicator';
+import { ibmplexsans400, maxDevice } from '../styles';
+import { Text } from './common';
+import { ScrollIndicator } from './scrollIndicator';
+import { SearchInput } from './search-input';
 
-const Container = SC.header`
+const Container = SC.header<{ scrolled: boolean }>`
   font-family: ${ibmplexsans400.style.fontFamily};
-  background: #ffffff05;
+  background: #ffffff;
   z-index: 9998;
   position: fixed;
   top: 0;
@@ -20,61 +20,55 @@ const Container = SC.header`
   justify-content: space-between;
   height: 4.75rem;
   margin: 0 auto;
-  padding: 0 140px;
+  padding: 0 100px;
+  transition: border-bottom 0.3s ease;
+
   @media ${maxDevice.tablet} {
     padding: 0 30px;
     height: 3.5rem;
   }
+
+  border-bottom: ${({ scrolled }) => (scrolled ? '1px solid #d0d0d0' : '1px solid #ffffff')};
 `;
 
-const SCIcon = SC(Icon)`
-  background-color: #fff;
-  border-radius: 50%;
-  margin-left: 15px;
-`;
-
-const Label = SC.div`
+const LeftBlock = SC.div`
   display: flex;
-  flex-direction: column;
-  @media ${maxDevice.tablet} {
-    display: none
-  }
+  align-items: center;
+  gap: 10px;
 `;
 
-const Link = SC.a`
-  font-size: 0.9rem;
-  line-height: 1.125rem;
-  background: linear-gradient(90deg,#fe00dd -56.25%,#fd0009 135.94%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`;
-
-const Row = SC.div`
+const RightBlock = SC.div`
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  gap:20px;
 `;
 
-export const Header = (props: any) => {
+export const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+
+    onScroll();
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <>
       <ScrollIndicator />
-      <Container>
-        <Text>
-          <strong>HR</strong>
-        </Text>
-        <Row>
-          <LocaleSwitcher />
-          <Label>
-            <Link href="tel://+79537647035">+7 953 764 70 35</Link>
-            <Link href="mailto:sjs-master@yandex.ru">sjs-master@yandex.ru</Link>
-          </Label>
-          <Link href="https://t.me/magickasoft">
-            <SCIcon name="telegram" size={32} color="#0087D0" />
-          </Link>
-          <Link href="https://wa.me/79537647035">
-            <SCIcon name="whatsApp" size={32} color="#27D061" />
-          </Link>
-        </Row>
+      <Container scrolled={scrolled}>
+        <LeftBlock>
+          <Image src="/static/povr-eshka-logo.png" alt="logo" width={60} height={60} />
+          <Text>
+            <strong>Повар-Ешка</strong>
+          </Text>
+        </LeftBlock>
+        <RightBlock>
+          <SearchInput />
+        </RightBlock>
       </Container>
     </>
   );
