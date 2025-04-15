@@ -2,7 +2,7 @@ import SC from '@emotion/styled';
 import Image from 'next/image';
 import React from 'react';
 
-import { minDevice } from '../../styles';
+import {minDevice} from '../../styles';
 
 const Card = SC.div`
   background-color: #f7f5f6;
