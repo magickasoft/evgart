@@ -4,7 +4,7 @@ import React from 'react';
 
 import {Page} from '../../components';
 import {RecipeCard} from '../../components/cards/recipe-card';
-import {RECIPES_OBJ} from './constants';
+import {RECIPES_OBJ} from '../../constants.ts/constants';
 
 const Cards = SC.div`
   display: grid;
