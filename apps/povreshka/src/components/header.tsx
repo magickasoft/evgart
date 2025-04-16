@@ -86,7 +86,7 @@ export const Header = () => {
       <ScrollIndicator />
       <Container scrolled={scrolled}>
         <LeftBlock>
-          <Image src="/static/povr-eshka-logo.png" alt="logo" width={60} height={60} />
+          <Image src="/static/povr-eshka-logo.png" alt="logo" width={60} height={60} priority />
           <Text>
             <strong>Повар-Ешка</strong>
           </Text>

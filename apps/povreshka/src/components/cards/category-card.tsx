@@ -51,7 +51,7 @@ export const CategoryCard = (props: {key: string; img: string | null; label: str
   return (
     <Link href={`/category/${props.name}`} style={{textDecoration: 'none'}}>
       <Card color={props.color}>
-        <Content>{props.img && <Image width="240" height="220" src={props.img} alt="icon" />}</Content>
+        <Content>{props.img && <Image width="240" height="220" src={props.img} alt="icon" priority />}</Content>
         <Title>{props.label}</Title>
       </Card>
     </Link>
