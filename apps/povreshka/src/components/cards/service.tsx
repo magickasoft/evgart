@@ -127,7 +127,7 @@ export const ServiceCard = ({label, desc, price, benefits, index = 0}: ServiceCa
       {Boolean(benefits?.length) && <BenefitLabel>{t('HomePage.Services.benefit')}</BenefitLabel>}
       {benefits.map((o: any, i: number) => (
         <Content key={i}>
-          <Image width="24" height="24" src="/static/services-check.svg" alt="check" />
+          <Image width="24" height="24" src="/static/services-check.svg" alt="check" priority />
           <Label>{t(o)}</Label>
         </Content>
       ))}

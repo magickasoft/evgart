@@ -87,7 +87,9 @@ export const RecipeCard = (props: {
 }) => {
   return (
     <Card>
-      <ImageBlock>{props.img ? <Image width="300" height="150" src={props.img} alt="icon" /> : null}</ImageBlock>
+      <ImageBlock>
+        {props.img ? <Image width="300" height="150" src={props.img} alt="icon" priority /> : null}
+      </ImageBlock>
       <Content>
         <Title>{props.title}</Title>
         <Description>{props.description}</Description>
