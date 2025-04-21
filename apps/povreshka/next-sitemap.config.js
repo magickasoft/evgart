@@ -10,7 +10,7 @@ module.exports = {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/_next/'],
+        disallow: ['/api/*', '/_next/*'],
         crawlDelay: 1,
       },
     ],
