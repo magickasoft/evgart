@@ -1,8 +1,7 @@
-import SC from '@emotion/styled';
-import {useTranslation} from 'next-i18next';
-import React from 'react';
+import SC from '@emotion/styled'
+import { useTranslation } from 'next-i18next'
 
-import {ibmplexsans400, maxDevice, minDevice} from '../styles';
+import { ibmplexsans400, maxDevice, minDevice } from '../styles'
 
 const Container = SC.section`
   overflow: hidden;
@@ -24,7 +23,7 @@ const Container = SC.section`
     min-height: 630px;
     padding: 50px 0 20px;
   }
-`;
+`
 
 const Content = SC.div`
   font-family: ${ibmplexsans400.style.fontFamily};
@@ -40,7 +39,7 @@ const Content = SC.div`
     max-width: 1255px;
     margin: 0 auto;
   }
-`;
+`
 
 const H3 = SC.h3`
   font-weight: 600;
@@ -54,7 +53,7 @@ const H3 = SC.h3`
     font-size: 22px;
     margin: 0 0 8px 0;
   }
-`;
+`
 
 const RightColumn = SC.div`
   @media ${minDevice.laptop} {
@@ -69,7 +68,7 @@ const RightColumn = SC.div`
   @media ${minDevice.laptopL} {
     width: 544px;
   }
-`;
+`
 
 const SvgWrap = SC.div`
   position: relative;
@@ -95,7 +94,7 @@ const SvgWrap = SC.div`
     height: 630px;
     left: calc((100vw - 1366px) / 2 - 20px);
   }
-`;
+`
 
 const Text = SC.div`
   font-size: 14px;
@@ -108,7 +107,7 @@ const Text = SC.div`
     line-height: 28px;
     margin-bottom: 47px;
   }
-`;
+`
 
 const Link = SC.a`
   padding: 8px 24px;
@@ -130,12 +129,12 @@ const Link = SC.a`
     font-size: 15px;
     line-height: 18px;
   }
-`;
+`
 
-const Img = SC.img``;
+const Img = SC.img``
 
 export const WorkWithUs = (props: any) => {
-  const {t} = useTranslation('common');
+  const { t } = useTranslation('common')
   return (
     <Container id="workWithUs">
       <Content>
@@ -151,5 +150,5 @@ export const WorkWithUs = (props: any) => {
         </RightColumn>
       </Content>
     </Container>
-  );
-};
+  )
+}

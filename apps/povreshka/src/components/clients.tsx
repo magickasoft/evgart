@@ -1,10 +1,9 @@
-import SC from '@emotion/styled';
-import {useTranslation} from 'next-i18next';
-import React from 'react';
+import SC from '@emotion/styled'
+import { useTranslation } from 'next-i18next'
 
-import {ibmplexsans400, maxDevice} from '../styles';
-import {ClientCard} from './cards';
-import {Slider} from './slider';
+import { ibmplexsans400, maxDevice } from '../styles'
+import { ClientCard } from './cards'
+import { Slider } from './slider'
 
 const Container = SC.section`
   overflow: hidden;
@@ -12,7 +11,7 @@ const Container = SC.section`
   @media ${maxDevice.tablet} {
     padding: 0 0 30px 0;
   }
-`;
+`
 
 const Content = SC.div`
   font-family: ${ibmplexsans400.style.fontFamily};
@@ -20,7 +19,7 @@ const Content = SC.div`
   @media ${maxDevice.tablet} {
     padding: 30px 30px 0 30px;
   }
-`;
+`
 
 const H3 = SC.h3`
   font-weight: 600;
@@ -34,7 +33,7 @@ const H3 = SC.h3`
     font-size: 22px;
     margin: 0 0 8px 0;
   }
-`;
+`
 
 const slideData = [
   {
@@ -73,10 +72,10 @@ const slideData = [
     executive: 'HomePage.Clients.clientExecutive6',
     position: 'HomePage.Clients.clientPosition6',
   },
-];
+]
 
 export const Clients = (props: any) => {
-  const {t} = useTranslation('common');
+  const { t } = useTranslation('common')
   return (
     <Container id="clients">
       <Content>
@@ -88,5 +87,5 @@ export const Clients = (props: any) => {
         ))}
       </Slider>
     </Container>
-  );
-};
+  )
+}

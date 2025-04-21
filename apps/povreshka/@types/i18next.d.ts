@@ -5,17 +5,17 @@
  *
  * @link https://www.i18next.com/overview/typescript
  */
-import 'i18next';
+import 'i18next'
 
-import type common from '../public/locales/ru/common.json';
+import type common from '../public/locales/ru/common.json'
 
 interface I18nNamespaces {
-  common: typeof common;
+  common: typeof common
 }
 
 declare module 'i18next' {
   interface CustomTypeOptions {
-    defaultNS: 'common';
-    resources: I18nNamespaces;
+    defaultNS: 'common'
+    resources: I18nNamespaces
   }
 }

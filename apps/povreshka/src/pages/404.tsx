@@ -1,12 +1,12 @@
-import SC from '@emotion/styled';
-import type {GetStaticProps, InferGetStaticPropsType} from 'next';
-import Link from 'next/link';
-import {useTranslation} from 'next-i18next';
+import SC from '@emotion/styled'
+import type { GetStaticProps, InferGetStaticPropsType } from 'next'
+import { useTranslation } from 'next-i18next'
+import Link from 'next/link'
 
-import {Page} from '../components';
-import {Icon} from '../components/icon';
-import {baseStaticProps} from '../helpers/baseStaticProps';
-import {maxDevice} from '../styles';
+import { Page } from '../components'
+import { Icon } from '../components/icon'
+import { baseStaticProps } from '../helpers/baseStaticProps'
+import { maxDevice } from '../styles'
 
 const Title = SC.div`
   white-space: pre-line;
@@ -23,7 +23,7 @@ const Title = SC.div`
     font-size: 30px;
     line-height: 36px;
   }
-`;
+`
 const Text = SC.div`
   width: 560px;
   margin-top: 40px;
@@ -44,24 +44,24 @@ const Text = SC.div`
     font-size: 16px;
     line-height: 20px;
   }
-`;
+`
 
 const NotFound = SC(Icon)`
   @media ${maxDevice.mobileL} {
     width: 90%;
   }
-`;
+`
 const Img = SC.div`
   display: flex;
   justify-content: flex-end;
-`;
+`
 
 type NotFoundPageProps = {
   // Add custom props here
-};
+}
 
 const NotFoundPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const {t} = useTranslation('common');
+  const { t } = useTranslation('common')
   return (
     <Page>
       <div>
@@ -77,9 +77,9 @@ const NotFoundPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) =>
         <NotFound name="notFound" size="260" />
       </Img>
     </Page>
-  );
-};
+  )
+}
 
-export const getStaticProps: GetStaticProps<NotFoundPageProps> = baseStaticProps;
+export const getStaticProps: GetStaticProps<NotFoundPageProps> = baseStaticProps
 
-export default NotFoundPage;
+export default NotFoundPage

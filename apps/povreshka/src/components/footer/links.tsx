@@ -1,9 +1,9 @@
-import SC from '@emotion/styled';
-import {useTranslation} from 'next-i18next';
-import React from 'react';
+import SC from '@emotion/styled'
+import { useTranslation } from 'next-i18next'
+import React from 'react'
 
-import {minDevice} from '../../styles';
-import {LinkProps, LinksProps} from './links.d';
+import { minDevice } from '../../styles'
+import { LinkProps, LinksProps } from './links.d'
 
 const Container = SC.div`
   display: flex;
@@ -11,7 +11,7 @@ const Container = SC.div`
   @media ${minDevice.tablet} {
     margin-left: auto;
   }
-`;
+`
 
 const Link = SC.a`
   color: #181818;
@@ -38,7 +38,7 @@ const Link = SC.a`
     font-size: 14px;
     font-weight: normal;
   }
-`;
+`
 
 /**
  * Renders a list of social links with translated labels.
@@ -48,16 +48,16 @@ const Link = SC.a`
  * @param {React.CSSProperties} [props.style] - The style object for the container.
  * @returns {JSX.Element} - The rendered Links component.
  */
-export const Links = ({list = [], ...props}: LinksProps): JSX.Element => {
-  const {t} = useTranslation('common');
+export const Links = ({ list = [], ...props }: LinksProps): JSX.Element => {
+  const { t } = useTranslation('common')
 
   return (
     <Container {...props}>
-      {list.map(({label, ...restProps}: LinkProps) => (
+      {list.map(({ label, ...restProps }: LinkProps) => (
         <Link key={label} {...restProps}>
           {t(label)}
         </Link>
       ))}
     </Container>
-  );
-};
+  )
+}

@@ -1,13 +1,12 @@
-import {useTranslation} from 'next-i18next';
-import React from 'react';
+import { useTranslation } from 'next-i18next'
 
-import {TechCard} from '../cards';
-import {Slider} from '../slider';
-import {responsive, slides} from './constants';
-import {Container, Content, H3} from './techstacks.sc';
+import { TechCard } from '../cards'
+import { Slider } from '../slider'
+import { responsive, slides } from './constants'
+import { Container, Content, H3 } from './techstacks.sc'
 
 export const TechStacks = (props: any) => {
-  const {t} = useTranslation('common');
+  const { t } = useTranslation('common')
   return (
     <Container id="techStacks">
       <Content>
@@ -19,5 +18,5 @@ export const TechStacks = (props: any) => {
         ))}
       </Slider>
     </Container>
-  );
-};
+  )
+}

@@ -1,14 +1,14 @@
 export const RECIPES_OBJ: {
   [key: string]: {
-    key: string;
-    name: string;
-    img: string | null;
-    title: string;
-    description: string;
-    time: number;
-    level: number;
-    rating: number;
-  }[];
+    key: string
+    name: string
+    img: string | null
+    title: string
+    description: string
+    time: number
+    level: number
+    rating: number
+  }[]
 } = {
   breakfast: [
     {
@@ -78,4 +78,4 @@ export const RECIPES_OBJ: {
       rating: 5,
     },
   ],
-};
+}

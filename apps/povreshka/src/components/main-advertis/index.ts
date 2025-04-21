@@ -1,1 +1,1 @@
-export {MainAdvertis} from './mainAdverstis';
+export { MainAdvertis } from './mainAdverstis'

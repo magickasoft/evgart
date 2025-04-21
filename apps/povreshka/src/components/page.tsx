@@ -1,7 +1,6 @@
-import SC from '@emotion/styled';
-import React from 'react';
+import SC from '@emotion/styled'
 
-import {ibmplexsans400, maxDevice} from '../styles';
+import { ibmplexsans400, maxDevice } from '../styles'
 
 const Container = SC.header`
   font-family: ${ibmplexsans400.style.fontFamily};
@@ -16,7 +15,7 @@ const Container = SC.header`
   @media ${maxDevice.laptopL} {
     flex-direction: column;
   }
-`;
+`
 
 const Label = SC.div`
   white-space: pre-line;
@@ -31,7 +30,7 @@ const Label = SC.div`
     font-size: 30px;
     line-height: 36px;
   }
-`;
+`
 
 const Text = SC.div`
   white-space: pre-line;
@@ -41,18 +40,18 @@ const Text = SC.div`
   line-height: 20px;
   color: #777777;
   max-width: 760px;
-`;
+`
 const Content = SC.div`
   width: 100%;
-`;
+`
 
 type PageProps = {
-  label?: any;
-  text?: any;
-  children?: any;
-};
+  label?: any
+  text?: any
+  children?: any
+}
 
-export const Page = ({label, text, children}: PageProps) => (
+export const Page = ({ label, text, children }: PageProps) => (
   <Container>
     <Content>
       {label && <Label>{label}</Label>}
@@ -60,4 +59,4 @@ export const Page = ({label, text, children}: PageProps) => (
       {children}
     </Content>
   </Container>
-);
+)

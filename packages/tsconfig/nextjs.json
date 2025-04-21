@@ -19,5 +19,15 @@
     "jsx": "preserve"
   },
   "include": ["src", "next-env.d.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "overrides": [
+    {
+      "files": "*.ts",
+      "options": {
+        "parser": "typescript",
+        "trailingComma": "all",
+        "bracketSameLine": false
+      }
+    }
+  ]
 }

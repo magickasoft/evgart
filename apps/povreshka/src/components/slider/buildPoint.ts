@@ -12,12 +12,12 @@ export const buildPoint = (breakpoint: number) => (slidesToShow: number, slidesT
     slidesToShow,
     slidesToScroll,
   },
-});
+})
 
-export const point2560 = buildPoint(2560);
+export const point2560 = buildPoint(2560)
 
-export const point1440 = buildPoint(1440);
+export const point1440 = buildPoint(1440)
 
-export const point1024 = buildPoint(1024);
+export const point1024 = buildPoint(1024)
 
-export const point768 = buildPoint(768);
+export const point768 = buildPoint(768)

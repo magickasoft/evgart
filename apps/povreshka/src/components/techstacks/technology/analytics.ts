@@ -22,4 +22,4 @@ export const analytics = {
     'Mode',
     'Affise',
   ],
-};
+}

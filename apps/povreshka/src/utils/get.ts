@@ -7,16 +7,16 @@
  * @return {any} The value of the nested property or the default value
  */
 export function get(obj: any, path: string, defaultValue: any = undefined): any {
-  const pathParts = path.split(/[,[\].]+/);
+  const pathParts = path.split(/[,[\].]+/)
 
-  let result = obj;
+  let result = obj
   for (const part of pathParts) {
     if (result === null || result === undefined) {
-      return defaultValue;
+      return defaultValue
     }
 
-    result = result[part];
+    result = result[part]
   }
 
-  return result === undefined ? defaultValue : result;
+  return result === undefined ? defaultValue : result
 }

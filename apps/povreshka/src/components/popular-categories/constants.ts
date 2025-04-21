@@ -41,4 +41,4 @@ export const CATEGORIES_ARR = [
     img: '/static/main-page-imgs/snacks.png',
     color: '#d5d3cd',
   },
-];
+]

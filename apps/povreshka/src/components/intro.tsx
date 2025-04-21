@@ -1,9 +1,8 @@
-import SC from '@emotion/styled';
-import {useTranslation} from 'next-i18next';
-import React from 'react';
+import SC from '@emotion/styled'
+import { useTranslation } from 'next-i18next'
 
-import {ibmplexsans400, maxDevice} from '../styles';
-import {CompaniesList} from './companiesList';
+import { ibmplexsans400, maxDevice } from '../styles'
+import { CompaniesList } from './companiesList'
 
 const Container = SC.div`
   font-family: ${ibmplexsans400.style.fontFamily};
@@ -11,7 +10,7 @@ const Container = SC.div`
   @media ${maxDevice.tablet} {
     padding: 18vh 30px 0 30px;
   }
-`;
+`
 
 const Brand = SC.h1`
   font-weight: 400;
@@ -27,10 +26,10 @@ const Brand = SC.h1`
     font-size: 22px;
     margin: 0 0 8px 0;
   }
-`;
+`
 
 export const Intro = (props: any) => {
-  const {t} = useTranslation('common');
+  const { t } = useTranslation('common')
   return (
     <section id="intro">
       <Container>
@@ -38,5 +37,5 @@ export const Intro = (props: any) => {
       </Container>
       <CompaniesList />
     </section>
-  );
-};
+  )
+}

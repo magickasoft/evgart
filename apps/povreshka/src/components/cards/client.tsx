@@ -1,8 +1,7 @@
-import SC from '@emotion/styled';
-import {useTranslation} from 'next-i18next';
-import React from 'react';
+import SC from '@emotion/styled'
+import { useTranslation } from 'next-i18next'
 
-import {minDevice} from '../../styles';
+import { minDevice } from '../../styles'
 
 const Container = SC.div`
   margin: 0 auto;
@@ -15,7 +14,7 @@ const Container = SC.div`
   @media ${minDevice.laptop} {
     padding: 0 15px;
   }
-`;
+`
 
 const Desc = SC.div`
   background: url('/static/icon-quote.svg') no-repeat 0 0;
@@ -30,7 +29,7 @@ const Desc = SC.div`
   @media ${minDevice.laptop} {
     padding: 0 0 0 10.5rem;
   }
-`;
+`
 
 const P = SC.p`
   font-size: 1rem;
@@ -44,7 +43,7 @@ const P = SC.p`
   @media ${minDevice.laptop} {
     margin: 0 0 2.5rem;
   }
-`;
+`
 
 const User = SC.div`
   margin: 0 0 0 3.625rem;
@@ -58,7 +57,7 @@ const User = SC.div`
     margin: 0 0 0 10.5rem;
     padding: 0 0 0 4rem;
   }
-`;
+`
 
 const Photo = SC.div`
   height: 2.25rem;
@@ -72,7 +71,7 @@ const Photo = SC.div`
     top: 0;
     width: 2.8125rem;
   }
-`;
+`
 
 const Img = SC.img`
   border-radius: 50%;
@@ -82,7 +81,7 @@ const Img = SC.img`
   @media ${minDevice.tablet} {
     width: 2.5rem;
   }
-`;
+`
 
 const H4 = SC.h4`
   font-weight: 400;
@@ -94,7 +93,7 @@ const H4 = SC.h4`
     line-height: 1.375rem;
     margin: 0 0 0.25rem;
   }
-`;
+`
 
 const Position = SC.p`
   color: #828290;
@@ -109,17 +108,17 @@ const Position = SC.p`
   @media ${minDevice.laptop} {
     font-size: 1rem;
   }
-`;
+`
 
 type ClientCardProps = {
-  src?: any;
-  desc?: any;
-  position?: any;
-  executive?: any;
-};
+  src?: any
+  desc?: any
+  position?: any
+  executive?: any
+}
 
-export const ClientCard = ({src, desc, position, executive}: ClientCardProps) => {
-  const {t} = useTranslation('common');
+export const ClientCard = ({ src, desc, position, executive }: ClientCardProps) => {
+  const { t } = useTranslation('common')
   return (
     <Container>
       <Desc>
@@ -135,5 +134,5 @@ export const ClientCard = ({src, desc, position, executive}: ClientCardProps) =>
         {position && <Position>{t(position)}</Position>}
       </User>
     </Container>
-  );
-};
+  )
+}

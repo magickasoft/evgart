@@ -1,8 +1,7 @@
-import SC from '@emotion/styled';
-import Image from 'next/image';
-import React from 'react';
+import SC from '@emotion/styled'
+import Image from 'next/image'
 
-import {minDevice} from '../../styles';
+import { minDevice } from '../../styles'
 
 const Card = SC.div`
   background-color: #f7f5f6;
@@ -20,7 +19,7 @@ const Card = SC.div`
   &:hover {
     opacity: 0.8;
   }
-`;
+`
 
 const ImageBlock = SC.div`
   display: flex;
@@ -29,7 +28,7 @@ const ImageBlock = SC.div`
   flex: 1;
   min-height: 150px;
   background: #ccc;
-`;
+`
 
 const Content = SC.div`
   display: flex;
@@ -38,7 +37,7 @@ const Content = SC.div`
   justify-content: flex-start;
   flex: 1;
   flex-direction: column;
-`;
+`
 
 const Title = SC.div`
   font-size: 16px;
@@ -49,7 +48,7 @@ const Title = SC.div`
   @media ${minDevice.laptop} {
     font-size: 18px;
   }
-`;
+`
 
 const Description = SC.div`
   font-size: 12px;
@@ -62,7 +61,7 @@ const Description = SC.div`
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
-`;
+`
 
 const Characteristic = SC.div`
   display: flex;
@@ -74,16 +73,16 @@ const Characteristic = SC.div`
   font-size: 12px;
   line-height: 1.2;
   color: #333;
-`;
+`
 
 export const RecipeCard = (props: {
-  name: string;
-  img: string | null;
-  title: string;
-  description: string;
-  time: number;
-  level: number;
-  rating: number;
+  name: string
+  img: string | null
+  title: string
+  description: string
+  time: number
+  level: number
+  rating: number
 }) => {
   return (
     <Card>
@@ -100,5 +99,5 @@ export const RecipeCard = (props: {
         </Characteristic>
       </Content>
     </Card>
-  );
-};
+  )
+}

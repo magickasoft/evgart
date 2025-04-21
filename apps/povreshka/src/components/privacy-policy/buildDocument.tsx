@@ -1,4 +1,4 @@
-import type {ComponentContentPair, Document} from './privacy-policy.d';
+import type { ComponentContentPair, Document } from './privacy-policy.d'
 
 /**
  * Builds a React node array from the given Document array.
@@ -8,12 +8,12 @@ import type {ComponentContentPair, Document} from './privacy-policy.d';
  */
 export const buildDocument = (documentArray: Document): Array<React.ReactNode> => {
   return documentArray.flatMap((item, index) => {
-    const [Component, content] = item as ComponentContentPair;
-    const isArray = Array.isArray(content);
+    const [Component, content] = item as ComponentContentPair
+    const isArray = Array.isArray(content)
     return isArray ? (
-      content.map((term, i) => <Component key={`${index}_${i}`} dangerouslySetInnerHTML={{__html: term}} />)
+      content.map((term, i) => <Component key={`${index}_${i}`} dangerouslySetInnerHTML={{ __html: term }} />)
     ) : (
-      <Component key={index} dangerouslySetInnerHTML={{__html: content}} />
-    );
-  });
-};
+      <Component key={index} dangerouslySetInnerHTML={{ __html: content }} />
+    )
+  })
+}

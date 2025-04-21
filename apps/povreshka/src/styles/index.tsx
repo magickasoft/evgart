@@ -1,17 +1,16 @@
-import {css, Global} from '@emotion/react';
-import {IBM_Plex_Sans} from 'next/font/google';
-import React from 'react';
+import { css, Global } from '@emotion/react'
+import { IBM_Plex_Sans } from 'next/font/google'
 
-import {colors, formatterColor} from './colors';
+import { colors, formatterColor } from './colors'
 
-export {breakpoint, maxDevice, minDevice} from './device';
+export { breakpoint, maxDevice, minDevice } from './device'
 
 export const theme = {
   colors,
   formatterColor,
-};
+}
 
-export const ibmplexsans400 = IBM_Plex_Sans({weight: '400', subsets: ['latin']});
+export const ibmplexsans400 = IBM_Plex_Sans({ weight: '400', subsets: ['latin'] })
 
 export const GlobalStyle = (props: any) => (
   <Global
@@ -103,4 +102,4 @@ export const GlobalStyle = (props: any) => (
       }
     `}
   />
-);
+)

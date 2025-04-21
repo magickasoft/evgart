@@ -1,12 +1,11 @@
-import SC from '@emotion/styled';
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
+import SC from '@emotion/styled'
+import Image from 'next/image'
+import Link from 'next/link'
 
-import {maxDevice, minDevice} from '../../styles';
+import { minDevice } from '../../styles'
 
-const Card = SC.div<{color?: string}>`
-  background-color: ${({color}) => color || '#f7f5f6'};
+const Card = SC.div<{ color?: string }>`
+  background-color: ${({ color }) => color || '#f7f5f6'};
   padding: 20px;
   position: relative;
   display: flex;
@@ -20,7 +19,7 @@ const Card = SC.div<{color?: string}>`
   &:hover {
     opacity: 0.8;
   }
-`;
+`
 
 const Title = SC.div`
   font-size: 14px;
@@ -38,22 +37,28 @@ const Title = SC.div`
   left: 15px;
   bottom: 15px;
   text-align: left;
-`;
+`
 
 const Content = SC.div`
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 1;
-`;
+`
 
-export const CategoryCard = (props: {key: string; img: string | null; label: string; color: string; name: string}) => {
+export const CategoryCard = (props: {
+  key: string
+  img: string | null
+  label: string
+  color: string
+  name: string
+}) => {
   return (
-    <Link href={`/category/${props.name}`} style={{textDecoration: 'none'}}>
+    <Link href={`/category/${props.name}`} style={{ textDecoration: 'none' }}>
       <Card color={props.color}>
         <Content>{props.img && <Image width="240" height="220" src={props.img} alt="icon" priority />}</Content>
         <Title>{props.label}</Title>
       </Card>
     </Link>
-  );
-};
+  )
+}

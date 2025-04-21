@@ -1,6 +1,4 @@
-import React from 'react';
-
-export const template = ({color = '#777777', paths = [], ...rest}: any) => (
+export const template = ({ color = '#777777', paths = [], ...rest }: any) => (
   <svg viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg" {...rest}>
     <g fill={color} fillRule="nonzero">
       {paths.map((path: string, i: number) => (
@@ -8,7 +6,7 @@ export const template = ({color = '#777777', paths = [], ...rest}: any) => (
       ))}
     </g>
   </svg>
-);
+)
 export const whatsApp = (props: any) =>
   template({
     paths: [
@@ -16,7 +14,7 @@ export const whatsApp = (props: any) =>
       'M31 0C13.88 0 0 13.88 0 31c0 17.12 13.88 31 31 31 17.12 0 31-13.88 31-31C62 13.88 48.12 0 31 0zm1.283 47.573h-.007c-3 0-5.948-.75-8.566-2.171l-9.502 2.48 2.543-9.243a17.735 17.735 0 0 1-2.392-8.918c.003-9.836 8.044-17.838 17.924-17.838 4.795.002 9.296 1.86 12.68 5.232 3.384 3.371 5.247 7.853 5.245 12.62-.004 9.836-8.046 17.838-17.925 17.838z',
     ],
     ...props,
-  });
+  })
 
 export const telegram = (props: any) =>
   template({
@@ -25,4 +23,4 @@ export const telegram = (props: any) =>
       'M22.966 41.977l.606-5.754 16.807-16.43-20.29 13.325z',
     ],
     ...props,
-  });
+  })
