@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://povreshka.vercel.app',
+  siteUrl: process.env.SITE_URL || 'https://povreshka.vercel.app',
   sitemapSize: 5000,
   generateRobotsTxt: true,
   changefreq: 'daily',
