@@ -1,8 +1,8 @@
 # *
 User-agent: *
 Allow: /
-Disallow: /api*
-Disallow: /_next*
+Disallow: /api/
+Disallow: /_next/
 Crawl-delay: 1
 
 # Host
