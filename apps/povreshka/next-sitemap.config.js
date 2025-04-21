@@ -1,14 +1,16 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://povreshka.vercel.app',
+  siteUrl: 'povreshka.vercel.app',
   sitemapSize: 7000,
   generateRobotsTxt: true,
+  changefreq: 'daily',
+  priority: 0.7,
   robotsTxtOptions: {
     policies: [
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/*', '/_next/*'],
+        disallow: ['/api*', '/_next*'],
         crawlDelay: 1,
       },
     ],

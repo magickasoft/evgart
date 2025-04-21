@@ -1,12 +1,12 @@
 # *
 User-agent: *
 Allow: /
-Disallow: /api/*
-Disallow: /_next/*
+Disallow: /api*
+Disallow: /_next*
 Crawl-delay: 1
 
 # Host
-Host: https://povreshka.vercel.app
+Host: povreshka.vercel.app
 
 # Sitemaps
-Sitemap: https://povreshka.vercel.app/sitemap.xml
+Sitemap: povreshka.vercel.app/sitemap.xml
