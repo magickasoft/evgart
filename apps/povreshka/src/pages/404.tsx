@@ -1,7 +1,7 @@
 import SC from '@emotion/styled'
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
-import { useTranslation } from 'next-i18next'
 import Link from 'next/link'
+import { useTranslation } from 'next-i18next'
 
 import { Page } from '../components'
 import { Icon } from '../components/icon'

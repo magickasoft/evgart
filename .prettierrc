@@ -9,6 +9,5 @@
   "printWidth": 120,
   "endOfLine": "auto",
   "quoteProps": "as-needed",
-  "jsxSingleQuote": false,
-  "plugins": ["prettier-plugin-organize-imports"]
+  "jsxSingleQuote": false
 }

@@ -1,16 +1,16 @@
 import { CacheProvider } from '@emotion/react'
 import { Analytics } from '@vercel/analytics/react'
-import { appWithTranslation, useTranslation } from 'next-i18next'
 import Head from 'next/head'
 import Router, { useRouter } from 'next/router'
 import Script from 'next/script'
+import { appWithTranslation, useTranslation } from 'next-i18next'
 import React from 'react'
 
 import nextI18NextConfig from '../../next-i18next.config'
 import { Footer, Header } from '../components/'
 import { createEmotionCache } from '../helpers/createEmotionCache'
 import { GA_MEASUREMENT_ID, pageview } from '../helpers/gtag'
-import { YA_METRIKA_ID, withYM } from '../helpers/ym'
+import { withYM, YA_METRIKA_ID } from '../helpers/ym'
 import { GlobalStyle } from '../styles/'
 
 const clientSideEmotionCache = createEmotionCache()
