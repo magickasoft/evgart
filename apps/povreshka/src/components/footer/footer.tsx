@@ -1,10 +1,6 @@
-import React from 'react';
-
-import {details, docsLinks, links} from './constants';
-import {Details} from './details';
-import {A, Contacts, Container, Content, Docs, Email} from './footer.sc';
-import {NavLinks} from './nav-links';
-import {Copyright} from './сopyright';
+import { docsLinks } from './constants'
+import { Container, Content, Docs } from './footer.sc'
+import { Copyright } from './сopyright'
 
 /**
  * Renders the Footer component with contact information, policy links, navigation links, and social links.
@@ -28,5 +24,5 @@ export const Footer = (props: any): JSX.Element => {
         <Copyright />
       </Content>
     </Container>
-  );
-};
+  )
+}

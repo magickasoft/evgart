@@ -20,4 +20,4 @@ export const backend = {
     'RabbitMQ',
     'ActiveMQ',
   ],
-};
+}

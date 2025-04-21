@@ -1,5 +1,5 @@
-import type {Document} from '../privacy-policy.d';
-import {Block, H2, H3} from '../privacy-policy.sc';
+import type { Document } from '../privacy-policy.d'
+import { Block, H2, H3 } from '../privacy-policy.sc'
 
 export const ru: Document = [
   [H2, 'ОБЩИЕ ПОЛОЖЕНИЯ'],
@@ -212,4 +212,4 @@ export const ru: Document = [
       '7.2. Действующая электронная версия Политики хранится — на сайте Оператора по адресу <a target="_blank" href="https://evgart-hr.ru/#clients" title="">https://evgart-hr.ru/#clients</a>',
     ],
   ],
-];
+]

@@ -1,7 +1,6 @@
-import SC from '@emotion/styled';
-import React from 'react';
+import SC from '@emotion/styled'
 
-import {minDevice} from '../../styles';
+import { minDevice } from '../../styles'
 
 const Container = SC.div`
   margin: 20px;
@@ -15,7 +14,7 @@ const Container = SC.div`
     box-shadow: 0 4px 18px 8px rgb(0 0 0 / 6%);
     border-radius: 30px;
   }
-`;
+`
 
 const Caption = SC.div`
   display: flex;
@@ -25,7 +24,7 @@ const Caption = SC.div`
   @media ${minDevice.laptop} {
         position: relative;
   }
-`;
+`
 
 const Title = SC.div`
   position: relative;
@@ -50,7 +49,7 @@ const Title = SC.div`
       background: url(/static/technology-black.svg) no-repeat center / contain;
     }
   }
-`;
+`
 
 const Ul = SC.ul`
   height: 42px;
@@ -63,7 +62,7 @@ const Ul = SC.ul`
   height: auto;
   overflow: hidden;
   transition: all .3s ease;
-`;
+`
 
 const Li = SC.li`
   display: inline-block;
@@ -82,13 +81,13 @@ const Li = SC.li`
     padding: 0 18px;
     margin: 0 3px 13px 2px;
   }
-`;
+`
 
 type TechCardProps = {
-  items: any;
-};
+  items: any
+}
 
-export const TechCard = ({items = []}: TechCardProps) => (
+export const TechCard = ({ items = [] }: TechCardProps) => (
   <>
     {items.map((o: any, index: number) => (
       <Container key={index}>
@@ -99,4 +98,4 @@ export const TechCard = ({items = []}: TechCardProps) => (
       </Container>
     ))}
   </>
-);
+)

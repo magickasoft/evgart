@@ -1,6 +1,6 @@
-import SC from '@emotion/styled';
+import SC from '@emotion/styled'
 
-import {ibmplexsans400, maxDevice} from '../../styles';
+import { maxDevice } from '../../styles'
 
 export const Container = SC.section`
   background-color: #ffffff;
@@ -13,13 +13,13 @@ export const Container = SC.section`
   @media ${maxDevice.tablet} {
     padding: 0 0 20px 0;
   }
-`;
+`
 
 export const Grid = SC.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
-`;
+`
 
 export const H5 = SC.h5`
   font-weight: 600;
@@ -33,4 +33,4 @@ export const H5 = SC.h5`
     font-size: 22px;
     margin: 0 0 8px 0;
   }
-`;
+`

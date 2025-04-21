@@ -28,4 +28,4 @@ export const devOps = {
     'Rancher',
     'Serverless',
   ],
-};
+}

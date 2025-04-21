@@ -1,9 +1,6 @@
-import SC from '@emotion/styled';
-import React from 'react';
+import SC from '@emotion/styled'
 
-import {minDevice} from '../../styles';
-import {socialLinks} from './constants';
-import {Links} from './links';
+import { minDevice } from '../../styles'
 
 const Container = SC.div`
   display: flex;
@@ -13,7 +10,7 @@ const Container = SC.div`
   @media ${minDevice.tablet} {
     flex-direction: row;
   }
-`;
+`
 
 const Label = SC.div`
   padding: 1rem 0 0;
@@ -23,7 +20,7 @@ const Label = SC.div`
   @media ${minDevice.tablet} {
     padding: 0;
   }
-`;
+`
 
 /**
  * Renders the Copyright component with the current year and social links.
@@ -31,11 +28,11 @@ const Label = SC.div`
  * @returns {JSX.Element} The rendered Copyright component
  */
 export const Copyright = (): JSX.Element => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear()
   return (
     <Container>
       <Label>© Повар-Ешка, {currentYear}</Label>
       {/* <Links list={socialLinks} /> */}
     </Container>
-  );
-};
+  )
+}

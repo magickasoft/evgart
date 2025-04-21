@@ -1,33 +1,33 @@
-import {CacheProvider} from '@emotion/react';
-import {Analytics} from '@vercel/analytics/react';
-import Head from 'next/head';
-import Router, {useRouter} from 'next/router';
-import Script from 'next/script';
-import {appWithTranslation, useTranslation} from 'next-i18next';
-import React from 'react';
+import { CacheProvider } from '@emotion/react'
+import { Analytics } from '@vercel/analytics/react'
+import Head from 'next/head'
+import Router, { useRouter } from 'next/router'
+import Script from 'next/script'
+import { appWithTranslation, useTranslation } from 'next-i18next'
+import React from 'react'
 
-import nextI18NextConfig from '../../next-i18next.config';
-import {Footer, Header} from '../components/';
-import {createEmotionCache} from '../helpers/createEmotionCache';
-import {GA_MEASUREMENT_ID, pageview} from '../helpers/gtag';
-import {withYM, YA_METRIKA_ID} from '../helpers/ym';
-import {GlobalStyle} from '../styles/';
+import nextI18NextConfig from '../../next-i18next.config'
+import { Footer, Header } from '../components/'
+import { createEmotionCache } from '../helpers/createEmotionCache'
+import { GA_MEASUREMENT_ID, pageview } from '../helpers/gtag'
+import { withYM, YA_METRIKA_ID } from '../helpers/ym'
+import { GlobalStyle } from '../styles/'
 
-const clientSideEmotionCache = createEmotionCache();
+const clientSideEmotionCache = createEmotionCache()
 
-const App = ({Component, emotionCache = clientSideEmotionCache, pageProps}: any) => {
-  const {t} = useTranslation('common');
-  const router = useRouter();
+const App = ({ Component, emotionCache = clientSideEmotionCache, pageProps }: any) => {
+  const { t } = useTranslation('common')
+  const router = useRouter()
   React.useEffect(() => {
-    const handleRouteChange = (url: any) => pageview(url);
-    router.events.on('routeChangeComplete', handleRouteChange);
-    router.events.on('hashChangeComplete', handleRouteChange);
+    const handleRouteChange = (url: any) => pageview(url)
+    router.events.on('routeChangeComplete', handleRouteChange)
+    router.events.on('hashChangeComplete', handleRouteChange)
 
     return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
-      router.events.off('hashChangeComplete', handleRouteChange);
-    };
-  }, [router.events]);
+      router.events.off('routeChangeComplete', handleRouteChange)
+      router.events.off('hashChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
 
   return (
     <CacheProvider value={emotionCache}>
@@ -63,9 +63,9 @@ const App = ({Component, emotionCache = clientSideEmotionCache, pageProps}: any)
       <Footer />
       <Analytics />
     </CacheProvider>
-  );
-};
-const AppYM = withYM(YA_METRIKA_ID, Router)(App);
-const AppWithTranslation: any = appWithTranslation(AppYM, nextI18NextConfig);
+  )
+}
+const AppYM = withYM(YA_METRIKA_ID, Router)(App)
+const AppWithTranslation: any = appWithTranslation(AppYM, nextI18NextConfig)
 
-export default AppWithTranslation;
+export default AppWithTranslation

@@ -1,6 +1,4 @@
-import React from 'react';
-
-export const ru = ({color, ...rest}: any) => {
+export const ru = ({ color, ...rest }: any) => {
   return (
     <svg viewBox="0 0 28 20" {...rest}>
       <defs>
@@ -15,5 +13,5 @@ export const ru = ({color, ...rest}: any) => {
         <path fill="#D80227" d="M0 13h28v20H0z" mask="url(#b)" />
       </g>
     </svg>
-  );
-};
+  )
+}

@@ -1,23 +1,23 @@
 export const socialLinks = [
-  {label: 'Footer.socialLink1', target: '_blank', href: 'https://www.facebook.com/groups/505514035070734'},
-  {label: 'Footer.socialLink2', target: '_blank', href: 'https://vc.ru/s/1479203-magickasoft'},
-  {label: 'Footer.socialLink3', target: '_blank', href: 'https://youtube.com/@magickasoft'},
+  { label: 'Footer.socialLink1', target: '_blank', href: 'https://www.facebook.com/groups/505514035070734' },
+  { label: 'Footer.socialLink2', target: '_blank', href: 'https://vc.ru/s/1479203-magickasoft' },
+  { label: 'Footer.socialLink3', target: '_blank', href: 'https://youtube.com/@magickasoft' },
   {
     label: 'Footer.socialLink4',
     target: '_blank',
     href: 'https://career.habr.com/companies/magickasoft',
   },
-  {label: 'Footer.socialLink5', target: '_blank', href: 'https://vk.com/magickasoft'},
-  {label: 'Footer.socialLink6', target: '_blank', href: 'https://dzen.ru/magickasoft'},
-];
+  { label: 'Footer.socialLink5', target: '_blank', href: 'https://vk.com/magickasoft' },
+  { label: 'Footer.socialLink6', target: '_blank', href: 'https://dzen.ru/magickasoft' },
+]
 
 export const links = [
-  {label: 'Footer.link1', href: '/#intro'},
-  {label: 'Footer.link2', href: '/#services'},
-  {label: 'Footer.link4', href: '/#techStacks'},
-  {label: 'Footer.link5', href: '/#workWithUs'},
-  {label: 'Footer.link6', href: '/#clients'},
-];
+  { label: 'Footer.link1', href: '/#intro' },
+  { label: 'Footer.link2', href: '/#services' },
+  { label: 'Footer.link4', href: '/#techStacks' },
+  { label: 'Footer.link5', href: '/#workWithUs' },
+  { label: 'Footer.link6', href: '/#clients' },
+]
 
 export const docsLinks = [
   {
@@ -38,11 +38,11 @@ export const docsLinks = [
     href: 'https://docs.google.com/document/d/1ziErA3MxZF9gngUIXRC56u3nEiJYEkGbOvWCCc1bRdI/edit',
     // href: 'https://docs.google.com/document/d/1xtBRcUstvJ-ayEplxVBzdK2PxzlyoYWXKvOuxYC9VJk/edit',
   },
-];
+]
 
 export const details = [
   'Шмаков Евгений Сергеевич',
   'ИНН: 540863710354',
   'Телефон: +7 953 764 70 35',
   'Почта: sjs-master@yandex.ru',
-];
+]

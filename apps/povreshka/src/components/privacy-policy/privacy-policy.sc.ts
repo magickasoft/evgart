@@ -1,6 +1,6 @@
-import SC from '@emotion/styled';
+import SC from '@emotion/styled'
 
-import {ibmplexsans400, maxDevice} from '../../styles';
+import { ibmplexsans400, maxDevice } from '../../styles'
 
 export const Container = SC.div`
   font-family: ${ibmplexsans400.style.fontFamily};
@@ -8,7 +8,7 @@ export const Container = SC.div`
   @media ${maxDevice.tablet} {
     padding: 18vh 30px 0 30px;
   }
-`;
+`
 
 export const H1 = SC.h1`
   font-weight: 600;
@@ -20,7 +20,7 @@ export const H1 = SC.h1`
     font-size: 1.375rem;
     margin: 0 0 0.5rem 0;
   }
-`;
+`
 
 export const H2 = SC.h2`
   font-weight: 600;
@@ -32,7 +32,7 @@ export const H2 = SC.h2`
     font-size: 0.875rem;
     margin: 0.75rem 0 0.5rem 0;
   }
-`;
+`
 
 export const H3 = SC.h3`
   font-weight: 500;
@@ -44,7 +44,7 @@ export const H3 = SC.h3`
     font-size: 0.825rem;
     margin: 0.75rem 0 0.5rem 0;
   }
-`;
+`
 
 export const Block = SC.p`
   font-weight: 400;
@@ -56,4 +56,4 @@ export const Block = SC.p`
     font-size: 0.825rem;
     margin: 0 0 0.5rem 0;
   }
-`;
+`

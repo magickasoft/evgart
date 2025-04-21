@@ -1,9 +1,8 @@
-import Head from 'next/head';
-import {useTranslation} from 'next-i18next';
-import React from 'react';
+import Head from 'next/head'
+import { useTranslation } from 'next-i18next'
 
 export const Meta = () => {
-  const {t} = useTranslation('common');
+  const { t } = useTranslation('common')
   return (
     <Head>
       <meta property="article:published_time" content={new Date().toISOString()} />
@@ -24,5 +23,5 @@ export const Meta = () => {
       <meta name="twitter:card" content={t('HomePage.SEO.twitter.card')} />
       <meta property="twitter:url" content={t('HomePage.SEO.twitter.url')} />
     </Head>
-  );
-};
+  )
+}

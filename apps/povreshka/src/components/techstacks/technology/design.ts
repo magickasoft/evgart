@@ -13,4 +13,4 @@ export const design = {
     'Hotjar',
     'figma',
   ],
-};
+}

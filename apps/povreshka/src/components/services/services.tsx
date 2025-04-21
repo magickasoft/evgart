@@ -1,13 +1,12 @@
-import {useTranslation} from 'next-i18next';
-import React from 'react';
+import { useTranslation } from 'next-i18next'
 
-import {ServiceCard} from '../cards';
-import {Slider} from '../slider';
-import {responsive, slides} from './constants';
-import {Container, Content, H3} from './services.sc';
+import { ServiceCard } from '../cards'
+import { Slider } from '../slider'
+import { responsive, slides } from './constants'
+import { Container, Content, H3 } from './services.sc'
 
 export const Services = (props: any) => {
-  const {t} = useTranslation('common');
+  const { t } = useTranslation('common')
   return (
     <Container id="services">
       <Content>
@@ -19,5 +18,5 @@ export const Services = (props: any) => {
         ))}
       </Slider>
     </Container>
-  );
-};
+  )
+}

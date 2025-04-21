@@ -1,7 +1,6 @@
-import SC from '@emotion/styled';
-import React from 'react';
+import SC from '@emotion/styled'
 
-import {minDevice} from '../../styles';
+import { minDevice } from '../../styles'
 
 const Container = SC.div`
   padding: 0.25rem 0 0;
@@ -10,7 +9,7 @@ const Container = SC.div`
   @media ${minDevice.tablet} {
     padding: 0;
   }
-`;
+`
 
 /**
  * Renders a list of details with optional props.
@@ -19,10 +18,10 @@ const Container = SC.div`
  * @param {Object} props - Optional props for the container.
  * @return {JSX.Element} The rendered details.
  */
-export const Details = ({list = [], ...props}: any): JSX.Element => {
+export const Details = ({ list = [], ...props }: any): JSX.Element => {
   return list.map((label: any) => (
     <Container key={label} {...props}>
       {label}
     </Container>
-  ));
-};
+  ))
+}

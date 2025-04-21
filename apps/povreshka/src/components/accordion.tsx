@@ -1,8 +1,8 @@
-import SC from '@emotion/styled';
-import React from 'react';
-import {animated, useSpring} from 'react-spring';
+import SC from '@emotion/styled'
+import React from 'react'
+import { animated, useSpring } from 'react-spring'
 
-import {Icon} from './icon';
+import { Icon } from './icon'
 
 const Container = SC.div`
   position: relative;
@@ -12,7 +12,7 @@ const Container = SC.div`
   border-radius: 3px;
   margin: 10px 0;
   padding: 0 20px;
-`;
+`
 
 const Title = SC.div`
   width: 100%;
@@ -28,7 +28,7 @@ const Title = SC.div`
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-`;
+`
 
 const Header = SC.div`
   display: flex;
@@ -38,16 +38,16 @@ const Header = SC.div`
   justify-content: space-between;
   cursor: pointer;
   margin: 7px 0 0 0;
-`;
+`
 
 const Content = SC.div`
   margin: 0 0 20px 0;
   overflow: auto;
-`;
+`
 
 const Arrow = SC.div`
   margin: 0 0 0 20px;
-`;
+`
 
 const contentAnimation = {
   false: {
@@ -64,7 +64,7 @@ const contentAnimation = {
     delay: 0,
     display: 'block',
   },
-};
+}
 
 const arrowAnimation = {
   false: {
@@ -75,19 +75,19 @@ const arrowAnimation = {
     transform: 'rotatex(-180deg)',
     delay: 0,
   },
-};
+}
 
 type AccordionProps = {
-  title: any;
-  children?: any;
-};
+  title: any
+  children?: any
+}
 
-export const Accordion = ({title, children}: AccordionProps) => {
-  const [open, setOpen] = React.useState(false);
+export const Accordion = ({ title, children }: AccordionProps) => {
+  const [open, setOpen] = React.useState(false)
   // @ts-ignore
-  const content = useSpring(contentAnimation[open]);
+  const content = useSpring(contentAnimation[open])
   // @ts-ignore
-  const arrow = useSpring(arrowAnimation[open]);
+  const arrow = useSpring(arrowAnimation[open])
   return (
     <Container>
       <Header onClick={() => setOpen(!open)}>
@@ -102,5 +102,5 @@ export const Accordion = ({title, children}: AccordionProps) => {
         <Content>{children}</Content>
       </animated.div>
     </Container>
-  );
-};
+  )
+}

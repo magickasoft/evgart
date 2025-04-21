@@ -1,10 +1,9 @@
-import SC from '@emotion/styled';
-import {useRouter} from 'next/router';
-import React from 'react';
+import SC from '@emotion/styled'
+import { useRouter } from 'next/router'
 
-import {Page} from '../../components';
-import {RecipeCard} from '../../components/cards/recipe-card';
-import {RECIPES_OBJ} from '../../constants.ts/constants';
+import { Page } from '../../components'
+import { RecipeCard } from '../../components/cards/recipe-card'
+import { RECIPES_OBJ } from '../../constants.ts/constants'
 
 const Cards = SC.div`
   display: grid;
@@ -17,17 +16,17 @@ const Cards = SC.div`
   padding: 20px;
   box-sizing: border-box;
   overflow-x: hidden;
-`;
+`
 
 const CategoryPage = () => {
-  const router = useRouter();
-  const {name} = router.query as {name: string};
+  const router = useRouter()
+  const { name } = router.query as { name: string }
 
   return (
     <Page>
-      <Cards>{name && RECIPES_OBJ[name].map(({key, ...current}) => <RecipeCard key={key} {...current} />)}</Cards>
+      <Cards>{name && RECIPES_OBJ[name].map(({ key, ...current }) => <RecipeCard key={key} {...current} />)}</Cards>
     </Page>
-  );
-};
+  )
+}
 
-export default CategoryPage;
+export default CategoryPage

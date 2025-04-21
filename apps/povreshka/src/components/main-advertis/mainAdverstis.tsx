@@ -1,6 +1,4 @@
-import React from 'react';
-
-import {Container, Content, H3} from './mainAdvertis.sc';
+import { Container, Content, H3 } from './mainAdvertis.sc'
 
 export const MainAdvertis = (props: any) => {
   return (
@@ -9,5 +7,5 @@ export const MainAdvertis = (props: any) => {
         <H3>Здесь могла бы быть Ваша реклама</H3>
       </Content>
     </Container>
-  );
-};
+  )
+}

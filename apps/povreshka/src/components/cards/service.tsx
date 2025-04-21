@@ -1,13 +1,12 @@
-import SC from '@emotion/styled';
-import Image from 'next/image';
-import {useTranslation} from 'next-i18next';
-import React from 'react';
+import SC from '@emotion/styled'
+import Image from 'next/image'
+import { useTranslation } from 'next-i18next'
 
-import {maxDevice, minDevice} from '../../styles';
+import { maxDevice, minDevice } from '../../styles'
 
 type ContainerProps = {
-  index: number;
-};
+  index: number
+}
 
 const Container = SC.div<ContainerProps>`
   display: flex;
@@ -16,15 +15,15 @@ const Container = SC.div<ContainerProps>`
   align-items: flex-start;
   margin: 15px;
   padding: 25px; 
-  color: ${({index}) => (index % 2 === 1 ? '#fff' : '#222')};
-  background-color: ${({index}) => (index % 2 === 1 ? '#222' : '#fff')};
+  color: ${({ index }) => (index % 2 === 1 ? '#fff' : '#222')};
+  background-color: ${({ index }) => (index % 2 === 1 ? '#222' : '#fff')};
   box-shadow: 0 4px 14px 5px rgb(0 0 0 / 15%);
   border-radius: 30px;
   @media ${minDevice.laptop} {
     margin: 30px;
     padding: 30px
   }
-`;
+`
 
 const Title = SC.div`
   -webkit-line-clamp: 10;
@@ -44,7 +43,7 @@ const Title = SC.div`
   @media ${minDevice.laptop} {
     font-size: 26px;
   }
-`;
+`
 
 const Desc = SC.div`
   font-size: 10px;
@@ -59,7 +58,7 @@ const Desc = SC.div`
     font-size: 14px;
     line-height: 18px;
   }
-`;
+`
 
 const Content = SC.div`
   align-items: center;
@@ -69,12 +68,12 @@ const Content = SC.div`
   @media ${maxDevice.tablet} {
     display: none;
   }
-`;
+`
 
 const Label = SC.div`
   font-size: 14px;
   line-height: 18px;
-`;
+`
 
 const BenefitLabel = SC.div`
   font-size: 14px;
@@ -87,7 +86,7 @@ const BenefitLabel = SC.div`
     font-size: 16px;
     line-height: 18px;
   }
-`;
+`
 
 const Price = SC.div`
   -webkit-line-clamp: 10;
@@ -107,18 +106,18 @@ const Price = SC.div`
   @media ${minDevice.laptop} {
     font-size: 26px;
   }
-`;
+`
 
 type ServiceCardProps = {
-  label?: any;
-  desc?: any;
-  price?: any;
-  benefits?: any;
-  index?: number;
-};
+  label?: any
+  desc?: any
+  price?: any
+  benefits?: any
+  index?: number
+}
 
-export const ServiceCard = ({label, desc, price, benefits, index = 0}: ServiceCardProps) => {
-  const {t} = useTranslation('common');
+export const ServiceCard = ({ label, desc, price, benefits, index = 0 }: ServiceCardProps) => {
+  const { t } = useTranslation('common')
   return (
     <Container index={index}>
       <Title>{t(label)}</Title>
@@ -132,5 +131,5 @@ export const ServiceCard = ({label, desc, price, benefits, index = 0}: ServiceCa
         </Content>
       ))}
     </Container>
-  );
-};
+  )
+}

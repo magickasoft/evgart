@@ -1,12 +1,12 @@
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick-theme.css'
+import 'slick-carousel/slick/slick.css'
 
-import SC from '@emotion/styled';
-import React from 'react';
-import RSlider from 'react-slick';
+import SC from '@emotion/styled'
+import React from 'react'
+import RSlider from 'react-slick'
 
-import {maxDevice} from '../../styles';
-import {Icon} from '../icon';
+import { maxDevice } from '../../styles'
+import { Icon } from '../icon'
 
 const Controls = SC.div`
   display: flex;
@@ -15,7 +15,7 @@ const Controls = SC.div`
   @media ${maxDevice.tablet} {
     padding: 0 30px 0 30px;
   }
-`;
+`
 
 const Btn = SC.div`
   height: 2.5rem;
@@ -23,16 +23,16 @@ const Btn = SC.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`
 
 type SliderProps = {
-  title?: any;
-  initialSlide?: number;
-  children?: any;
-  withControls?: boolean;
-  centerMode?: boolean;
-  responsive?: any;
-};
+  title?: any
+  initialSlide?: number
+  children?: any
+  withControls?: boolean
+  centerMode?: boolean
+  responsive?: any
+}
 
 const sliderOptions = {
   className: 'center',
@@ -41,24 +41,24 @@ const sliderOptions = {
   autoplay: false,
   slidesToShow: 1,
   slidesToScroll: 1,
-};
+}
 
-export const Slider = ({withControls = true, initialSlide = 0, children, ...props}: SliderProps) => {
-  const slider: any = React.useRef();
-  const [hasSetPosition, setHasSetPosition] = React.useState(false);
+export const Slider = ({ withControls = true, initialSlide = 0, children, ...props }: SliderProps) => {
+  const slider: any = React.useRef()
+  const [hasSetPosition, setHasSetPosition] = React.useState(false)
 
   const options = {
     initialSlide,
     ...sliderOptions,
     ...props,
-  };
+  }
 
   React.useEffect(() => {
     if (slider.current && !hasSetPosition) {
-      slider.current?.slickGoTo(initialSlide);
-      setHasSetPosition(true);
+      slider.current?.slickGoTo(initialSlide)
+      setHasSetPosition(true)
     }
-  }, [initialSlide, hasSetPosition, slider]);
+  }, [initialSlide, hasSetPosition, slider])
 
   return (
     <>
@@ -76,5 +76,5 @@ export const Slider = ({withControls = true, initialSlide = 0, children, ...prop
         {children}
       </RSlider>
     </>
-  );
-};
+  )
+}

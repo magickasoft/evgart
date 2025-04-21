@@ -1,7 +1,7 @@
-import SC from '@emotion/styled';
+import SC from '@emotion/styled'
 
-import {ibmplexsans400, maxDevice, minDevice} from '../../styles';
-import {Links} from './links';
+import { ibmplexsans400, maxDevice, minDevice } from '../../styles'
+import { Links } from './links'
 
 export const Container = SC.footer`
   font-family: ${ibmplexsans400.style.fontFamily};
@@ -9,7 +9,7 @@ export const Container = SC.footer`
   @media ${maxDevice.tablet} {
     padding: 0 30px 0.75rem 30px;
   }
-`;
+`
 
 export const Content = SC.div`
   border-top: 1px solid #1f2326;
@@ -20,7 +20,7 @@ export const Content = SC.div`
   @media ${maxDevice.mobileL} {
     padding-top: 2rem;
   }
-`;
+`
 
 export const A = SC.a`
   transition: .25s ease;
@@ -44,7 +44,7 @@ export const A = SC.a`
     font-size: 2.25rem;
     line-height: 2.9375rem;
   }
-`;
+`
 
 export const Contacts = SC.div`
   display: flex;
@@ -55,12 +55,12 @@ export const Contacts = SC.div`
     flex-direction: row;
     justify-content: space-between;
   }
-`;
+`
 
 export const Email = SC.div`
   padding: 0 3rem 0 0;
-`;
+`
 
 export const Docs = SC(Links)`
   margin-bottom: 15px;
-`;
+`

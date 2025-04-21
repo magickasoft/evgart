@@ -1,6 +1,5 @@
 // components/SearchInput.tsx
-import styled from '@emotion/styled';
-import React from 'react';
+import styled from '@emotion/styled'
 
 const InputWrapper = styled.div`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -25,12 +24,12 @@ const InputWrapper = styled.div`
   @media (max-width: 768px) {
     width: 200px;
   }
-`;
+`
 
-export const SearchInput = ({placeholder = 'Поиск...'}: {placeholder?: string}) => {
+export const SearchInput = ({ placeholder = 'Поиск...' }: { placeholder?: string }) => {
   return (
     <InputWrapper>
       <input type="text" placeholder={placeholder} />
     </InputWrapper>
-  );
-};
+  )
+}

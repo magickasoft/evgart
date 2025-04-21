@@ -6,7 +6,7 @@ export const breakpoint = {
   laptop: '1024px',
   laptopL: '1440px',
   desktop: '2560px',
-};
+}
 
 export const mediaQuery = (property: string) => ({
   mobileS: `(${property}: ${breakpoint.mobileS})`,
@@ -17,8 +17,8 @@ export const mediaQuery = (property: string) => ({
   laptopL: `(${property}: ${breakpoint.laptopL})`,
   desktop: `(${property}: ${breakpoint.desktop})`,
   desktopL: `(${property}: ${breakpoint.desktop})`,
-});
+})
 
-export const minDevice = mediaQuery('min-width');
+export const minDevice = mediaQuery('min-width')
 
-export const maxDevice = mediaQuery('max-width');
+export const maxDevice = mediaQuery('max-width')

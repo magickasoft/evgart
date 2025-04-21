@@ -1,12 +1,11 @@
-import type {GetStaticProps, InferGetStaticPropsType} from 'next';
-import React from 'react';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 
-import {Meta, PrivacyPolicy} from '../components';
-import {baseStaticProps} from '../helpers/baseStaticProps';
+import { Meta, PrivacyPolicy } from '../components'
+import { baseStaticProps } from '../helpers/baseStaticProps'
 
 type PrivacyPolicyPageProps = {
   // Add custom props here
-};
+}
 
 const PrivacyPolicyPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
@@ -14,9 +13,9 @@ const PrivacyPolicyPage = (_props: InferGetStaticPropsType<typeof getStaticProps
       <Meta />
       <PrivacyPolicy />
     </>
-  );
-};
+  )
+}
 
-export const getStaticProps: GetStaticProps<PrivacyPolicyPageProps> = baseStaticProps;
+export const getStaticProps: GetStaticProps<PrivacyPolicyPageProps> = baseStaticProps
 
-export default PrivacyPolicyPage;
+export default PrivacyPolicyPage

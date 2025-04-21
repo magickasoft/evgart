@@ -1,4 +1,4 @@
-import axios, {CreateAxiosDefaults} from 'axios';
+import axios, { CreateAxiosDefaults } from 'axios'
 
 const axiosConfig: CreateAxiosDefaults = {
   baseURL: process.env.baseURL ?? '/api/',
@@ -8,13 +8,13 @@ const axiosConfig: CreateAxiosDefaults = {
     'Content-Type': 'application/json',
     Accept: 'application/json',
   },
-};
+}
 
-const axiosClient = axios.create(axiosConfig);
+const axiosClient = axios.create(axiosConfig)
 
 axiosClient.interceptors.response.use(
   response => response,
   error => Promise.reject(new Error(error)),
-);
+)
 
-export const API = axiosClient;
+export const API = axiosClient

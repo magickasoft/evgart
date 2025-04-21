@@ -1,13 +1,12 @@
-import SC from '@emotion/styled';
-import Image from 'next/image';
-import React, {useEffect, useState} from 'react';
+import SC from '@emotion/styled'
+import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
-import {ibmplexsans400, maxDevice} from '../styles';
-import {Text} from './common';
-import {ScrollIndicator} from './scrollIndicator';
-import {SearchInput} from './search-input';
+import { ibmplexsans400, maxDevice } from '../styles'
+import { Text } from './common'
+import { ScrollIndicator } from './scrollIndicator'
 
-const Container = SC.header<{scrolled: boolean}>`
+const Container = SC.header<{ scrolled: boolean }>`
   font-family: ${ibmplexsans400.style.fontFamily};
   background: #ffffff;
   z-index: 9998;
@@ -28,15 +27,15 @@ const Container = SC.header<{scrolled: boolean}>`
     height: 3.5rem;
   }
 
-  border-bottom: ${({scrolled}) => (scrolled ? '1px solid #d0d0d0' : '1px solid #ffffff')};
-`;
+  border-bottom: ${({ scrolled }) => (scrolled ? '1px solid #d0d0d0' : '1px solid #ffffff')};
+`
 
 const LeftBlock = SC.div`
   display: flex;
   align-items: center;
   gap: 10px;
   width: fit-content;
-`;
+`
 
 const CenterBlock = SC.nav`
   display: flex;
@@ -60,26 +59,26 @@ const CenterBlock = SC.nav`
       font-size: 14px;
     }
   }
-`;
+`
 
 const RightBlock = SC.div`
   display: flex;
   align-items: center;
   gap:20px;
-`;
+`
 
 export const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     const onScroll = () => {
-      setScrolled(window.scrollY > 0);
-    };
+      setScrolled(window.scrollY > 0)
+    }
 
-    onScroll();
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+    onScroll()
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   return (
     <>
@@ -102,5 +101,5 @@ export const Header = () => {
         <RightBlock>{/* <SearchInput /> */}</RightBlock>
       </Container>
     </>
-  );
-};
+  )
+}

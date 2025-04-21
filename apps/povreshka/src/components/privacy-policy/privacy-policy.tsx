@@ -1,10 +1,9 @@
-import {useRouter} from 'next/router';
-import {useTranslation} from 'next-i18next';
-import React from 'react';
+import { useRouter } from 'next/router'
+import { useTranslation } from 'next-i18next'
 
-import {buildDocument} from './buildDocument';
-import {docs} from './locales';
-import {Container, H1} from './privacy-policy.sc';
+import { buildDocument } from './buildDocument'
+import { docs } from './locales'
+import { Container, H1 } from './privacy-policy.sc'
 
 /**
  * Render the Privacy Policy page with the specified content and structure.
@@ -13,8 +12,8 @@ import {Container, H1} from './privacy-policy.sc';
  * @return {JSX.Element} the rendered Privacy Policy page
  */
 export const PrivacyPolicy = (props: any): JSX.Element => {
-  const {t} = useTranslation('common');
-  const {locale} = useRouter();
+  const { t } = useTranslation('common')
+  const { locale } = useRouter()
   return (
     <section>
       <Container>
@@ -22,5 +21,5 @@ export const PrivacyPolicy = (props: any): JSX.Element => {
         {buildDocument(docs[locale || 'ru'])}
       </Container>
     </section>
-  );
-};
+  )
+}

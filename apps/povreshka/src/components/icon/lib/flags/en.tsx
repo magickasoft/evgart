@@ -1,6 +1,4 @@
-import React from 'react';
-
-export const en = ({color, ...rest}: any) => {
+export const en = ({ color, ...rest }: any) => {
   return (
     <svg viewBox="0 0 28 20" {...rest}>
       <defs>
@@ -23,5 +21,5 @@ export const en = ({color, ...rest}: any) => {
         </g>
       </g>
     </svg>
-  );
-};
+  )
+}

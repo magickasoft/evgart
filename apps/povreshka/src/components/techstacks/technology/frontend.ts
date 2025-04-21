@@ -50,4 +50,4 @@ export const frontend = {
     'react-query',
     'Apollo Client',
   ],
-};
+}

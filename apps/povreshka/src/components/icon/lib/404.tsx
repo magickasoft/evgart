@@ -1,6 +1,4 @@
-import React from 'react';
-
-export const notFound = ({color = '#DFE3F3', ...rest}: any) => (
+export const notFound = ({ color = '#DFE3F3', ...rest }: any) => (
   <svg viewBox="0 0 260 300" fill="none" xmlns="http://www.w3.org/2000/svg" {...rest}>
     <path
       d="M225.979 160.553L222.789 156.285L213.574 160.553C210.739 161.976 209.676 165.534 211.448 168.024L216.764 176.917"
@@ -200,4 +198,4 @@ export const notFound = ({color = '#DFE3F3', ...rest}: any) => (
       fill={color}
     />
   </svg>
-);
+)
