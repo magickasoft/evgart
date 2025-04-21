@@ -1,16 +1,12 @@
-# robots.txt для сайта povreshka.vercel.app
-# Последнее обновление: 2024-02-01
-
-# Основные правила для всех поисковых систем
+# *
 User-agent: *
-Allow: /              # Разрешаем индексацию всего сайта
-Disallow: /api/*       # Блокируем API-эндпоинты (рекомендация для Next.js)
-Disallow: /_next/*     # Блокируем служебные файлы Next.js
-Crawl-delay: 1         # Задержка между запросами (опционально)
+Allow: /
+Disallow: /api/*
+Disallow: /_next/*
+Crawl-delay: 1
 
-# Явное указание главного зеркала (только для Yandex)
-Host: povreshka.vercel.app
+# Host
+Host: https://povreshka.vercel.app
 
-# Ссылки на карты сайта
+# Sitemaps
 Sitemap: https://povreshka.vercel.app/sitemap.xml
-Sitemap: https://povreshka.vercel.app/sitemap-news.xml
