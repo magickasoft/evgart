@@ -6,7 +6,7 @@ Disallow: /_next*
 Crawl-delay: 1
 
 # Host
-Host: povreshka.vercel.app
+Host: https://povreshka.vercel.app
 
 # Sitemaps
-Sitemap: povreshka.vercel.app/sitemap.xml
+Sitemap: https://povreshka.vercel.app/sitemap.xml
