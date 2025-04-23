@@ -1,5 +1,6 @@
 import SC from '@emotion/styled'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { minDevice } from '../../styles'
 
@@ -84,20 +85,32 @@ export const RecipeCard = (props: {
   level: number
   rating: number
 }) => {
+  const href = `/recipe/${props.name}`
+  
   return (
-    <Card>
-      <ImageBlock>
-        {props.img ? <Image width="300" height="150" src={props.img} alt="icon" priority /> : null}
-      </ImageBlock>
-      <Content>
-        <Title>{props.title}</Title>
-        <Description>{props.description}</Description>
-        <Characteristic>
-          <span>Время: {props.time} минут</span>
-          <span>Сложность: {props.level}</span>
-          <span>Рейтинг: {props.rating}</span>
-        </Characteristic>
-      </Content>
-    </Card>
+    <Link href={href} style={{ textDecoration: 'none' }} aria-label={`Рецепт: ${props.title}`}>
+  <Card role="link" tabIndex={0}>
+    <ImageBlock>
+      {props.img ? (
+        <Image
+          width="300"
+          height="150"
+          src={props.img}
+          alt={`Изображение для ${props.title}`}
+          priority
+        />
+      ) : null}
+    </ImageBlock>
+    <Content>
+      <Title>{props.title}</Title>
+      <Description>{props.description}</Description>
+      <Characteristic>
+        <span>Время: {props.time} минут</span>
+        <span>Сложность: {props.level}</span>
+        <span>Рейтинг: {props.rating}</span>
+      </Characteristic>
+    </Content>
+  </Card>
+</Link>
   )
 }
