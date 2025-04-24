@@ -1,0 +1,19 @@
+{
+  "extensions.autoCheckUpdates": false,
+  "extensions.autoUpdate": false,
+  "prettier.configPath": ".prettierrc",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.validate": ["javascript"],
+  "eslint.enable": true,
+  "eslint.format.enable": true,
+  "eslint.debug": true,
+  "i18n-ally.localesPaths": ["public/locales"],
+  "i18n-ally.keystyle": "nested",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "cSpell.words": ["Timeframe", "useportfolio"]
+}
