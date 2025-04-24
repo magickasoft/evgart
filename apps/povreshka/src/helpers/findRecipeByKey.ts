@@ -1,4 +1,4 @@
-import { RECIPES_OBJ } from "../../constants.ts/recipes"
+import { RECIPES_OBJ } from "../constants.ts/recipes"
 
 export const findRecipeByKey = (key: string) => {
   for (const category in RECIPES_OBJ) {

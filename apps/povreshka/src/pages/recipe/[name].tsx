@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
 import { Page } from '../../components'
-import { findRecipeByKey } from './findRecipeByKey'
+import { findRecipeByKey } from '../../helpers/findRecipeByKey'
 
 const Container = SC.div`
   max-width: 800px;
