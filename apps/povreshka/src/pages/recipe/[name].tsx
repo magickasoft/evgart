@@ -57,10 +57,18 @@ const RecipePage = () => {
           <>
             <Title>{recipe.title}</Title>
             {recipe.img && <Image src={recipe.img} alt={recipe.name} />}
-            <Info><strong>Description:</strong> {recipe.description}</Info>
-            <Info><strong>Cooking Time:</strong> {recipe.time} minutes</Info>
-            <Info><strong>Difficulty Level:</strong> {recipe.level}</Info>
-            <Info><strong>Rating:</strong> {recipe.rating}/5</Info>
+            <Info>
+              <strong>Description:</strong> {recipe.description}
+            </Info>
+            <Info>
+              <strong>Cooking Time:</strong> {recipe.time} minutes
+            </Info>
+            <Info>
+              <strong>Difficulty Level:</strong> {recipe.level}
+            </Info>
+            <Info>
+              <strong>Rating:</strong> {recipe.rating}/5
+            </Info>
           </>
         ) : (
           <Title>Recipe not found</Title>

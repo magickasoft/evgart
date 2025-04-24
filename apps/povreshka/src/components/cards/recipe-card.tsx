@@ -86,31 +86,25 @@ export const RecipeCard = (props: {
   rating: number
 }) => {
   const href = `/recipe/${props.name}`
-  
+
   return (
     <Link href={href} style={{ textDecoration: 'none' }} aria-label={`Рецепт: ${props.title}`}>
-  <Card role="link" tabIndex={0}>
-    <ImageBlock>
-      {props.img ? (
-        <Image
-          width="300"
-          height="150"
-          src={props.img}
-          alt={`Изображение для ${props.title}`}
-          priority
-        />
-      ) : null}
-    </ImageBlock>
-    <Content>
-      <Title>{props.title}</Title>
-      <Description>{props.description}</Description>
-      <Characteristic>
-        <span>Время: {props.time} минут</span>
-        <span>Сложность: {props.level}</span>
-        <span>Рейтинг: {props.rating}</span>
-      </Characteristic>
-    </Content>
-  </Card>
-</Link>
+      <Card role="link" tabIndex={0}>
+        <ImageBlock>
+          {props.img ? (
+            <Image width="300" height="150" src={props.img} alt={`Изображение для ${props.title}`} priority />
+          ) : null}
+        </ImageBlock>
+        <Content>
+          <Title>{props.title}</Title>
+          <Description>{props.description}</Description>
+          <Characteristic>
+            <span>Время: {props.time} минут</span>
+            <span>Сложность: {props.level}</span>
+            <span>Рейтинг: {props.rating}</span>
+          </Characteristic>
+        </Content>
+      </Card>
+    </Link>
   )
 }
