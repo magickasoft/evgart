@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 
 import { Page } from '../../components'
 import { RecipeCard } from '../../components/cards/recipe-card'
-import { RECIPES_OBJ } from '../../constants.ts/recipes'
+import { RECIPES_OBJ } from '../../constants.ts/recipes/recipes'
 
 const Cards = SC.div`
   display: grid;

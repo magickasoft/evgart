@@ -28,8 +28,8 @@ export const CATEGORIES_ARR = [
     color: '#d2c9c0',
   },
   {
-    key: 'desserts',
-    name: 'desserts',
+    key: 'dessert',
+    name: 'dessert',
     label: 'Десерты',
     img: '/static/main-page-imgs/desserts.png',
     color: '#fbcf7c',
