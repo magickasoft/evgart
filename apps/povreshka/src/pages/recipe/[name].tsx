@@ -3,36 +3,156 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
 import { Page } from '../../components'
-import { findRecipeByKey } from '../../helpers/findRecipeByKey'
+import { DetailCard } from '../../components/cards'
+import { InfoBlock } from '../../components/recipe-page'
+import { findByKey } from '../../helpers/findByKey'
 
-const Container = SC.div`
-  max-width: 800px;
+const HeaderContainer = SC.div`
+  max-width: 1800px;
   margin: 0 auto;
-  padding: 40px 20px;
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
+  overflow: hidden;
 `
 
-const Title = SC.h1`
-  margin-bottom: 20px;
-  line-height: 1.2;
+const Header = SC.div`
+  display: flex;
+  max-height: 90vh;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+`
+
+const TitleContainer = SC.div`
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px 0 0 8px;
+`
+
+const ImageContainer = SC.div`
+  width: 40%;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
 `
 
 const Image = SC.img`
   width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-  border-radius: 8px;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 0 8px 0 0;
 `
 
-const Info = SC.p`
-  margin: 10px 0;
+const Title = SC.h1`
+  margin-bottom: 10px;
+  line-height: 1.2;
+`
+
+const Description = SC.p`
+  width: 80%;
+  margin-bottom: 10px;
+  font-size: 1rem;
   line-height: 1.6;
+`
+
+const InfoContainer = SC.div`
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+`
+
+const DetailsContainer = SC.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+`
+
+const IngredientsContainer = SC.div`
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: start;
+  padding: 20px;
+`
+const EquipmentsContainer = SC.div`
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: end;
+  padding: 10px;
+  margin-left: 20px;
+`
+
+const DetailsTitle = SC.h2`
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+`
+
+const DetailsCardsContainer = SC.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: inherit;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+`
+
+const RecipeStepsContainer = SC.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`
+
+const RecipeStep = SC.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+`
+
+const RecipeTitle = SC.h2`
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+`
+const RecipeDescription = SC.p`
+  width: 80%;
+  margin-bottom: 30px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
 `
 
 const RecipePage = () => {
   const router = useRouter()
-  const [recipe, setRecipe] = useState<ReturnType<typeof findRecipeByKey> | null>(null)
+  const [recipe, setRecipe] = useState<ReturnType<typeof findByKey> | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -41,7 +161,7 @@ const RecipePage = () => {
     const { name } = router.query as { name?: string }
 
     if (name) {
-      const found = findRecipeByKey(name)
+      const found = findByKey(name)
       setRecipe(found)
     }
 
@@ -50,30 +170,70 @@ const RecipePage = () => {
 
   return (
     <Page>
-      <Container>
+      <HeaderContainer>
         {loading ? (
           <Title>Loading...</Title>
         ) : recipe ? (
           <>
-            <Title>{recipe.title}</Title>
-            {recipe.img && <Image src={recipe.img} alt={recipe.name} />}
-            <Info>
-              <strong>Description:</strong> {recipe.description}
-            </Info>
-            <Info>
-              <strong>Cooking Time:</strong> {recipe.time} minutes
-            </Info>
-            <Info>
-              <strong>Difficulty Level:</strong> {recipe.level}
-            </Info>
-            <Info>
-              <strong>Rating:</strong> {recipe.rating}/5
-            </Info>
+            <Header>
+              <TitleContainer>
+                <Title>{recipe.title}</Title>
+                <Description>{recipe.description}</Description>
+                <InfoContainer>
+                  {recipe.preparation && <InfoBlock name="Подготовка" value={recipe.preparation} gauge="мин" />}
+                  <InfoBlock name="Готовка" value={recipe.time} gauge="мин" />
+                  <InfoBlock name="Калорийность" value={recipe.calories} gauge="ккал" />
+                </InfoContainer>
+              </TitleContainer>
+              <ImageContainer>{recipe.img && <Image src={recipe.img} alt={recipe.name} />}</ImageContainer>
+            </Header>
           </>
         ) : (
           <Title>Recipe not found</Title>
         )}
-      </Container>
+      </HeaderContainer>
+      <DetailsContainer>
+        <IngredientsContainer>
+          <DetailsTitle>Ингредиенты</DetailsTitle>
+          <DetailsCardsContainer>
+            {recipe?.ingredients.map(ingredient => (
+              <DetailCard
+                key={ingredient.name}
+                name={ingredient.name}
+                text={`${ingredient.count} ${ingredient.gauge}`}
+                img={ingredient.img}
+              />
+            ))}
+          </DetailsCardsContainer>
+        </IngredientsContainer>
+        <EquipmentsContainer>
+          <DetailsTitle>Оборудование</DetailsTitle>
+          <DetailsCardsContainer>
+            {recipe?.equipments.map(equipment => (
+              <DetailCard key={equipment.name} name={equipment.name} img={equipment.img} />
+            ))}
+          </DetailsCardsContainer>
+        </EquipmentsContainer>
+      </DetailsContainer>
+      <RecipeStepsContainer>
+        {recipe?.cookingRecipe?.map((step, index) => (
+          <RecipeStep key={index}>
+            <RecipeTitle>{`Шаг ${index + 1}`}</RecipeTitle>
+            <RecipeDescription>{step.description}</RecipeDescription>
+            <DetailsCardsContainer>
+              {step?.ingredients.map(ingredient => (
+                <DetailCard
+                  key={ingredient.name}
+                  name={ingredient.name}
+                  text={`${ingredient.count} ${ingredient.gauge}`}
+                  img={ingredient.img}
+                  backgroundColor="#f9f9f9"
+                />
+              ))}
+            </DetailsCardsContainer>
+          </RecipeStep>
+        ))}
+      </RecipeStepsContainer>
     </Page>
   )
 }
