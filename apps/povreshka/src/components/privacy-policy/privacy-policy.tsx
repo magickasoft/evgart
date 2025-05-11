@@ -18,7 +18,7 @@ export const PrivacyPolicy = (props: any): JSX.Element => {
     <section>
       <Container>
         <H1>{t('PrivacyPolicyPage.title')}</H1>
-        {buildDocument(docs[locale || 'ru'])}
+        {buildDocument(docs[locale ?? 'ru'])}
       </Container>
     </section>
   )
