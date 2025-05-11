@@ -10,8 +10,7 @@
     "docker-build": "docker build -t povreshka-nextjs .",
     "docker-run": "docker run -p 3000:3000 povreshka-nextjs",
     "docker-images": "docker images",
-    "analyze": "./node_modules/.bin/cross-env ANALYZE=true yarn build && serve .next/analyze",
-    "sitemap": "./node_modules/.bin/next-sitemap"
+    "analyze": "./node_modules/.bin/cross-env ANALYZE=true yarn build && serve .next/analyze"
   },
   "dependencies": {
     "@emotion/cache": "11.14.0",
@@ -26,7 +25,6 @@
     "i18next": "24.2.3",
     "next": "15.3.1",
     "next-i18next": "15.4.2",
-    "next-sitemap": "4.2.3",
     "next-ym": "2.3.5",
     "react": "18.3.1",
     "react-dom": "18.3.1",
