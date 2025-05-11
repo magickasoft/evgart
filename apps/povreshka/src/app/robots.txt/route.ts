@@ -1,5 +1,5 @@
 import { DOMAIN } from '../../process.env/domain'
-import { isProduction } from '../../process.env/node'
+import { isProduction } from '../../process.env/NODE_ENV'
 
 export const dynamic = 'force-static'
 

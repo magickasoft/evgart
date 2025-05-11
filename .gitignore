@@ -33,5 +33,5 @@ yarn-error.log*
 .turbo
 apps/web/pages/index.tsx
 .vercel
-.env*.local
+.env*
 .qodo

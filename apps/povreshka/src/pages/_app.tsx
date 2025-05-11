@@ -9,8 +9,10 @@ import React from 'react'
 import nextI18NextConfig from '../../next-i18next.config'
 import { Footer, Header } from '../components/'
 import { createEmotionCache } from '../helpers/createEmotionCache'
-import { GA_MEASUREMENT_ID, pageview } from '../helpers/gtag'
-import { withYM, YA_METRIKA_ID } from '../helpers/ym'
+import { pageview } from '../helpers/gtag'
+import { GA_MEASUREMENT_ID } from '../process.env/GA_MEASUREMENT_ID'
+import { withYM } from '../helpers/ym'
+import { YANDEX_METRICA_ID } from '../process.env/YANDEX_METRICA_ID'
 import { GlobalStyle } from '../styles/'
 
 const clientSideEmotionCache = createEmotionCache()
@@ -65,7 +67,7 @@ const App = ({ Component, emotionCache = clientSideEmotionCache, pageProps }: an
     </CacheProvider>
   )
 }
-const AppYM = withYM(YA_METRIKA_ID, Router)(App)
+const AppYM = withYM(YANDEX_METRICA_ID, Router)(App)
 const AppWithTranslation: any = appWithTranslation(AppYM, nextI18NextConfig)
 
 export default AppWithTranslation

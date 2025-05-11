@@ -1,19 +1,19 @@
-export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
-export const env = process.env.NODE_ENV
+import { GA_MEASUREMENT_ID } from '../process.env/GA_MEASUREMENT_ID'
+import { isProduction } from '../process.env/NODE_ENV'
 
-export const pageview = (url: any) => {
+export const pageview = (page_path: string) => {
   // @ts-ignore
-  if (window['gtag'] && env !== 'development') {
+  if (window['gtag'] && isProduction) {
     // @ts-ignore
     window['gtag']('config', GA_MEASUREMENT_ID, {
-      page_path: url,
+      page_path,
     })
   }
 }
 
 export const event = ({ action, category, label, value }: any) => {
   // @ts-ignore
-  if (window['gtag'] && env !== 'development') {
+  if (window['gtag'] && isProduction) {
     // @ts-ignore
     window['gtag']('event', action, {
       event_category: category,
