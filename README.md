@@ -1,3 +1,6 @@
+[![Maintainability](https://qlty.sh/badges/c90bef4a-8b60-4646-a718-26ab3832746e/maintainability.svg)](https://qlty.sh/gh/magickasoft/projects/evgart)
+[![Code Coverage](https://qlty.sh/badges/c90bef4a-8b60-4646-a718-26ab3832746e/test_coverage.svg)](https://qlty.sh/gh/magickasoft/projects/evgart)
+
 # Turborepo starter
 
 This is an official Yarn v1 starter turborepo.
