@@ -1,5 +1,5 @@
 export const EQUIPMENTS = {
-  fryingPan: {
+  pan: {
     img: '/static/equipments/frying-pan.webp',
     name: 'Сковорода',
   },
@@ -46,5 +46,25 @@ export const EQUIPMENTS = {
   bakingSheet: {
     img: null,
     name: 'Противень',
+  },
+  blender: {
+    img: null,
+    name: 'Блендер',
+  },
+  oven: {
+    img: null,
+    name: 'Духовка',
+  },
+  bakingTray: {
+    img: null,
+    name: 'Противень',
+  },
+  pastryBrush: {
+    img: null,
+    name: 'Кулинарная кисть',
+  },
+  cutBoard: {
+    img: null,
+    name: 'Разделочная доска',
   },
 }
