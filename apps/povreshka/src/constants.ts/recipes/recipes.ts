@@ -28,7 +28,7 @@ export interface Recipe {
   rating: number
   portions: number
   used: number[]
-  ingredients: { name: string; count: number; gauge: string; img: string | null }[]
+  ingredients: { name: string; count?: number; gauge: string; img: string | null }[]
   equipments: { name: string; img: string | null }[]
   cookingRecipe: {
     img: string | null
