@@ -35,7 +35,7 @@ export const BREAKFAST = [
         count: 0.5,
       },
     ],
-    equipments: [EQUIPMENTS.fryingPan, EQUIPMENTS.spatula, EQUIPMENTS.bowl, EQUIPMENTS.whisk, EQUIPMENTS.plate],
+    equipments: [EQUIPMENTS.pan, EQUIPMENTS.spatula, EQUIPMENTS.bowl, EQUIPMENTS.whisk, EQUIPMENTS.plate],
     cookingRecipe: [
       {
         img: null,
@@ -78,19 +78,124 @@ export const BREAKFAST = [
       },
     ],
   },
+  {
+    categories: [{ name: 'breakfast' }],
+    key: 'scrambled-eggs-with-broccoli',
+    name: 'scrambled-eggs-with-broccoli',
+    img: null,
+    title: 'Яичница с брокколи',
+    description:
+      'Яичница с брокколи — отличный способ начать утро с порции витаминов. Хрустящие соцветия и мягкие яйца создают интересный контраст текстур, а зелень и перец добавляют свежести. Готовится за считанные минуты и выглядит как настоящее ресторанное блюдо.',
+    calories: 278.75,
+    preparation: 5,
+    time: 15,
+    level: 1,
+    rating: 5,
+    portions: 2,
+    used: [16.18, 23.56, 6.09],
+    ingredients: [
+      {
+        ...INGREDIENTS.egg,
+        count: 3,
+      },
+      {
+        ...INGREDIENTS.refinedVegetableOil,
+        count: 2,
+      },
+      {
+        ...INGREDIENTS.groundBlackPepper,
+        count: 0.5,
+      },
+      {
+        ...INGREDIENTS.salt,
+        count: 0.5,
+      },
+      {
+        ...INGREDIENTS.broccoli,
+        count: 150,
+      },
+      {
+        ...INGREDIENTS.hardCheese,
+        count: 30,
+      },
+    ],
+    equipments: [
+      EQUIPMENTS.pan,
+      EQUIPMENTS.spatula,
+      EQUIPMENTS.bowl,
+      EQUIPMENTS.whisk,
+      EQUIPMENTS.plate,
+      EQUIPMENTS.colander,
+      EQUIPMENTS.pot,
+    ],
+    cookingRecipe: [
+      {
+        img: null,
+        video: null,
+        description:
+          'Разберите брокколи на мелкие соцветия и тщательно промойте под холодной водой. Затем доведите до кипения воду в небольшой кастрюле, слегка подсолите и опустите в нее капусту. Бланшируйте около 3 минут, чтобы она стала мягкой, но сохранила свою текстуру и цвет. После этого откиньте брокколи на дуршлаг и дайте воде стечь.',
+        ingredients: [
+          {
+            ...INGREDIENTS.broccoli,
+            count: 150,
+          },
+        ],
+      },
+      {
+        img: null,
+        video: null,
+        description:
+          'Разогрейте сковороду на среднем огне и добавьте растительное масло. Как только масло разогреется, выложите подготовленные соцветия на сковороду. Обжарьте брокколи на среднем огне, периодически помешивая, примерно 3-4 минуты, чтобы она немного подрумянилась.',
+        ingredients: [
+          {
+            ...INGREDIENTS.refinedVegetableOil,
+            count: 3,
+          },
+        ],
+      },
+      {
+        img: null,
+        video: null,
+        description:
+          'Пока брокколи обжаривается, разбейте яйца в миску и слегка взбейте их вилкой или венчиком. Взбивать сильно не нужно, достаточно просто размешать желтки с белками. Добавьте немного соли и свежемолотого черного перца.',
+        ingredients: [
+          {
+            ...INGREDIENTS.egg,
+            count: 2,
+          },
+          {
+            ...INGREDIENTS.groundBlackPepper,
+            count: 0.5,
+          },
+          {
+            ...INGREDIENTS.salt,
+            count: 0.5,
+          },
+        ],
+      },
+      {
+        img: null,
+        video: null,
+        description:
+          'Обжаренную брокколи равномерно распределите по сковороде и залейте взбитыми яйцами. Уменьшите огонь до минимума и готовьте яичницу под крышкой, чтобы яйца схватились и приготовились равномерно. Весь процесс займет около 5-7 минут, в зависимости от размера сковороды.',
+        ingredients: [],
+      },
+      {
+        img: null,
+        video: null,
+        description:
+          'Если хотите добавить сыр, посыпьте яичницу тертым сыром за 2-3 минуты до готовности. Готовую яичницу с брокколи аккуратно переложите на тарелку и подавайте горячей. Это блюдо отлично сочетается с хрустящими тостами и свежими овощами.',
+        ingredients: [
+          {
+            ...INGREDIENTS.hardCheese,
+            count: 30,
+          },
+        ],
+      },
+    ],
+  },
 ]
 
-// {
-//   key: 'scrambled-eggs-with-broccoli',
-//   name: 'scrambled-eggs-with-broccoli',
-//   img: null,
-//   title: 'Яичница с брокколи',
-//   description:
-//     'Яичница с брокколи — отличный способ начать утро с порции витаминов. Хрустящие соцветия и мягкие яйца создают интересный контраст текстур, а зелень и перец добавляют свежести. Готовится за считанные минуты и выглядит как настоящее ресторанное блюдо.',
-//   time: 15,
-//   level: 1,
-//   rating: 5,
-// },
 // {
 //   key: 'scrambled-eggs-with-sausages-and-beans',
 //   name: 'scrambled-eggs-with-sausages-and-beans',

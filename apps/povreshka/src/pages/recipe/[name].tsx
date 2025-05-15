@@ -36,14 +36,30 @@ const TitleContainer = SC.div`
 const ImageContainer = SC.div`
   width: 40%;
   display: flex;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
+  border-radius: 0 8px 0 0;
 `
 
 const Image = SC.img`
   width: 100%;
   height: 100%;
   object-fit: cover; 
+  border-radius: 0 8px 0 0;
+`
+
+const Placeholder = SC.div`
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #f9f9f9, #ddd);
+  color: #777;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 0 8px 0 0;
 `
 
@@ -73,7 +89,7 @@ const DetailsContainer = SC.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 20px;
   background-color: #f9f9f9;
   margin-bottom: 20px;
@@ -185,7 +201,9 @@ const RecipePage = () => {
                   <InfoBlock name="Калорийность" value={recipe.calories} gauge="ккал" />
                 </InfoContainer>
               </TitleContainer>
-              <ImageContainer>{recipe.img && <Image src={recipe.img} alt={recipe.name} />}</ImageContainer>
+              <ImageContainer>
+                {recipe.img ? <Image src={recipe.img} alt={recipe.name} /> : <Placeholder>Нет изображения</Placeholder>}
+              </ImageContainer>
             </Header>
           </>
         ) : (
