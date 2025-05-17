@@ -1,7 +1,8 @@
+import { YandexMetricaProvider } from '@artginzburg/next-ym'
 import { CacheProvider } from '@emotion/react'
 import { Analytics } from '@vercel/analytics/react'
 import Head from 'next/head'
-import Router, { useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 import Script from 'next/script'
 import { appWithTranslation, useTranslation } from 'next-i18next'
 import React from 'react'
@@ -10,9 +11,7 @@ import nextI18NextConfig from '../../next-i18next.config'
 import { Footer, Header } from '../components/'
 import { createEmotionCache } from '../helpers/createEmotionCache'
 import { pageview } from '../helpers/gtag'
-import { withYM } from '../helpers/ym'
 import { GA_MEASUREMENT_ID } from '../process.env/GA_MEASUREMENT_ID'
-import { YANDEX_METRICA_ID } from '../process.env/YANDEX_METRICA_ID'
 import { GlobalStyle } from '../styles/'
 
 const clientSideEmotionCache = createEmotionCache()
@@ -21,7 +20,7 @@ const App = ({ Component, emotionCache = clientSideEmotionCache, pageProps }: an
   const { t } = useTranslation('common')
   const router = useRouter()
   React.useEffect(() => {
-    const handleRouteChange = (url: any) => pageview(url)
+    const handleRouteChange = (url: string) => pageview(url)
     router.events.on('routeChangeComplete', handleRouteChange)
     router.events.on('hashChangeComplete', handleRouteChange)
 
@@ -60,14 +59,17 @@ const App = ({ Component, emotionCache = clientSideEmotionCache, pageProps }: an
         <meta name="description" content={t('SEO.description')} />
         <meta name="keywords" content={t('SEO.keywords')} />
       </Head>
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
-      <Analytics />
+      <YandexMetricaProvider>
+        <>
+          <Header />
+          <Component {...pageProps} />
+          <Footer />
+          <Analytics />
+        </>
+      </YandexMetricaProvider>
     </CacheProvider>
   )
 }
-const AppYM = withYM(YANDEX_METRICA_ID, Router)(App)
-const AppWithTranslation: any = appWithTranslation(AppYM, nextI18NextConfig)
+const AppWithTranslation = appWithTranslation(App, nextI18NextConfig)
 
 export default AppWithTranslation
