@@ -15,6 +15,11 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
+"@artginzburg/next-ym@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@artginzburg/next-ym/-/next-ym-1.2.1.tgz#b3ff1324e609c7f6153257dafe146a3ed513fa4f"
+  integrity sha512-ySFfQ7X5upYocW2bWhnV9UcK+d67ddu43uk7FqTlO9VR85e9YB2RbN616MqKcxmXM2BL6KwLHcbf7vsabYhVvQ==
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.25.9", "@babel/code-frame@^7.26.0":
   version "7.26.0"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.26.0.tgz#9374b5cd068d128dac0b94ff482594273b1c2815"
@@ -1586,7 +1591,7 @@ debug@^3.2.7:
   dependencies:
     ms "^2.1.1"
 
-debug@^4.0.0, debug@^4.1.0, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4:
+debug@^4.1.0, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4:
   version "4.3.4"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
   integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
@@ -3573,14 +3578,6 @@ next-i18next@15.4.2:
     hoist-non-react-statics "^3.3.2"
     i18next-fs-backend "^2.6.0"
 
-next-ym@2.3.5:
-  version "2.3.5"
-  resolved "https://registry.yarnpkg.com/next-ym/-/next-ym-2.3.5.tgz#329d5bf707e8bee39169fbc58b4c7127007f1cdb"
-  integrity sha512-wkZE5BqvvCbdoDE3B1qMY5M3ja/o0viBagXHiht+ujhijzr8JEoxenE7Snpd/nFcj8Jd2FH0T2Hs2P5pmycfEg==
-  dependencies:
-    debug "^4.0.0"
-    react-ym "^0.0.7"
-
 next@15.3.1:
   version "15.3.1"
   resolved "https://registry.yarnpkg.com/next/-/next-15.3.1.tgz#69cf2c124e504db64e14fc75eb29bd64c0c787a7"
@@ -3963,11 +3960,6 @@ react-spring@9.7.5:
     "@react-spring/three" "~9.7.5"
     "@react-spring/web" "~9.7.5"
     "@react-spring/zdog" "~9.7.5"
-
-react-ym@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/react-ym/-/react-ym-0.0.7.tgz#496c9ea5f6644b40bc264b38d72d6501a9687e93"
-  integrity sha512-K15COS5d+iPtwGPGSJ3KbFFrKD0hQMO2mHltvionEjNjRs51FZnykp9GCtseSSHyo1mTqATLmDjAVIjjB3pXOw==
 
 react@18.3.1:
   version "18.3.1"
