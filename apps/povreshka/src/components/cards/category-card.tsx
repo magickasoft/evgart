@@ -4,14 +4,16 @@ import Link from 'next/link'
 
 import { minDevice } from '../../styles'
 
-const Card = SC.div<{ color?: string }>`
+type VariantType = 'large' | 'small'
+
+const Card = SC.div<{ color?: string; variant: VariantType }>`
   background-color: ${({ color }) => color || '#f7f5f6'};
-  padding: 20px;
+  padding: ${({ variant }) => (variant === 'large' ? '20px' : '12px')};
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 250px;
+  height: ${({ variant }) => (variant === 'large' ? '250px' : '180px')};
   border-radius: 16px;
   overflow: hidden;
   transition:
@@ -37,9 +39,9 @@ const Card = SC.div<{ color?: string }>`
   }
 `
 
-const Title = SC.div`
-  font-size: 14px;
-  line-height: 12px;
+const Title = SC.div<{ variant: VariantType }>`
+  font-size: ${({ variant }) => (variant === 'large' ? '14px' : '12px')};
+  line-height: ${({ variant }) => (variant === 'large' ? '12px' : '10px')};
   color: #333;
   margin: 0;
   position: absolute;
@@ -49,17 +51,23 @@ const Title = SC.div`
   transition: transform 0.3s ease, font-weight 0.3s ease;
 
   @media ${minDevice.laptop} {
-    font-size: 18px;
-    line-height: 18px;
+    font-size: ${({ variant }) => (variant === 'large' ? '18px' : '14px')};
+    line-height: ${({ variant }) => (variant === 'large' ? '18px' : '14px')};
   }
 `
 
-const Content = SC.div`
+const Content = SC.div<{ variant: VariantType }>`
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 1;
   transition: transform 0.3s ease;
+
+  img {
+    width: ${({ variant }) => (variant === 'large' ? '240px' : '140px')};
+    height: ${({ variant }) => (variant === 'large' ? '220px' : '120px')};
+    object-fit: contain;
+  }
 `
 
 export const CategoryCard = ({
@@ -68,20 +76,32 @@ export const CategoryCard = ({
   label,
   color,
   name,
+  variant = 'large',
 }: {
   key: string
   img: string | null
   label: string
   color: string
   name: string
+  variant?: VariantType
 }) => {
   return (
-    <Link href={`/category/${name}`} style={{ textDecoration: 'none' }} passHref legacyBehavior>
-      <Card color={color}>
-        <Content className="card-image">
-          {img && <Image width="240" height="220" src={img} alt="icon" priority />}
+    <Link href={`/categories/${name}`} style={{ textDecoration: 'none' }} passHref legacyBehavior>
+      <Card color={color} variant={variant}>
+        <Content className="card-image" variant={variant}>
+          {img && (
+            <Image
+              width={variant === 'large' ? 240 : 160}
+              height={variant === 'large' ? 220 : 140}
+              src={img}
+              alt="icon"
+              priority
+            />
+          )}
         </Content>
-        <Title className="card-title">{label}</Title>
+        <Title className="card-title" variant={variant}>
+          {label}
+        </Title>
       </Card>
     </Link>
   )
