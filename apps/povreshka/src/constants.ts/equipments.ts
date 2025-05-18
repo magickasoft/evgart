@@ -67,4 +67,32 @@ export const EQUIPMENTS = {
     img: null,
     name: 'Разделочная доска',
   },
+  spoon: {
+    img: null,
+    name: 'Ложка',
+  },
+  measuringSpoon: {
+    img: null,
+    name: 'Мерная ложка',
+  },
+  grill: {
+    img: null,
+    name: 'Мангал',
+  },
+  tongs: {
+    img: null,
+    name: 'Щипцы',
+  },
+  lid: {
+    img: null,
+    name: 'Крышка',
+  },
+  paperTowel: {
+    img: null,
+    name: 'Бумажное полотенце',
+  },
+  skewers: {
+    img: null,
+    name: 'Шампуры',
+  },
 }

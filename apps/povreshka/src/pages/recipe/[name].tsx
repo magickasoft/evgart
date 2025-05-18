@@ -218,7 +218,7 @@ const RecipePage = () => {
               <DetailCard
                 key={ingredient.name}
                 name={ingredient.name}
-                text={`${ingredient.count} ${ingredient.gauge}`}
+                text={`${ingredient.count && ingredient.gauge ? `${ingredient.count} ${ingredient.gauge}` : ''}`}
                 img={ingredient.img}
               />
             ))}
@@ -243,9 +243,10 @@ const RecipePage = () => {
                 <DetailCard
                   key={ingredient.name}
                   name={ingredient.name}
-                  text={`${ingredient.count} ${ingredient.gauge}`}
+                  text={`${ingredient.count && ingredient.gauge ? `${ingredient.count} ${ingredient.gauge}` : ''}`}
                   img={ingredient.img}
                   backgroundColor="#f9f9f9"
+                  variant="short"
                 />
               ))}
             </DetailsCardsContainer>

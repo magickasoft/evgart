@@ -3,6 +3,7 @@ import SC from '@emotion/styled'
 import { Page } from '../../components'
 import { CategoryCard } from '../../components/cards/category-card'
 import { CATEGORIES_ARR } from '../../components/popular-categories/constants'
+import { SEASONAL_CATEGORIES_ARR } from '../../components/seasonal-categories/constants'
 import { maxDevice } from '../../styles'
 
 export const Container = SC.section`
@@ -33,7 +34,7 @@ const CategoriesPage = () => {
     <Page>
       <Content>
         <Grid>
-          {CATEGORIES_ARR.map(({ key, ...item }) => (
+          {[...SEASONAL_CATEGORIES_ARR, ...CATEGORIES_ARR].map(({ key, ...item }) => (
             <CategoryCard key={key} {...item} variant="small" />
           ))}
         </Grid>

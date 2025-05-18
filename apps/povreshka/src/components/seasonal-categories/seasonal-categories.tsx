@@ -1,20 +1,21 @@
 import SC from '@emotion/styled'
 
 import { CategoryCard } from '../cards/category-card'
-import { CATEGORIES_ARR } from './constants'
-import { Container, Grid } from './popular-categories.sc'
+import { SEASONAL_CATEGORIES_ARR } from './constants'
+import { Container, Grid } from './seasonal-categories.sc'
 
 const Content = SC.div`
   padding: 20px;
+  padding-top: 100px;
 `
 
-export const PopularCategories = (props: any) => {
+export const SeasonalCategories = (props: any) => {
   return (
     <Container id="techStacks">
       <Content>
-        <h2>ПОПУЛЯРНЫЕ КАТЕГОРИИ</h2>
+        <h2>СЕЗОННЫЕ КАТЕГОРИИ</h2>
         <Grid>
-          {CATEGORIES_ARR.map(({ key, ...item }) => (
+          {SEASONAL_CATEGORIES_ARR.map(({ key, ...item }) => (
             <CategoryCard key={key} {...item} />
           ))}
         </Grid>

@@ -2,9 +2,10 @@ import SC from '@emotion/styled'
 
 const Card = SC.div<{
   backgroundColor?: string
+  variant?: 'default' | 'short'
 }>`
 width: 150px;
-height: 220px;
+height: ${props => (props.variant === 'short' ? '180px' : '220px')};
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
@@ -75,11 +76,12 @@ type DetailCardProps = {
   name: string
   text?: string
   img: string | null
+  variant?: 'default' | 'short'
 }
 
-export const DetailCard = ({ name, text, img, backgroundColor }: DetailCardProps) => {
+export const DetailCard = ({ name, text, img, backgroundColor, variant = 'default' }: DetailCardProps) => {
   return (
-    <Card backgroundColor={backgroundColor}>
+    <Card backgroundColor={backgroundColor} variant={variant}>
       <ImageBlock>{img ? <Image src={img} alt={name} /> : <NoImage>No image</NoImage>}</ImageBlock>
       <TextBlock>
         {text && <Description>{text}</Description>}

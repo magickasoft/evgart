@@ -1,33 +1,84 @@
-export const INGREDIENTS = {
-  egg: {
-    name: 'Яйцо куриное',
-    img: '/static/ingredients/egg.webp',
-    gauge: 'шт.',
-  },
-  refinedVegetableOil: {
-    name: 'Масло растительное рафинированное',
-    gauge: 'ст.л.',
+const MEAT = {
+  porkNeck: {
+    name: 'Шея свиная',
+    gauge: 'кг',
     img: null,
   },
-  groundBlackPepper: {
-    name: 'Перец чёрный молотый',
-    gauge: 'г',
-    img: '/static/ingredients/black-pepper.webp',
+  chickenThighFillet: {
+    name: 'Куриное филе бедра',
+    gauge: 'кг',
+    img: null,
   },
-  salt: {
-    name: 'Соль',
-    gauge: 'г',
-    img: '/static/ingredients/salt.webp',
+}
+
+const GREANS = {
+  greens: {
+    name: 'Зелень',
+    gauge: 'пуч.',
+    img: null,
   },
-  broccoli: {
-    name: 'Брокколи',
-    gauge: 'г',
-    img: '/static/ingredients/broccoli.webp',
+  dill: {
+    name: 'Укроп',
+    gauge: 'пуч.',
+    img: null,
   },
-  hardCheese: {
-    name: 'Сыр твёрдый',
+  parsley: {
+    name: 'Петрушка',
+    gauge: 'пуч.',
+    img: null,
+  },
+  basil: {
+    name: 'Базилик',
+    gauge: 'пуч.',
+    img: null,
+  },
+  cilantro: {
+    name: 'Кинза',
+    gauge: 'пуч.',
+    img: null,
+  },
+  greenOnion: {
+    name: 'Лук зелёный',
+    gauge: 'пуч.',
+    img: null,
+  },
+  spinach: {
+    name: 'Шпинат',
+    gauge: 'пуч.',
+    img: null,
+  },
+  arugula: {
+    name: 'Руккола',
+    gauge: 'пуч.',
+    img: null,
+  },
+  oreganoDry: {
+    name: 'Орегано сушёный',
     gauge: 'г',
-    img: '/static/ingredients/hard-cheese.webp',
+    img: null,
+  },
+}
+
+const VEGATABLES = {
+  tomato: {
+    name: 'Помидор',
+    gauge: 'шт.',
+    img: null,
+  },
+  cucumber: {
+    name: 'Огурец',
+    gauge: 'шт.',
+    img: null,
+  },
+  bellPepper: {
+    name: 'Перец сладкий',
+    gauge: 'шт.',
+    img: null,
+  },
+  zucchini: {
+    name: 'Цуккини',
+    gauge: 'шт.',
+    img: null,
   },
   beet: {
     name: 'Свекла',
@@ -47,6 +98,12 @@ export const INGREDIENTS = {
     // img: '/static/ingredients/onion.webp',
     img: null,
   },
+  redOnion: {
+    name: 'Лук красный',
+    gauge: 'шт.',
+    // img: '/static/ingredients/onion.webp',
+    img: null,
+  },
   potato: {
     name: 'Картофель',
     gauge: 'шт.',
@@ -59,20 +116,91 @@ export const INGREDIENTS = {
     // img: '/static/ingredients/garlic.webp',
     img: null,
   },
-  tomato: {
-    name: 'Помидор',
-    gauge: 'шт.',
-    // img: '/static/ingredients/tomato.webp',
-    img: null,
-  },
   cabbage: {
     name: 'Капуста белокочанная',
     gauge: 'коч.',
     // img: '/static/ingredients/cabbage.webp',
     img: null,
   },
+  broccoli: {
+    name: 'Брокколи',
+    gauge: 'г',
+    img: '/static/ingredients/broccoli.webp',
+  },
+  olives: {
+    name: 'Оливки',
+    gauge: 'г',
+    // img: '/static/ingredients/olive.webp',
+    img: null,
+  },
+}
+
+const LIQUIDS = {
+  water: {
+    name: 'Вода',
+    gauge: 'мл',
+    img: null,
+  },
+  hotWater: {
+    name: 'Горячая вода',
+    gauge: 'мл',
+    img: null,
+  },
+  carbonatedMineralWater: {
+    name: 'Газированная минеральная вода',
+    gauge: 'мл',
+    img: null,
+  },
+  lemonJuice: {
+    name: 'Лимонный сок',
+    gauge: 'мл',
+    img: null,
+  },
+}
+
+export const INGREDIENTS = {
+  ...MEAT,
+  ...GREANS,
+  ...VEGATABLES,
+  ...LIQUIDS,
+  egg: {
+    name: 'Яйцо куриное',
+    img: '/static/ingredients/egg.webp',
+    gauge: 'шт.',
+  },
+  refinedVegetableOil: {
+    name: 'Масло растительное рафинированное',
+    gauge: 'ст.л.',
+    img: null,
+  },
   vegetableOil: {
     name: 'Масло растительное',
+    gauge: 'ст.л.',
+    img: null,
+  },
+  groundBlackPepper: {
+    name: 'Перец чёрный молотый',
+    gauge: 'г',
+    img: '/static/ingredients/black-pepper.webp',
+  },
+  salt: {
+    name: 'Соль',
+    gauge: 'г',
+    img: '/static/ingredients/salt.webp',
+  },
+  fetaCheese: {
+    name: 'Сыр фета',
+    gauge: 'г',
+    // img: '/static/ingredients/feta-cheese.webp',
+    img: null,
+  },
+  hardCheese: {
+    name: 'Сыр твёрдый',
+    gauge: 'г',
+    img: '/static/ingredients/hard-cheese.webp',
+  },
+  oliveOil: {
+    name: 'Масло оливковое',
     gauge: 'ст.л.',
     img: null,
   },
@@ -111,14 +239,14 @@ export const INGREDIENTS = {
     gauge: 'г',
     img: null,
   },
-  hotWater: {
-    name: 'Горячая вода',
+  kefir32: {
+    name: 'Кефир 3.2%',
     gauge: 'мл',
     img: null,
   },
-  water: {
-    name: 'Вода',
-    gauge: 'мл',
+  lavash: {
+    name: 'Лаваш',
+    gauge: 'шт.',
     img: null,
   },
 }
