@@ -1,8 +1,10 @@
 import { BREAKFAST } from './breakfast'
 import { DESSERT } from './dessert'
 import { DINNER } from './dinner'
+import { GRILL } from './grill'
 import { HEALTHY } from './healthy'
 import { SNACKS } from './snacks'
+import { SUMMER_MENU } from './summerMenu'
 import { SUPPER } from './supper'
 
 export enum RecipeCategories {
@@ -12,6 +14,8 @@ export enum RecipeCategories {
   HEALTHY = 'healthy',
   DESSERT = 'dessert',
   SNACKS = 'snacks',
+  GRILL = 'grill',
+  SUMMER_MENU = 'summerMenu',
 }
 
 export interface Recipe {
@@ -34,7 +38,7 @@ export interface Recipe {
     img: string | null
     video: string | null
     description: string
-    ingredients: { name: string; count: number; gauge: string; img: string | null }[]
+    ingredients: { name: string; count?: number; gauge: string; img: string | null }[]
   }[]
 }
 
@@ -47,4 +51,6 @@ export const RECIPES_OBJ: {
   healthy: [...HEALTHY],
   dessert: [...DESSERT],
   snacks: [...SNACKS],
+  grill: [...GRILL],
+  summerMenu: [...SUMMER_MENU],
 }

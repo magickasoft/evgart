@@ -1,0 +1,231 @@
+import { count } from 'console'
+
+import { EQUIPMENTS } from '../equipments'
+import { INGREDIENTS } from '../ingredients'
+
+export const GRILL = [
+  {
+    categories: [{ name: 'grill' }],
+    key: 'shashlyk-iz-svininy-na-kefire',
+    name: 'shashlyk-iz-svininy-na-kefire',
+    img: null,
+    title: 'Шашлык из свинины на кефире',
+    description:
+      'Мечтаете о по-настоящему нежном и сочном шашлыке из свинины? Попробуйте приготовить мясо в маринаде из кефира — это простой и эффективный способ добиться потрясающего результата. Особенно хорошо подходит свиная шея: она жирная, мягкая и быстро пропитывается ароматами специй. Главный секрет мягкости — в кефире. Этот кисломолочный продукт, независимо от жирности, содержит бактерии, которые при длительном мариновании разрушают жесткие волокна, делая мясо необычайно нежным. Чтобы усилить вкус, рекомендуем добавить в маринад свежую зелень — базилик, укроп и петрушку. Они придают шашлыку легкий травяной аромат и подчеркивают вкус мяса. Не забудьте про лук — он не только усиливает аромат, но и дополнительно смягчает свинину. Достаточно оставить мясо в маринаде на 4–6 часов, а лучше — на ночь, и результат вас приятно удивит. Приготовьте шашлык из свинины на кефире по нашему проверенному рецепту и наслаждайтесь идеальным вкусом с дымком! Такой маринад сделает ваш пикник незабываемым.',
+    calories: 1999.06,
+    preparation: 240,
+    time: 40,
+    level: 1,
+    rating: 5,
+    portions: 4,
+    used: [74.36, 179.36, 20.2],
+    ingredients: [
+      {
+        ...INGREDIENTS.onion,
+        count: 8,
+      },
+      {
+        ...INGREDIENTS.salt,
+        count: 5,
+      },
+      {
+        ...INGREDIENTS.groundBlackPepper,
+        count: 5,
+      },
+      {
+        ...INGREDIENTS.dill,
+        count: 0.5,
+      },
+      {
+        ...INGREDIENTS.basil,
+        count: 1,
+      },
+      {
+        ...INGREDIENTS.parsley,
+        count: 0.5,
+      },
+      {
+        ...INGREDIENTS.porkNeck,
+        count: 2,
+      },
+      {
+        ...INGREDIENTS.kefir32,
+        count: 600,
+      },
+      {
+        ...INGREDIENTS.oliveOil,
+        count: 4,
+      },
+    ],
+    equipments: [
+      EQUIPMENTS.bowl,
+      EQUIPMENTS.knife,
+      EQUIPMENTS.cutBoard,
+      EQUIPMENTS.blender,
+      EQUIPMENTS.spoon,
+      EQUIPMENTS.grill,
+      EQUIPMENTS.tongs,
+      EQUIPMENTS.lid,
+      EQUIPMENTS.paperTowel,
+      EQUIPMENTS.skewers,
+    ],
+    cookingRecipe: [
+      {
+        img: null,
+        video: null,
+        description:
+          'Подготовьте ингредиенты: хорошо промойте мясо и обсушите бумажным полотенцем. Удалите лишний жир и плёнки, чтобы шашлык получился мягким и не имел лишней жирности.',
+        ingredients: [{ ...INGREDIENTS.porkNeck }],
+      },
+      {
+        img: null,
+        video: null,
+        description:
+          'Нарежьте свиную шею острым ножом на равные по размеру куски — так мясо прожарится равномерно и не пересохнет. Оптимально — кубики размером около 4–5 см.',
+        ingredients: [],
+      },
+      {
+        img: null,
+        video: null,
+        description:
+          'Промойте зелень — укроп, базилик и петрушку — в холодной воде, затем обсушите. Разберите зелень руками и выложите в чашу блендера вместе с черешками.',
+        ingredients: [{ ...INGREDIENTS.dill }, { ...INGREDIENTS.basil }, { ...INGREDIENTS.parsley }],
+      },
+      {
+        img: null,
+        video: null,
+        description:
+          'Добавьте к зелени оливковое или рафинированное растительное масло. Измельчите до состояния пасты — она придаст маринаду яркий аромат и насыщенный вкус.',
+        ingredients: [{ ...INGREDIENTS.refinedVegetableOil }, { ...INGREDIENTS.oliveOil }],
+      },
+      {
+        img: null,
+        video: null,
+        description:
+          'В глубокой миске соедините куски мяса, кефир, луковые кольца, зелёную пасту, соль и перец. Всё хорошо перемешайте руками, чтобы маринад равномерно покрывал мясо.',
+        ingredients: [
+          { ...INGREDIENTS.kefir32 },
+          { ...INGREDIENTS.onion },
+          { ...INGREDIENTS.salt },
+          { ...INGREDIENTS.groundBlackPepper },
+        ],
+      },
+      {
+        img: null,
+        video: null,
+        description:
+          'Накройте миску крышкой или пищевой пленкой и оставьте мясо мариноваться минимум на 4 часа при комнатной температуре или на ночь в холодильнике.',
+        ingredients: [],
+      },
+      {
+        img: null,
+        video: null,
+        description:
+          'Нанизайте мясо на шампуры или выложите на решетку. Жарьте на горячих углях до готовности, регулярно переворачивая, чтобы мясо подрумянилось со всех сторон. Подавайте с овощами и свежей зеленью.',
+        ingredients: [],
+      },
+    ],
+  },
+  {
+    categories: [{ name: 'grill' }],
+    key: 'shashlyk-iz-kurinogo-bedra',
+    name: 'shashlyk-iz-kurinogo-bedra',
+    img: null,
+    title: 'Шашлык из куриного бедра',
+    description:
+      'Если вы хотите приготовить действительно сочный и ароматный шашлык из курицы — не нужно изобретать велосипед. Достаточно воспользоваться проверенным рецептом с простым, но эффективным маринадом на основе газированной воды. Такой способ маринования давно используют опытные кулинары: он придаёт мясу мягкость, делает его нежным и сохраняет сочность при жарке. Минимум усилий — максимум вкуса!',
+    calories: 355,
+    preparation: 120,
+    time: 60,
+    level: 1,
+    rating: 5,
+    portions: 8,
+    used: [28.67, 14.61, 28.2],
+    ingredients: [
+      {
+        ...INGREDIENTS.chickenThighFillet,
+        count: 1,
+      },
+      {
+        ...INGREDIENTS.carbonatedMineralWater,
+        count: 100,
+      },
+      {
+        ...INGREDIENTS.salt,
+        count: 12,
+      },
+      {
+        ...INGREDIENTS.groundBlackPepper,
+        count: 2,
+      },
+      {
+        ...INGREDIENTS.vegetableOil,
+        count: 2,
+      },
+      {
+        ...INGREDIENTS.onion,
+        count: 1,
+      },
+      {
+        ...INGREDIENTS.lavash,
+        count: 2,
+      },
+      {
+        ...INGREDIENTS.greens,
+        count: 16,
+      },
+    ],
+    equipments: [
+      EQUIPMENTS.knife,
+      EQUIPMENTS.cutBoard,
+      EQUIPMENTS.bowl,
+      EQUIPMENTS.spoon,
+      EQUIPMENTS.lid,
+      EQUIPMENTS.tongs,
+      EQUIPMENTS.grill,
+      EQUIPMENTS.skewers,
+      EQUIPMENTS.paperTowel,
+    ],
+    cookingRecipe: [
+      {
+        img: null,
+        video: null,
+        description:
+          'Филе куриного бедра тщательно промойте, обсушите бумажными полотенцами. Нарежьте мясо на крупные куски размером около 5–7 см. Посыпьте солью и молотым перцем, аккуратно перемешайте.',
+        ingredients: [
+          { ...INGREDIENTS.chickenThighFillet },
+          { ...INGREDIENTS.salt },
+          { ...INGREDIENTS.groundBlackPepper },
+        ],
+      },
+      {
+        img: null,
+        video: null,
+        description:
+          'Очистите лук и нарежьте его полукольцами толщиной около 0.5–1 см. Добавьте его к мясу вместе с растительным маслом. Всё тщательно перемешайте ложкой или руками.',
+        ingredients: [{ ...INGREDIENTS.onion }, { ...INGREDIENTS.vegetableOil }],
+      },
+      {
+        img: null,
+        video: null,
+        description:
+          'Влейте в мясо с луком газированную минеральную воду. Перемешайте всё ещё раз, накройте миску крышкой и оставьте мариноваться минимум на 2 часа.',
+        ingredients: [{ ...INGREDIENTS.carbonatedMineralWater }],
+      },
+      {
+        img: null,
+        video: null,
+        description:
+          'Когда мясо замаринуется, удалите лишний лук. Нанизывайте курицу на шампуры или деревянные шпажки. Обжаривайте на гриле или сковороде-гриль до золотистой корочки со всех сторон.',
+        ingredients: [],
+      },
+      {
+        img: null,
+        video: null,
+        description:
+          'Готовый шашлык подавайте с рубленой зеленью и свежим лавашом. Блюдо особенно вкусно в горячем виде прямо с огня.',
+        ingredients: [{ ...INGREDIENTS.greens }, { ...INGREDIENTS.lavash }],
+      },
+    ],
+  },
+]
