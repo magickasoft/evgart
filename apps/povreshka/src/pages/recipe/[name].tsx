@@ -1,4 +1,5 @@
 import SC from '@emotion/styled'
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
@@ -6,7 +7,6 @@ import { Page } from '../../components'
 import { DetailCard } from '../../components/cards'
 import { InfoBlock } from '../../components/recipe-page'
 import { findByKey } from '../../helpers/findByKey'
-import Head from 'next/head'
 
 const HeaderContainer = SC.div`
   max-width: 1800px;
@@ -265,6 +265,9 @@ const RecipePage = () => {
           ))}
         </RecipeStepsContainer>
       </Page>
+      <div style={{ display: 'none' }}>
+        {recipe?.searchRequests?.map(searchRequest => <p key={searchRequest}>{searchRequest}</p>)}
+      </div>
     </>
   )
 }

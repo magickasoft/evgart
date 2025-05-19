@@ -19,6 +19,8 @@ export enum RecipeCategories {
 }
 
 export interface Recipe {
+  metaSeo?: Record<string, string>
+  searchRequests?: string[]
   categories: { name: string }[]
   key: string
   name: string

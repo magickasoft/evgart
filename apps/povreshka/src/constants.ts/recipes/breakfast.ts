@@ -3,6 +3,29 @@ import { INGREDIENTS } from '../ingredients'
 
 export const BREAKFAST = [
   {
+    metaSeo: {
+      title: 'Яичница-болтунья',
+      description:
+        'Нежная и воздушная яичница-болтунья — идеальный вариант для тех, кто ценит вкус и простоту. Это блюдо быстро готовится, легко усваивается и дарит приятное ощущение сытости без тяжести. Главное — не перегревать сковороду и не взбивать яйца слишком сильно, чтобы сохранить кремовую текстуру.',
+      keywords: 'яичница, болтунья, завтрак, яйца, легкий завтрак',
+      'og:title': 'Яичница-болтунья',
+      'og:description':
+        'Нежная и воздушная яичница-болтунья — идеальный вариант для тех, кто ценит вкус и простоту. Это блюдо быстро готовится, легко усваивается и дарит приятное ощущение сытости без тяжести. Главное — не перегревать сковороду и не взбивать яйца слишком сильно, чтобы сохранить кремовую текстуру.',
+      'og:url': 'https://povreshka.ru/recipe/scrambled-eggs',
+      // 'og:image': '/static/recipes/scrambled-eggs.webp',
+      // twitterTitle: 'Яичница-болтунья',
+      // twitterDescription:
+      //   'Нежная и воздушная яичница-болтунья — идеальный вариант для тех, кто ценит вкус и простоту. Это блюдо быстро готовится, легко усваивается и дарит приятное ощущение сытости без тяжести. Главное — не перегревать сковороду и не взбивать яйца слишком сильно, чтобы сохранить кремовую текстуру.',
+      // twitterImage: '/static/recipes/scrambled-eggs.webp',
+      // twitterUrl: 'https://povreshka.ru/recipe/scrambled-eggs',
+      // canonicalUrl: 'https://povreshka.ru/recipe/scrambled-eggs',
+      // robots: 'index, follow',
+      // googlebot: 'index, follow',
+      // yandex: 'index, follow',
+      // selfwork: 'index, follow',
+      // 'max-image-preview': 'large',
+    },
+    searchRequests: ['яичница', 'болтунья', 'завтрак', 'яйца', 'легкий завтрак'],
     categories: [{ name: 'breakfast' }],
     key: 'scrambled-eggs',
     name: 'scrambled-eggs',
