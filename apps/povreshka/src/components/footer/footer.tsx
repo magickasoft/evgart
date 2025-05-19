@@ -19,7 +19,7 @@ export const Footer = (props: any): JSX.Element => {
           </Email>
           <A href="tel://+79537647035">+7 953 764 70 35</A>
         </Contacts> */}
-        <Docs list={docsLinks} />
+        {/* <Docs list={docsLinks} /> */}
         {/* <NavLinks list={links} /> */}
         <Copyright />
       </Content>
