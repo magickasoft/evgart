@@ -6,6 +6,7 @@ import { Page } from '../../components'
 import { DetailCard } from '../../components/cards'
 import { InfoBlock } from '../../components/recipe-page'
 import { findByKey } from '../../helpers/findByKey'
+import Head from 'next/head'
 
 const HeaderContainer = SC.div`
   max-width: 1800px;
@@ -185,75 +186,86 @@ const RecipePage = () => {
   }, [router.isReady, router.query])
 
   return (
-    <Page>
-      <HeaderContainer>
-        {loading ? (
-          <Title>Loading...</Title>
-        ) : recipe ? (
-          <>
-            <Header>
-              <TitleContainer>
-                <Title>{recipe.title}</Title>
-                <Description>{recipe.description}</Description>
-                <InfoContainer>
-                  {recipe.preparation && <InfoBlock name="Подготовка" value={recipe.preparation} gauge="мин" />}
-                  <InfoBlock name="Готовка" value={recipe.time} gauge="мин" />
-                  <InfoBlock name="Калорийность" value={recipe.calories} gauge="ккал" />
-                </InfoContainer>
-              </TitleContainer>
-              <ImageContainer>
-                {recipe.img ? <Image src={recipe.img} alt={recipe.name} /> : <Placeholder>Нет изображения</Placeholder>}
-              </ImageContainer>
-            </Header>
-          </>
-        ) : (
-          <Title>Recipe not found</Title>
-        )}
-      </HeaderContainer>
-      <DetailsContainer>
-        <IngredientsContainer>
-          <DetailsTitle>Ингредиенты</DetailsTitle>
-          <DetailsCardsContainer>
-            {recipe?.ingredients.map(ingredient => (
-              <DetailCard
-                key={ingredient.name}
-                name={ingredient.name}
-                text={`${ingredient.count && ingredient.gauge ? `${ingredient.count} ${ingredient.gauge}` : ''}`}
-                img={ingredient.img}
-              />
-            ))}
-          </DetailsCardsContainer>
-        </IngredientsContainer>
-        <EquipmentsContainer>
-          <DetailsTitle>Оборудование</DetailsTitle>
-          <DetailsCardsContainer>
-            {recipe?.equipments.map(equipment => (
-              <DetailCard key={equipment.name} name={equipment.name} img={equipment.img} />
-            ))}
-          </DetailsCardsContainer>
-        </EquipmentsContainer>
-      </DetailsContainer>
-      <RecipeStepsContainer>
-        {recipe?.cookingRecipe?.map((step, index) => (
-          <RecipeStep key={index}>
-            <RecipeTitle>{`Шаг ${index + 1}`}</RecipeTitle>
-            <RecipeDescription>{step.description}</RecipeDescription>
+    <>
+      <Head>
+        <title>{recipe ? recipe.title : 'Recipe not found'}</title>
+        <meta name="description" content={recipe ? recipe.description : 'Recipe not found'} />
+        <meta name="keywords" content={recipe ? recipe.categories.join(', ') : ''} />
+      </Head>
+      <Page>
+        <HeaderContainer>
+          {loading ? (
+            <Title>Loading...</Title>
+          ) : recipe ? (
+            <>
+              <Header>
+                <TitleContainer>
+                  <Title>{recipe.title}</Title>
+                  <Description>{recipe.description}</Description>
+                  <InfoContainer>
+                    {recipe.preparation && <InfoBlock name="Подготовка" value={recipe.preparation} gauge="мин" />}
+                    <InfoBlock name="Готовка" value={recipe.time} gauge="мин" />
+                    <InfoBlock name="Калорийность" value={recipe.calories} gauge="ккал" />
+                  </InfoContainer>
+                </TitleContainer>
+                <ImageContainer>
+                  {recipe.img ? (
+                    <Image src={recipe.img} alt={recipe.name} />
+                  ) : (
+                    <Placeholder>Нет изображения</Placeholder>
+                  )}
+                </ImageContainer>
+              </Header>
+            </>
+          ) : (
+            <Title>Recipe not found</Title>
+          )}
+        </HeaderContainer>
+        <DetailsContainer>
+          <IngredientsContainer>
+            <DetailsTitle>Ингредиенты</DetailsTitle>
             <DetailsCardsContainer>
-              {step?.ingredients.map(ingredient => (
+              {recipe?.ingredients.map(ingredient => (
                 <DetailCard
                   key={ingredient.name}
                   name={ingredient.name}
                   text={`${ingredient.count && ingredient.gauge ? `${ingredient.count} ${ingredient.gauge}` : ''}`}
                   img={ingredient.img}
-                  backgroundColor="#f9f9f9"
-                  variant="short"
                 />
               ))}
             </DetailsCardsContainer>
-          </RecipeStep>
-        ))}
-      </RecipeStepsContainer>
-    </Page>
+          </IngredientsContainer>
+          <EquipmentsContainer>
+            <DetailsTitle>Оборудование</DetailsTitle>
+            <DetailsCardsContainer>
+              {recipe?.equipments.map(equipment => (
+                <DetailCard key={equipment.name} name={equipment.name} img={equipment.img} />
+              ))}
+            </DetailsCardsContainer>
+          </EquipmentsContainer>
+        </DetailsContainer>
+        <RecipeStepsContainer>
+          {recipe?.cookingRecipe?.map((step, index) => (
+            <RecipeStep key={index}>
+              <RecipeTitle>{`Шаг ${index + 1}`}</RecipeTitle>
+              <RecipeDescription>{step.description}</RecipeDescription>
+              <DetailsCardsContainer>
+                {step?.ingredients.map(ingredient => (
+                  <DetailCard
+                    key={ingredient.name}
+                    name={ingredient.name}
+                    text={`${ingredient.count && ingredient.gauge ? `${ingredient.count} ${ingredient.gauge}` : ''}`}
+                    img={ingredient.img}
+                    backgroundColor="#f9f9f9"
+                    variant="short"
+                  />
+                ))}
+              </DetailsCardsContainer>
+            </RecipeStep>
+          ))}
+        </RecipeStepsContainer>
+      </Page>
+    </>
   )
 }
 
