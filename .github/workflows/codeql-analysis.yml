@@ -33,9 +33,7 @@ jobs:
           queries: security-extended,security-and-quality
 
       - name: Install Dependencies
-        run: |
-          yarn install --frozen-lockfile
-          # или другие команды для установки зависимостей
+        run: yarn install --frozen-lockfile
 
       - name: Autobuild
         uses: github/codeql-action/autobuild@v3
