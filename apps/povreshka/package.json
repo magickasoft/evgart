@@ -7,6 +7,7 @@
     "build": "./node_modules/.bin/next build",
     "start": "./node_modules/.bin/next start",
     "lint": "./node_modules/.bin/next lint",
+    "type-check": "tsc --noEmit",
     "docker-build": "docker build -t povreshka-nextjs .",
     "docker-run": "docker run -p 3000:3000 povreshka-nextjs",
     "docker-images": "docker images",
