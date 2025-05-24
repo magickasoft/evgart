@@ -1,5 +1,7 @@
 name: 'Code Analysis'
 
+permissions: read-all
+
 on:
   push:
     branches: [master]
@@ -13,10 +15,7 @@ jobs:
     name: CodeQL
     runs-on: ubuntu-latest
     permissions:
-      actions: read
-      contents: read
       security-events: write
-      packages: read
 
     strategy:
       fail-fast: false
