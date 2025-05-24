@@ -21,7 +21,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Type Checking
-        run: tsc --noEmit
+        run: yarn type-check
 
   lint:
     name: ESLint
