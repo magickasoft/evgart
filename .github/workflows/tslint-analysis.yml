@@ -1,4 +1,4 @@
-name: 'TSLint'
+name: 'Code Analysis'
 
 on:
   push:
@@ -9,8 +9,8 @@ on:
     - cron: '0 0 * * 1' # Every Monday at 00:00 UTC
 
 jobs:
-  build:
-    name: Analyze
+  type-check:
+    name: TypeScript Check
     runs-on: ubuntu-latest
 
     steps:
