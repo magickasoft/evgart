@@ -1,4 +1,4 @@
-name: 'CodeQL'
+name: 'Code Analysis'
 
 on:
   push:
@@ -9,8 +9,8 @@ on:
     - cron: '0 0 * * 1' # Every Monday at 00:00 UTC
 
 jobs:
-  analyze:
-    name: Analyze
+  code-ql:
+    name: CodeQL
     runs-on: ubuntu-latest
     permissions:
       actions: read
