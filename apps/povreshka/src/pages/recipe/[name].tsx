@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
-import { Page } from '../../components'
+import { NoList, Page } from '../../components'
 import { DetailCard } from '../../components/cards'
 import { InfoBlock } from '../../components/recipe-page'
 import { findByKey } from '../../helpers/findByKey'
@@ -65,6 +65,7 @@ const Placeholder = SC.div`
 `
 
 const Title = SC.h1`
+width: 80%;
   margin-bottom: 10px;
   line-height: 1.2;
 `
@@ -204,7 +205,7 @@ const RecipePage = () => {
                   <InfoContainer>
                     {recipe.preparation && <InfoBlock name="Подготовка" value={recipe.preparation} gauge="мин" />}
                     <InfoBlock name="Готовка" value={recipe.time} gauge="мин" />
-                    <InfoBlock name="Калорийность" value={recipe.calories} gauge="ккал" />
+                    {recipe.calories ? <InfoBlock name="Калорийность" value={recipe.calories} gauge="ккал" /> : null}
                   </InfoContainer>
                 </TitleContainer>
                 <ImageContainer>
@@ -223,24 +224,32 @@ const RecipePage = () => {
         <DetailsContainer>
           <IngredientsContainer>
             <DetailsTitle>Ингредиенты</DetailsTitle>
-            <DetailsCardsContainer>
-              {recipe?.ingredients.map(ingredient => (
-                <DetailCard
-                  key={ingredient.name}
-                  name={ingredient.name}
-                  text={`${ingredient.count && ingredient.gauge ? `${ingredient.count} ${ingredient.gauge}` : ''}`}
-                  img={ingredient.img}
-                />
-              ))}
-            </DetailsCardsContainer>
+            {recipe?.ingredients.length ? (
+              <DetailsCardsContainer>
+                {recipe?.ingredients.map(ingredient => (
+                  <DetailCard
+                    key={ingredient.name}
+                    name={ingredient.name}
+                    text={`${ingredient.count && ingredient.gauge ? `${ingredient.count} ${ingredient.gauge}` : ''}`}
+                    img={ingredient.img}
+                  />
+                ))}
+              </DetailsCardsContainer>
+            ) : (
+              <NoList value="Список ингредиентов будет доступен позднее..." />
+            )}
           </IngredientsContainer>
           <EquipmentsContainer>
             <DetailsTitle>Оборудование</DetailsTitle>
-            <DetailsCardsContainer>
-              {recipe?.equipments.map(equipment => (
-                <DetailCard key={equipment.name} name={equipment.name} img={equipment.img} />
-              ))}
-            </DetailsCardsContainer>
+            {recipe?.equipments.length ? (
+              <DetailsCardsContainer width="80%">
+                {recipe?.equipments.map(equipment => (
+                  <DetailCard key={equipment.name} name={equipment.name} img={equipment.img} />
+                ))}
+              </DetailsCardsContainer>
+            ) : (
+              <NoList value="Список оборудования будет доступен позднее..." />
+            )}
           </EquipmentsContainer>
         </DetailsContainer>
         <RecipeStepsContainer>

@@ -2,8 +2,184 @@ import type { MetadataRoute } from 'next'
 
 import { DOMAIN } from '../process.env/domain'
 
+const baseUrl = `https://${DOMAIN}`
+
+const GRILL: MetadataRoute.Sitemap = [
+  {
+    url: `${baseUrl}/recipe/shashlyk-iz-svininy-na-kefire`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+  {
+    url: `${baseUrl}/en/recipe/shashlyk-iz-svininy-na-kefire`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+  {
+    url: `${baseUrl}/recipe/shashlyk-iz-kurinogo-bedra`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+  {
+    url: `${baseUrl}/en/recipe/shashlyk-iz-kurinogo-bedra`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+]
+
+const BREAKFAST: MetadataRoute.Sitemap = [
+  {
+    url: `${baseUrl}/recipe/scrambled-eggs`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+  {
+    url: `${baseUrl}/en/recipe/scrambled-eggs`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+  {
+    url: `${baseUrl}/recipe/scrambled-eggs-with-broccoli`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+  {
+    url: `${baseUrl}/en/recipe/scrambled-eggs-with-broccoli`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+]
+
+const DINNER: MetadataRoute.Sitemap = [
+  {
+    url: `${baseUrl}/recipe/borshch-s-pampushkami`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+  {
+    url: `${baseUrl}/en/recipe/borshch-s-pampushkami`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+]
+
+const SUPPER: MetadataRoute.Sitemap = [
+  {
+    url: `${baseUrl}/recipe/rublenye-kotlety-iz-grudki-na-skovorode`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+  {
+    url: `${baseUrl}/en/recipe/rublenye-kotlety-iz-grudki-na-skovorode`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+  {
+    url: `${baseUrl}/recipe/stejk-ribaj-na-elektrogrile`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+  {
+    url: `${baseUrl}/en/recipe/stejk-ribaj-na-elektrogrile`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+  {
+    url: `${baseUrl}/recipe/mjaso-po-francuzski-s-pomidorami-i-syrom`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+  {
+    url: `${baseUrl}/en/recipe/mjaso-po-francuzski-s-pomidorami-i-syrom`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+  {
+    url: `${baseUrl}/recipe/uzbekskij-plov-s-govyadinoj`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+  {
+    url: `${baseUrl}/en/recipe/uzbekskij-plov-s-govyadinoj`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+]
+
+const SALADS: MetadataRoute.Sitemap = [
+  {
+    url: `${baseUrl}/recipe/grecheskij-salat`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+  {
+    url: `${baseUrl}/en/recipe/grecheskij-salat`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+]
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = `https://${DOMAIN}`
   return [
     {
       url: `${baseUrl}`,
@@ -53,101 +229,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       images: [],
       videos: [],
     },
-    {
-      url: `${baseUrl}/recipe/shashlyk-iz-svininy-na-kefire`,
-      lastModified: new Date().toISOString().split('T')[0],
-      changeFrequency: 'monthly',
-      priority: 0.8,
-      images: [],
-      videos: [],
-    },
-    {
-      url: `${baseUrl}/en/recipe/shashlyk-iz-svininy-na-kefire`,
-      lastModified: new Date().toISOString().split('T')[0],
-      changeFrequency: 'monthly',
-      priority: 0.8,
-      images: [],
-      videos: [],
-    },
-    {
-      url: `${baseUrl}/recipe/shashlyk-iz-kurinogo-bedra`,
-      lastModified: new Date().toISOString().split('T')[0],
-      changeFrequency: 'monthly',
-      priority: 0.8,
-      images: [],
-      videos: [],
-    },
-    {
-      url: `${baseUrl}/en/recipe/shashlyk-iz-kurinogo-bedra`,
-      lastModified: new Date().toISOString().split('T')[0],
-      changeFrequency: 'monthly',
-      priority: 0.8,
-      images: [],
-      videos: [],
-    },
-    {
-      url: `${baseUrl}/recipe/grecheskij-salat`,
-      lastModified: new Date().toISOString().split('T')[0],
-      changeFrequency: 'monthly',
-      priority: 0.8,
-      images: [],
-      videos: [],
-    },
-    {
-      url: `${baseUrl}/en/recipe/grecheskij-salat`,
-      lastModified: new Date().toISOString().split('T')[0],
-      changeFrequency: 'monthly',
-      priority: 0.8,
-      images: [],
-      videos: [],
-    },
-    {
-      url: `${baseUrl}/recipe/scrambled-eggs`,
-      lastModified: new Date().toISOString().split('T')[0],
-      changeFrequency: 'monthly',
-      priority: 0.8,
-      images: [],
-      videos: [],
-    },
-    {
-      url: `${baseUrl}/en/recipe/scrambled-eggs`,
-      lastModified: new Date().toISOString().split('T')[0],
-      changeFrequency: 'monthly',
-      priority: 0.8,
-      images: [],
-      videos: [],
-    },
-    {
-      url: `${baseUrl}/recipe/scrambled-eggs-with-broccoli`,
-      lastModified: new Date().toISOString().split('T')[0],
-      changeFrequency: 'monthly',
-      priority: 0.8,
-      images: [],
-      videos: [],
-    },
-    {
-      url: `${baseUrl}/en/recipe/scrambled-eggs-with-broccoli`,
-      lastModified: new Date().toISOString().split('T')[0],
-      changeFrequency: 'monthly',
-      priority: 0.8,
-      images: [],
-      videos: [],
-    },
-    {
-      url: `${baseUrl}/recipe/borshch-s-pampushkami`,
-      lastModified: new Date().toISOString().split('T')[0],
-      changeFrequency: 'monthly',
-      priority: 0.8,
-      images: [],
-      videos: [],
-    },
-    {
-      url: `${baseUrl}/en/recipe/borshch-s-pampushkami`,
-      lastModified: new Date().toISOString().split('T')[0],
-      changeFrequency: 'monthly',
-      priority: 0.8,
-      images: [],
-      videos: [],
-    },
+    ...GRILL,
+    ...SALADS,
+    ...BREAKFAST,
+    ...DINNER,
+    ...SUPPER,
   ]
 }

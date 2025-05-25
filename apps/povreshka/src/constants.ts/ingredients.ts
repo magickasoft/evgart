@@ -9,6 +9,11 @@ const MEAT = {
     gauge: 'кг',
     img: null,
   },
+  chickenBreast: {
+    name: 'Куриное филе грудки',
+    gauge: 'кг',
+    img: null,
+  },
 }
 
 const GREANS = {
@@ -156,6 +161,26 @@ const LIQUIDS = {
     gauge: 'мл',
     img: null,
   },
+  milk: {
+    name: 'Молоко',
+    gauge: 'мл',
+    img: null,
+  },
+  kefir: {
+    name: 'Кефир',
+    gauge: 'мл',
+    img: null,
+  },
+  yogurt: {
+    name: 'Йогурт',
+    gauge: 'мл',
+    img: null,
+  },
+  cream20: {
+    name: 'Сливки 20%',
+    gauge: 'мл',
+    img: null,
+  },
 }
 
 export const INGREDIENTS = {
@@ -163,10 +188,26 @@ export const INGREDIENTS = {
   ...GREANS,
   ...VEGATABLES,
   ...LIQUIDS,
+  whiteBread: {
+    name: 'Белый хлеб',
+    gauge: 'г',
+    // img: '/static/ingredients/white-bread.webp',
+    img: null,
+  },
   egg: {
     name: 'Яйцо куриное',
     img: '/static/ingredients/egg.webp',
     gauge: 'шт.',
+  },
+  butter: {
+    name: 'Масло сливочное',
+    gauge: 'г',
+    img: null,
+  },
+  meltedButter: {
+    name: 'Масло сливочное растопленное',
+    gauge: 'ст.л.',
+    img: null,
   },
   refinedVegetableOil: {
     name: 'Масло растительное рафинированное',
@@ -188,6 +229,12 @@ export const INGREDIENTS = {
     gauge: 'г',
     img: '/static/ingredients/salt.webp',
   },
+  flour: {
+    name: 'Мука',
+    gauge: 'г',
+    img: null,
+  },
+
   fetaCheese: {
     name: 'Сыр фета',
     gauge: 'г',
@@ -217,11 +264,6 @@ export const INGREDIENTS = {
   bayLeaf: {
     name: 'Лавровый лист',
     gauge: 'шт.',
-    img: null,
-  },
-  flour: {
-    name: 'Мука',
-    gauge: 'г',
     img: null,
   },
   milk: {
