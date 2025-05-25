@@ -4,7 +4,13 @@ import Link from 'next/link'
 
 import { minDevice } from '../../styles'
 
-type VariantType = 'large' | 'small'
+type VariantType = 'large' | 'small' | 'slider'
+
+const CardHeight = {
+  large: '250px',
+  small: '180px',
+  slider: '290px',
+}
 
 const Card = SC.div<{ color?: string; variant: VariantType }>`
   background-color: ${({ color }) => color || '#f7f5f6'};
@@ -13,7 +19,8 @@ const Card = SC.div<{ color?: string; variant: VariantType }>`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: ${({ variant }) => (variant === 'large' ? '250px' : '180px')};
+  height: ${({ variant }) => CardHeight[variant]};
+  min-width: 250px;
   border-radius: 16px;
   overflow: hidden;
   transition:
@@ -56,6 +63,18 @@ const Title = SC.div<{ variant: VariantType }>`
   }
 `
 
+const ContentWidth = {
+  large: '240px',
+  small: '140px',
+  slider: '240px',
+}
+
+const ContentHeight = {
+  large: '220px',
+  small: '120px',
+  slider: '220px',
+}
+
 const Content = SC.div<{ variant: VariantType }>`
   display: flex;
   align-items: center;
@@ -64,8 +83,8 @@ const Content = SC.div<{ variant: VariantType }>`
   transition: transform 0.3s ease;
 
   img {
-    width: ${({ variant }) => (variant === 'large' ? '240px' : '140px')};
-    height: ${({ variant }) => (variant === 'large' ? '220px' : '120px')};
+    width: ${({ variant }) => ContentWidth[variant]};
+    height: ${({ variant }) => ContentHeight[variant]};
     object-fit: contain;
   }
 `

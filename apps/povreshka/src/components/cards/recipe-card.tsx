@@ -44,6 +44,7 @@ const Characteristic = styled.div`
 const Card = styled.div`
   background-color: #fdfcfc;
   width: 300px;
+  min-width: 300px;
   height: 270px;
   position: relative;
   display: flex;
@@ -93,7 +94,7 @@ const Content = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 12px;
+  padding: 20px;
   flex: 1;
 `
 

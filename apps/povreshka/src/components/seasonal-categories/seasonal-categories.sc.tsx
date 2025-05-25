@@ -6,6 +6,7 @@ export const Container = SC.section`
   background-color: #ffffff;
   min-height: 300px;
   max-width: 1920px;
+  margin: 0 auto;
   overflow: hidden;
   padding: 0px 100px ;
   margin-bottom: 20px;
