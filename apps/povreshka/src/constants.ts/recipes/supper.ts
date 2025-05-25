@@ -1,5 +1,3 @@
-import { count } from 'console'
-
 import { INGREDIENTS } from '../ingredients'
 
 export const SUPPER = [
