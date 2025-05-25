@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
-import { Page } from '../../components'
+import { NoList, Page } from '../../components'
 import { DetailCard } from '../../components/cards'
 import { InfoBlock } from '../../components/recipe-page'
 import { findByKey } from '../../helpers/findByKey'
@@ -236,7 +236,7 @@ const RecipePage = () => {
                 ))}
               </DetailsCardsContainer>
             ) : (
-              <p>Список ингредиентов будет доступен позднее...</p>
+              <NoList value="Список ингредиентов будет доступен позднее..." />
             )}
           </IngredientsContainer>
           <EquipmentsContainer>
@@ -248,7 +248,7 @@ const RecipePage = () => {
                 ))}
               </DetailsCardsContainer>
             ) : (
-              <p>Список оборудования будет доступен позднее...</p>
+              <NoList value="Список оборудования будет доступен позднее..." />
             )}
           </EquipmentsContainer>
         </DetailsContainer>
