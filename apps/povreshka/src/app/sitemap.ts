@@ -72,6 +72,22 @@ const BREAKFAST: MetadataRoute.Sitemap = [
     images: [],
     videos: [],
   },
+  {
+    url: `${baseUrl}/recipe/ovsjanaja-kasha-s-jablokami-i-koricej`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+  {
+    url: `${baseUrl}/en/recipe/ovsjanaja-kasha-s-jablokami-i-koricej`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
 ]
 
 const DINNER: MetadataRoute.Sitemap = [
@@ -179,6 +195,79 @@ const SALADS: MetadataRoute.Sitemap = [
   },
 ]
 
+const DESSERTS: MetadataRoute.Sitemap = [
+  {
+    url: `${baseUrl}/recipe/chizkeik`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+  {
+    url: `${baseUrl}/en/recipe/chizkeik`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+]
+
+const HEALTHIES: MetadataRoute.Sitemap = [
+  {
+    url: `${baseUrl}/recipe/ragu-iz-kabachkov-v-smetane`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+  {
+    url: `${baseUrl}/en/recipe/ragu-iz-kabachkov-v-smetane`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+]
+
+const SNACKS: MetadataRoute.Sitemap = [
+  {
+    url: `${baseUrl}/recipe/rulety-iz-vetchiny-s-syrnom-i-chesnokom`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+  {
+    url: `${baseUrl}/en/recipe/rulety-iz-vetchiny-s-syrnom-i-chesnokom`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+  {
+    url: `${baseUrl}/recipe/kartofelnye-chipsy-v-mikrovolnovke`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+  {
+    url: `${baseUrl}/en/recipe/kartofelnye-chipsy-v-mikrovolnovke`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly',
+    priority: 0.8,
+    images: [],
+    videos: [],
+  },
+]
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
@@ -234,5 +323,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...BREAKFAST,
     ...DINNER,
     ...SUPPER,
+    ...DESSERTS,
+    ...HEALTHIES,
+    ...SNACKS,
   ]
 }

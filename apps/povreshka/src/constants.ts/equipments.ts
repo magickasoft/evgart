@@ -19,6 +19,11 @@ export const EQUIPMENTS = {
     img: null,
     name: 'Тарелка',
   },
+  microwave: {
+    // img: '/static/equipments/microwave.webp',
+    img: null,
+    name: 'Микроволновая печь',
+  },
   fork: {
     img: null,
     name: 'Вилка',
@@ -26,10 +31,6 @@ export const EQUIPMENTS = {
   knife: {
     img: null,
     name: 'Нож',
-  },
-  cuttingBoard: {
-    img: null,
-    name: 'Разделочная доска',
   },
   pot: {
     img: null,

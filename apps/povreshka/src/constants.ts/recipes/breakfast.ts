@@ -217,6 +217,54 @@ export const BREAKFAST = [
       },
     ],
   },
+  {
+    categories: [{ name: 'breakfast' }],
+    key: 'ovsjanaja-kasha-s-jablokami-i-koricej',
+    name: 'ovsjanaja-kasha-s-jablokami-i-koricej',
+    img: null,
+    title: 'Овсяная каша с яблоками и корицей',
+    description:
+      'Начните день с ароматной овсянки — нежной, сытной и с витаминным зарядом! Этот простой рецепт сочетает полезные злаки, сладкие яблоки и согревающую корицу. Без сахара, на молоке или воде — идеально для правильного питания и худеющих.',
+    calories: 320.5,
+    preparation: null,
+    time: 20,
+    level: 1,
+    rating: 4.8,
+    portions: 4,
+    used: [],
+    ingredients: [],
+    equipments: [
+      EQUIPMENTS.pot,
+      EQUIPMENTS.spoon,
+      EQUIPMENTS.measuringSpoon,
+      EQUIPMENTS.cutBoard,
+      EQUIPMENTS.knife,
+      EQUIPMENTS.plate,
+    ],
+    cookingRecipe: [
+      {
+        img: null,
+        video: null,
+        description:
+          'Насыпьте овсяные хлопья в кастрюлю, влейте молоко и добавьте сахар по вкусу. Поставьте на средний огонь и, постоянно помешивая, доведите смесь до кипения. Затем влейте яблочный сок и снова доведите до легкого кипения.',
+        ingredients: [],
+      },
+      {
+        img: null,
+        video: null,
+        description:
+          'Подготовьте яблоки: очистите их от кожуры и удалите сердцевину. Нарежьте тонкими дольками и добавьте в кашу. Уменьшите огонь до минимума и варите около 5 минут, пока яблоки не станут мягкими. Снимите с огня, накройте крышкой и дайте настояться ещё 5 минут.',
+        ingredients: [],
+      },
+      {
+        img: null,
+        video: null,
+        description:
+          'В горячую кашу добавьте щепотку молотой корицы и немного сливок для нежности. Быстро перемешайте и подавайте к столу, украсив дольками свежего яблока или орешками по желанию.',
+        ingredients: [],
+      },
+    ],
+  },
 ]
 
 // {

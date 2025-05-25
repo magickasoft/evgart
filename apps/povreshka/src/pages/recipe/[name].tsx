@@ -242,7 +242,7 @@ const RecipePage = () => {
           <EquipmentsContainer>
             <DetailsTitle>Оборудование</DetailsTitle>
             {recipe?.equipments.length ? (
-              <DetailsCardsContainer width="80%">
+              <DetailsCardsContainer>
                 {recipe?.equipments.map(equipment => (
                   <DetailCard key={equipment.name} name={equipment.name} img={equipment.img} />
                 ))}
