@@ -27,13 +27,13 @@ export interface Recipe {
   img: string | null
   title: string
   description: string
-  calories: number
+  calories: number | null
   preparation: number | null
   time: number
   level: number
   rating: number
   portions: number
-  used: number[]
+  used: number[] | null
   ingredients: { name: string; count?: number; gauge: string; img: string | null }[]
   equipments: { name: string; img: string | null }[]
   cookingRecipe: {
