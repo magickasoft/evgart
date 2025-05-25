@@ -9,6 +9,7 @@ export const Container = SC.section`
   overflow: hidden;
   padding: 0px 100px ;
   margin-bottom: 40px;
+  margin: 0 auto;
   
   @media ${maxDevice.tablet} {
     padding: 0 0 20px 0;

@@ -1,24 +1,71 @@
-import SC from '@emotion/styled'
+import styled from '@emotion/styled'
 
+import { RECIPES_OBJ } from '../../constants.ts/recipes/recipes'
 import { CategoryCard } from '../cards/category-card'
+import { RecipeCard } from '../cards/recipe-card'
 import { CATEGORIES_ARR } from './constants'
-import { Container, Grid } from './popular-categories.sc'
+import { Container } from './popular-categories.sc'
 
-const Content = SC.div`
+const Wrapper = styled.div`
   padding: 20px;
 `
 
-export const PopularCategories = (props: any) => {
+const Title = styled.h2`
+  margin-bottom: 24px;
+`
+
+const CategoryRow = styled.div`
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  overflow: scroll;
+  gap: 24px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`
+
+const RecipesScroll = styled.div`
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  padding-bottom: 8px;
+
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+  }
+`
+
+export const PopularCategories = () => {
   return (
     <Container id="techStacks">
-      <Content>
-        <h2>ПОПУЛЯРНЫЕ КАТЕГОРИИ</h2>
-        <Grid>
-          {CATEGORIES_ARR.map(({ key, ...item }) => (
-            <CategoryCard key={key} {...item} />
-          ))}
-        </Grid>
-      </Content>
+      <Wrapper>
+        <Title>ПОПУЛЯРНЫЕ КАТЕГОРИИ</Title>
+
+        {CATEGORIES_ARR.map(({ name, ...category }) => {
+          const recipes = RECIPES_OBJ[name]?.slice(0, 10) || []
+
+          return (
+            <CategoryRow key={name}>
+              <CategoryCard name={name} {...category} key={name} variant="slider" />
+
+              {recipes.length > 0 && (
+                <RecipesScroll>
+                  {recipes.map(({ key, name, ...recipe }) => (
+                    <RecipeCard name={name} key={name} {...recipe} />
+                  ))}
+                </RecipesScroll>
+              )}
+            </CategoryRow>
+          )
+        })}
+      </Wrapper>
     </Container>
   )
 }
