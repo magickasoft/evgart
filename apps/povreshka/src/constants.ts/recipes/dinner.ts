@@ -76,22 +76,12 @@ export const DINNER = [
         ...INGREDIENTS.yeast,
         count: 6,
       },
-      {
-        ...INGREDIENTS.milk,
-      },
-      {
-        ...INGREDIENTS.egg,
-        count: 1,
-      },
+
       {
         ...INGREDIENTS.sesameSeeds,
       },
       {
         ...INGREDIENTS.milk,
-      },
-      {
-        ...INGREDIENTS.sugar,
-        count: 0.5,
       },
       {
         ...INGREDIENTS.refinedVegetableOil,

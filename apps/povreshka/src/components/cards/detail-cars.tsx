@@ -5,7 +5,9 @@ const Card = SC.div<{
   variant?: 'default' | 'short'
 }>`
 width: 150px;
+min-width: 150px;
 height: ${props => (props.variant === 'short' ? '180px' : '220px')};
+min-height: ${props => (props.variant === 'short' ? '180px' : '220px')};
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
