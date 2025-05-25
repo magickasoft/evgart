@@ -103,18 +103,17 @@ const IngredientsContainer = SC.div`
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   text-align: start;
-  padding: 20px;
+  border-right: 1px solid #ddd;
+  padding-right: 30px;
 `
 const EquipmentsContainer = SC.div`
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   text-align: end;
-  padding: 10px;
-  margin-left: 20px;
+  border-left: 1px solid #ddd;
+  padding-left: 30px;
 `
 
 const DetailsTitle = SC.h2`
@@ -124,14 +123,14 @@ const DetailsTitle = SC.h2`
   color: #333;
 `
 
-const DetailsCardsContainer = SC.div`
-  width: 100%;
+const DetailsCardsContainer = SC.div<{ width?: string }>`
+  width: ${props => props.width || '100%'};
   display: flex;
   flex-direction: row;
-  justify-content: inherit;
-  align-items: center;
-  flex-wrap: wrap;
   gap: 10px;
+  height: 220px;
+  overflow-x: auto;
+  justify-content: flex-start;
 `
 
 const RecipeStepsContainer = SC.div`
@@ -249,18 +248,19 @@ const RecipePage = () => {
             <RecipeStep key={index}>
               <RecipeTitle>{`Шаг ${index + 1}`}</RecipeTitle>
               <RecipeDescription>{step.description}</RecipeDescription>
-              <DetailsCardsContainer>
-                {step?.ingredients.map(ingredient => (
-                  <DetailCard
-                    key={ingredient.name}
-                    name={ingredient.name}
-                    text={`${ingredient.count && ingredient.gauge ? `${ingredient.count} ${ingredient.gauge}` : ''}`}
-                    img={ingredient.img}
-                    backgroundColor="#f9f9f9"
-                    variant="short"
-                  />
-                ))}
-              </DetailsCardsContainer>
+              {step?.ingredients?.length ? (
+                <DetailsCardsContainer width="80%">
+                  {step?.ingredients.map(ingredient => (
+                    <DetailCard
+                      key={ingredient.name}
+                      name={ingredient.name}
+                      text={`${ingredient.count && ingredient.gauge ? `${ingredient.count} ${ingredient.gauge}` : ''}`}
+                      img={ingredient.img}
+                      backgroundColor="#f9f9f9"
+                    />
+                  ))}
+                </DetailsCardsContainer>
+              ) : null}
             </RecipeStep>
           ))}
         </RecipeStepsContainer>
