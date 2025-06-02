@@ -38,7 +38,7 @@
     "ui": "*"
   },
   "devDependencies": {
-    "@babel/core": "7.26.0",
+    "@babel/core": "7.27.4",
     "@types/color": "3.0.6",
     "@types/node": "22.9.3",
     "@types/react": "18.3.3",
