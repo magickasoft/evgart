@@ -1,4 +1,5 @@
 import SC from '@emotion/styled'
+import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
@@ -6,6 +7,7 @@ import { useEffect, useState } from 'react'
 import { NoList, Page } from '../../components'
 import { DetailCard } from '../../components/cards'
 import { InfoBlock } from '../../components/recipe-page'
+import { RECIPES_OBJ } from '../../constants.ts/recipes/recipes'
 import { findByKey } from '../../helpers/findByKey'
 
 const HeaderContainer = SC.div`
@@ -167,24 +169,7 @@ const RecipeDescription = SC.p`
   color: #333;
 `
 
-const RecipePage = () => {
-  const router = useRouter()
-  const [recipe, setRecipe] = useState<ReturnType<typeof findByKey> | null>(null)
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    if (!router.isReady) return
-
-    const { name } = router.query as { name?: string }
-
-    if (name) {
-      const found = findByKey(name)
-      setRecipe(found)
-    }
-
-    setLoading(false)
-  }, [router.isReady, router.query])
-
+const RecipePage = ({ recipe }: { recipe: ReturnType<typeof findByKey> | null }) => {
   return (
     <>
       <Head>
@@ -194,9 +179,9 @@ const RecipePage = () => {
       </Head>
       <Page>
         <HeaderContainer>
-          {loading ? (
-            <Title>Loading...</Title>
-          ) : recipe ? (
+          {!recipe ? (
+            <Title>Recipe not found</Title>
+          ) : (
             <>
               <Header>
                 <TitleContainer>
@@ -217,63 +202,68 @@ const RecipePage = () => {
                 </ImageContainer>
               </Header>
             </>
-          ) : (
-            <Title>Recipe not found</Title>
           )}
         </HeaderContainer>
-        <DetailsContainer>
-          <IngredientsContainer>
-            <DetailsTitle>Ингредиенты</DetailsTitle>
-            {recipe?.ingredients.length ? (
-              <DetailsCardsContainer>
-                {recipe?.ingredients.map(ingredient => (
-                  <DetailCard
-                    key={ingredient.name}
-                    name={ingredient.name}
-                    text={`${ingredient.count && ingredient.gauge ? `${ingredient.count} ${ingredient.gauge}` : ''}`}
-                    img={ingredient.img}
-                  />
-                ))}
-              </DetailsCardsContainer>
-            ) : (
-              <NoList value="Список ингредиентов будет доступен позднее..." />
-            )}
-          </IngredientsContainer>
-          <EquipmentsContainer>
-            <DetailsTitle>Оборудование</DetailsTitle>
-            {recipe?.equipments.length ? (
-              <DetailsCardsContainer>
-                {recipe?.equipments.map(equipment => (
-                  <DetailCard key={equipment.name} name={equipment.name} img={equipment.img} />
-                ))}
-              </DetailsCardsContainer>
-            ) : (
-              <NoList value="Список оборудования будет доступен позднее..." />
-            )}
-          </EquipmentsContainer>
-        </DetailsContainer>
-        <RecipeStepsContainer>
-          {recipe?.cookingRecipe?.map((step, index) => (
-            <RecipeStep key={index}>
-              <RecipeTitle>{`Шаг ${index + 1}`}</RecipeTitle>
-              <RecipeDescription>{step.description}</RecipeDescription>
-              {step?.ingredients?.length ? (
-                <DetailsCardsContainer width="80%">
-                  {step?.ingredients.map(ingredient => (
-                    <DetailCard
-                      key={ingredient.name}
-                      name={ingredient.name}
-                      text={`${ingredient.count && ingredient.gauge ? `${ingredient.count} ${ingredient.gauge}` : ''}`}
-                      img={ingredient.img}
-                      backgroundColor="#f9f9f9"
-                    />
-                  ))}
-                </DetailsCardsContainer>
-              ) : null}
-            </RecipeStep>
-          ))}
-        </RecipeStepsContainer>
+
+        {recipe && (
+          <>
+            <DetailsContainer>
+              <IngredientsContainer>
+                <DetailsTitle>Ингредиенты</DetailsTitle>
+                {recipe.ingredients.length ? (
+                  <DetailsCardsContainer>
+                    {recipe.ingredients.map(ingredient => (
+                      <DetailCard
+                        key={ingredient.name}
+                        name={ingredient.name}
+                        text={`${ingredient.count && ingredient.gauge ? `${ingredient.count} ${ingredient.gauge}` : ''}`}
+                        img={ingredient.img}
+                      />
+                    ))}
+                  </DetailsCardsContainer>
+                ) : (
+                  <NoList value="Список ингредиентов будет доступен позднее..." />
+                )}
+              </IngredientsContainer>
+              <EquipmentsContainer>
+                <DetailsTitle>Оборудование</DetailsTitle>
+                {recipe.equipments.length ? (
+                  <DetailsCardsContainer>
+                    {recipe.equipments.map(equipment => (
+                      <DetailCard key={equipment.name} name={equipment.name} img={equipment.img} />
+                    ))}
+                  </DetailsCardsContainer>
+                ) : (
+                  <NoList value="Список оборудования будет доступен позднее..." />
+                )}
+              </EquipmentsContainer>
+            </DetailsContainer>
+
+            <RecipeStepsContainer>
+              {recipe.cookingRecipe?.map((step, index) => (
+                <RecipeStep key={index}>
+                  <RecipeTitle>{`Шаг ${index + 1}`}</RecipeTitle>
+                  <RecipeDescription>{step.description}</RecipeDescription>
+                  {step.ingredients?.length ? (
+                    <DetailsCardsContainer width="80%">
+                      {step.ingredients.map(ingredient => (
+                        <DetailCard
+                          key={ingredient.name}
+                          name={ingredient.name}
+                          text={`${ingredient.count && ingredient.gauge ? `${ingredient.count} ${ingredient.gauge}` : ''}`}
+                          img={ingredient.img}
+                          backgroundColor="#f9f9f9"
+                        />
+                      ))}
+                    </DetailsCardsContainer>
+                  ) : null}
+                </RecipeStep>
+              ))}
+            </RecipeStepsContainer>
+          </>
+        )}
       </Page>
+
       <div style={{ display: 'none' }}>
         {recipe?.searchRequests?.map(searchRequest => <p key={searchRequest}>{searchRequest}</p>)}
       </div>
@@ -281,4 +271,41 @@ const RecipePage = () => {
   )
 }
 
+export const getStaticPaths: GetStaticPaths = async () => {
+  const keys = getAllRecipeKeys()
+
+  const paths = keys.map(name => ({
+    params: { name },
+  }))
+
+  return {
+    paths,
+    fallback: true,
+  }
+}
+
+export const getStaticProps: GetStaticProps = async context => {
+  const name = context.params?.name as string
+  const recipe = findByKey(name) || null
+
+  return {
+    props: {
+      recipe,
+    },
+    revalidate: 60,
+  }
+}
+
 export default RecipePage
+
+export const getAllRecipeKeys = (): string[] => {
+  const allKeys: string[] = []
+
+  for (const category of Object.values(RECIPES_OBJ)) {
+    for (const recipe of category) {
+      allKeys.push(recipe.name)
+    }
+  }
+
+  return allKeys
+}
