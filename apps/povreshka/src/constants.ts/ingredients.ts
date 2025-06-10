@@ -14,6 +14,16 @@ const MEAT = {
     gauge: 'кг',
     img: null,
   },
+  boiledSausage: {
+    name: 'Колбаса вареная',
+    gauge: 'кг.',
+    img: null,
+  },
+  boiledPorkSausage: {
+    name: 'Колбаса вареная свиная',
+    gauge: 'кг.',
+    img: null,
+  },
 }
 
 const GREANS = {
@@ -103,6 +113,18 @@ const VEGATABLES = {
     // img: '/static/ingredients/onion.webp',
     img: null,
   },
+  greenOnion: {
+    name: 'Лук зелёный',
+    gauge: 'шт.',
+    // img: '/static/ingredients/onion.webp',
+    img: null,
+  },
+  radish: {
+    name: 'Редис',
+    gauge: 'шт.',
+    // img: '/static/ingredients/cabbage-red.webp',
+    img: null,
+  },
   redOnion: {
     name: 'Лук красный',
     gauge: 'шт.',
@@ -176,9 +198,19 @@ const LIQUIDS = {
     gauge: 'мл',
     img: null,
   },
+  sourCream: {
+    name: 'Сметана',
+    gauge: 'г',
+    img: null,
+  },
   cream20: {
     name: 'Сливки 20%',
     gauge: 'мл',
+    img: null,
+  },
+  breadKvass: {
+    name: 'Хлебный квас',
+    gauge: 'л',
     img: null,
   },
 }
@@ -193,6 +225,11 @@ export const INGREDIENTS = {
     gauge: 'г',
     // img: '/static/ingredients/white-bread.webp',
     img: null,
+  },
+  mustard: {
+    name: 'Горчица',
+    gauge: 'г',
+    // img: '/static/ingredients/mustard.webp',
   },
   egg: {
     name: 'Яйцо куриное',

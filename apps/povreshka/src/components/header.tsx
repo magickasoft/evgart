@@ -35,6 +35,7 @@ const LeftBlock = SC.div`
   align-items: center;
   gap: 10px;
   width: fit-content;
+  margin-right: 40px;
 `
 
 const CenterBlock = SC.nav`
@@ -46,7 +47,7 @@ const CenterBlock = SC.nav`
   width: 100%;
 
   a {
-    font-size: 16px;
+    font-size: 20px;
     text-decoration: none;
     color: #333333;
     transition: color 0.2s ease;
@@ -86,9 +87,6 @@ export const Header = () => {
       <Container scrolled={scrolled}>
         <LeftBlock>
           <Image src="/static/povr-eshka-logo.png" alt="logo" width={60} height={60} priority />
-          <Text>
-            <strong>Повар-Ешка</strong>
-          </Text>
         </LeftBlock>
         <CenterBlock>
           <div>
