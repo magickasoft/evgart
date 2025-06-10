@@ -230,6 +230,7 @@ export const INGREDIENTS = {
     name: 'Горчица',
     gauge: 'г',
     // img: '/static/ingredients/mustard.webp',
+    img: null,
   },
   egg: {
     name: 'Яйцо куриное',
