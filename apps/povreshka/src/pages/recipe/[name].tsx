@@ -173,10 +173,35 @@ const RecipePage = ({ recipe }: { recipe: ReturnType<typeof findByKey> | null })
   return (
     <>
       <Head>
-        <title>{recipe ? recipe.title : 'Recipe not found'}</title>
-        <meta name="description" content={recipe ? recipe.description : 'Recipe not found'} />
-        <meta name="keywords" content={recipe ? recipe.categories.join(', ') : ''} />
+        <title>{recipe?.metaSeo?.title || 'Recipe not found'}</title>
+        <meta name="description" content={recipe?.metaSeo?.description || 'Recipe not found'} />
+        <meta name="keywords" content={recipe?.metaSeo?.keywords?.join(', ') || ''} />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={recipe?.metaSeo?.['og:title'] || ''} />
+        <meta property="og:description" content={recipe?.metaSeo?.['og:description'] || ''} />
+        <meta property="og:url" content={recipe?.metaSeo?.['og:url'] || ''} />
+        <meta property="og:image" content={recipe?.metaSeo?.['og:image'] || ''} />
+
+        {/* Twitter */}
+        <meta name="twitter:title" content={recipe?.metaSeo?.twitterTitle || ''} />
+        <meta name="twitter:description" content={recipe?.metaSeo?.twitterDescription || ''} />
+        <meta name="twitter:image" content={recipe?.metaSeo?.twitterImage || ''} />
+        <meta name="twitter:url" content={recipe?.metaSeo?.twitterUrl || ''} />
+        <meta name="twitter:card" content={recipe?.metaSeo?.['twitter:card'] || 'summary_large_image'} />
+
+        {/* SEO and other */}
+        <link rel="canonical" href={recipe?.metaSeo?.canonicalUrl || ''} />
+        <meta name="robots" content={recipe?.metaSeo?.robots || 'index, follow'} />
+        <meta name="googlebot" content={recipe?.metaSeo?.googlebot || 'index, follow'} />
+        <meta name="yandex" content={recipe?.metaSeo?.yandex || 'index, follow'} />
+        <meta name="selfwork" content={recipe?.metaSeo?.selfwork || 'index, follow'} />
+        <meta name="max-image-preview" content={recipe?.metaSeo?.['max-image-preview'] || 'large'} />
+        <meta name="viewport" content={recipe?.metaSeo?.viewport || 'width=device-width, initial-scale=1'} />
+        <meta name="author" content={recipe?.metaSeo?.author || 'Повар-ешка'} />
+        <meta name="theme-color" content={recipe?.metaSeo?.['theme-color'] || '#ffffff'} />
       </Head>
+
       <Page>
         <HeaderContainer>
           {!recipe ? (

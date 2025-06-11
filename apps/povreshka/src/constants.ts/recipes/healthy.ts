@@ -1,5 +1,32 @@
 export const HEALTHY = [
   {
+    metaSeo: {
+      title: 'Рагу из кабачков в сметане',
+      description:
+        'Рагу из кабачков в сметане — это легкое и питательное блюдо, которое идеально подходит для летнего обеда или ужина. Кабачки, богатые витаминами и минералами, готовятся в нежном соусе из сметаны, что придает блюду особую кремовую текстуру и вкус. Это рагу можно подавать как самостоятельное блюдо или в качестве гарнира к мясу или рыбе.',
+      keywords: ['рагу', 'кабачки', 'сметана', 'сытный ужин', 'ужин', 'легкий ужин'],
+      'og:title': 'Рубленые котлеты из куриного филе на сковороде',
+      'og:description':
+        'Рагу из кабачков в сметане — это легкое и питательное блюдо, которое идеально подходит для летнего обеда или ужина. Кабачки, богатые витаминами и минералами, готовятся в нежном соусе из сметаны, что придает блюду особую кремовую текстуру и вкус. Это рагу можно подавать как самостоятельное блюдо или в качестве гарнира к мясу или рыбе.',
+      'og:url': 'https://povreshka.ru/recipe/ragu-iz-kabachkov-v-smetane',
+      'og:image': '/static/recipes/ragu-iz-kabachkov-v-smetane.webp',
+      twitterTitle: 'Рубленые котлеты из куриного филе на сковороде',
+      twitterDescription:
+        'Рагу из кабачков в сметане — это легкое и питательное блюдо, которое идеально подходит для летнего обеда или ужина. Кабачки, богатые витаминами и минералами, готовятся в нежном соусе из сметаны, что придает блюду особую кремовую текстуру и вкус. Это рагу можно подавать как самостоятельное блюдо или в качестве гарнира к мясу или рыбе.',
+      twitterImage: '/static/recipes/ragu-iz-kabachkov-v-smetane.webp',
+      twitterUrl: 'https://povreshka.ru/recipe/ragu-iz-kabachkov-v-smetane',
+      'twitter:card': 'summary_large_image',
+      canonicalUrl: 'https://povreshka.ru/recipe/ragu-iz-kabachkov-v-smetane',
+      robots: 'index, follow',
+      googlebot: 'index, follow',
+      yandex: 'index, follow',
+      selfwork: 'index, follow',
+      'max-image-preview': 'large',
+      viewport: 'width=device-width, initial-scale=1',
+      author: 'Повар-ешка',
+      'theme-color': '#ffffff',
+    },
+    searchRequests: ['рагу', 'кабачки', 'сметана', 'сытный ужин', 'ужин', 'легкий ужин'],
     categories: [{ name: 'healthy' }, { name: 'supper' }],
     key: 'ragu-iz-kabachkov-v-smetane',
     name: 'ragu-iz-kabachkov-v-smetane',
