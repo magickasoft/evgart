@@ -1,7 +1,32 @@
-import CategoriesPage from '../../pages/categories'
-
 export const DESSERT = [
   {
+    metaSeo: {
+      title: 'Чизкейк',
+      description:
+        'Чизкейк — это изысканный десерт, покоривший миллионы сладкоежек по всему миру. Его основа — нежная сливочная начинка на песочной корже, которая буквально тает во рту. В отличие от привычных пирожных, чизкейк не требует выпечки (хотя есть и запечённые варианты), а его вкус балансирует между лёгкой кислинкой и сладкой сливочностью.',
+      keywords: ['чизкейк', 'пирожное', 'десерт'],
+      'og:title': 'Чизкейк',
+      'og:description':
+        'Чизкейк — это изысканный десерт, покоривший миллионы сладкоежек по всему миру. Его основа — нежная сливочная начинка на песочной корже, которая буквально тает во рту. В отличие от привычных пирожных, чизкейк не требует выпечки (хотя есть и запечённые варианты), а его вкус балансирует между лёгкой кислинкой и сладкой сливочностью.',
+      'og:url': 'https://povreshka.ru/recipe/chizkeik',
+      'og:image': '/static/recipes/chizkeik.webp',
+      twitterTitle: 'Чизкейк',
+      twitterDescription:
+        'Чизкейк — это изысканный десерт, покоривший миллионы сладкоежек по всему миру. Его основа — нежная сливочная начинка на песочной корже, которая буквально тает во рту. В отличие от привычных пирожных, чизкейк не требует выпечки (хотя есть и запечённые варианты), а его вкус балансирует между лёгкой кислинкой и сладкой сливочностью.',
+      twitterImage: '/static/recipes/chizkeik.webp',
+      twitterUrl: 'https://povreshka.ru/recipe/chizkeik',
+      'twitter:card': 'summary_large_image',
+      canonicalUrl: 'https://povreshka.ru/recipe/chizkeik',
+      robots: 'index, follow',
+      googlebot: 'index, follow',
+      yandex: 'index, follow',
+      selfwork: 'index, follow',
+      'max-image-preview': 'large',
+      viewport: 'width=device-width, initial-scale=1',
+      author: 'Повар-ешка',
+      'theme-color': '#ffffff',
+    },
+    searchRequests: ['чизкейк', 'пирожное', 'десерт'],
     categories: [{ name: 'dessert' }],
     key: 'chizkeik',
     name: 'chizkeik',

@@ -3,10 +3,37 @@ import { INGREDIENTS } from '../ingredients'
 
 export const SUMMER_MENU = [
   {
+    metaSeo: {
+      title: 'Греческий салат',
+      description:
+        'Это классика средиземноморской кухни: сочные помидоры, хрустящие огурцы, сладкий болгарский перец, красный лук, маслины и нежный сыр фета. Всё заправляется ароматным оливковым маслом и щепоткой орегано. Лёгкий, освежающий и невероятно вкусный салат, который идеально подходит как к мясным блюдам, так и в качестве самостоятельного приёма пищи.',
+      keywords: ['салат', 'лук', 'помидоры', 'огурцы', 'сыр', 'маслины', 'перец', 'оливки'],
+      'og:title': 'Греческий салат',
+      'og:description':
+        'Это классика средиземноморской кухни: сочные помидоры, хрустящие огурцы, сладкий болгарский перец, красный лук, маслины и нежный сыр фета. Всё заправляется ароматным оливковым маслом и щепоткой орегано. Лёгкий, освежающий и невероятно вкусный салат, который идеально подходит как к мясным блюдам, так и в качестве самостоятельного приёма пищи.',
+      'og:url': 'https://povreshka.ru/recipe/grecheskij-salat',
+      'og:image': '/static/recipes/grecheskij-salat.webp',
+      twitterTitle: 'Греческий салат',
+      twitterDescription:
+        'Это классика средиземноморской кухни: сочные помидоры, хрустящие огурцы, сладкий болгарский перец, красный лук, маслины и нежный сыр фета. Всё заправляется ароматным оливковым маслом и щепоткой орегано. Лёгкий, освежающий и невероятно вкусный салат, который идеально подходит как к мясным блюдам, так и в качестве самостоятельного приёма пищи.',
+      twitterImage: '/static/recipes/grecheskij-salat.webp',
+      twitterUrl: 'https://povreshka.ru/recipe/grecheskij-salat',
+      'twitter:card': 'summary_large_image',
+      canonicalUrl: 'https://povreshka.ru/recipe/grecheskij-salat',
+      robots: 'index, follow',
+      googlebot: 'index, follow',
+      yandex: 'index, follow',
+      selfwork: 'index, follow',
+      'max-image-preview': 'large',
+      viewport: 'width=device-width, initial-scale=1',
+      author: 'Повар-ешка',
+      'theme-color': '#ffffff',
+    },
+    searchRequests: ['салат', 'лук', 'помидоры', 'огурцы', 'сыр', 'маслины', 'перец', 'оливки'],
     categories: [{ name: 'salads' }, { name: 'summerMenu' }],
     key: 'grecheskij-salat',
     name: 'grecheskij-salat',
-    // img: '/static/recipes/scrambled-eggs.webp',
+    // img: '/static/recipes/grecheskij-salat.webp',
     img: null,
     title: 'Греческий салат',
     description:

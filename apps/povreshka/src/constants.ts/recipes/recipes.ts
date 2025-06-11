@@ -18,8 +18,32 @@ export enum RecipeCategories {
   SUMMER_MENU = 'summerMenu',
 }
 
+export interface MetaSeo {
+  title: string
+  description: string
+  keywords: string[]
+  'og:title': string
+  'og:description': string
+  'og:url': string
+  'og:image'?: string
+  twitterTitle?: string
+  twitterDescription?: string
+  twitterImage?: string
+  twitterUrl?: string
+  'twitter:card'?: string
+  canonicalUrl?: string
+  robots?: string
+  googlebot?: string
+  yandex?: string
+  selfwork?: string
+  'max-image-preview'?: string
+  viewport?: string
+  author?: string
+  'theme-color'?: string
+}
+
 export interface Recipe {
-  metaSeo?: Record<string, string>
+  metaSeo: MetaSeo
   searchRequests?: string[]
   categories: { name: string }[]
   key: string
