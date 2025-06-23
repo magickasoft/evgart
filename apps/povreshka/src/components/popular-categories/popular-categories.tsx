@@ -8,21 +8,39 @@ import { Container } from './popular-categories.sc'
 
 const Wrapper = styled.div`
   padding: 20px;
+
+  @media (max-width: 768px) {
+    padding: 16px 12px;
+  }
 `
 
 const Title = styled.h2`
   margin-bottom: 24px;
+  font-size: 24px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    text-align: center;
+  }
 `
 
 const CategoryRow = styled.div`
   display: flex;
   align-items: flex-start;
   margin-bottom: 32px;
-  overflow: scroll;
   gap: 24px;
 
   @media (max-width: 768px) {
     flex-direction: column;
+    gap: 12px;
+  }
+`
+
+const CategoryCardWrapper = styled.div`
+  flex-shrink: 0;
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `
 
@@ -31,6 +49,7 @@ const RecipesScroll = styled.div`
   overflow-x: auto;
   gap: 12px;
   padding-bottom: 8px;
+  max-width: 90vw;
 
   &::-webkit-scrollbar {
     height: 6px;
@@ -53,12 +72,14 @@ export const PopularCategories = () => {
 
           return (
             <CategoryRow key={name}>
-              <CategoryCard name={name} {...category} key={name} variant="slider" />
+              <CategoryCardWrapper>
+                <CategoryCard name={name} {...category} variant="slider" />
+              </CategoryCardWrapper>
 
               {recipes.length > 0 && (
                 <RecipesScroll>
                   {recipes.map(({ key, name, ...recipe }) => (
-                    <RecipeCard name={name} key={name} {...recipe} />
+                    <RecipeCard name={name} key={key || name} {...recipe} />
                   ))}
                 </RecipesScroll>
               )}
