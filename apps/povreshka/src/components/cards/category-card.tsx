@@ -1,8 +1,6 @@
-import SC from '@emotion/styled'
+import styled from '@emotion/styled'
 import Image from 'next/image'
 import Link from 'next/link'
-
-import { minDevice } from '../../styles'
 
 type VariantType = 'large' | 'small' | 'slider'
 
@@ -12,7 +10,7 @@ const CardHeight = {
   slider: '290px',
 }
 
-const Card = SC.div<{ color?: string; variant: VariantType }>`
+const Card = styled.div<{ color?: string; variant: VariantType }>`
   background-color: ${({ color }) => color || '#f7f5f6'};
   padding: ${({ variant }) => (variant === 'large' ? '20px' : '12px')};
   position: relative;
@@ -29,6 +27,7 @@ const Card = SC.div<{ color?: string; variant: VariantType }>`
     box-shadow 0.3s ease,
     opacity 0.3s ease;
   cursor: pointer;
+  flex-shrink: 0;
 
   &:hover {
     opacity: 1;
@@ -44,38 +43,44 @@ const Card = SC.div<{ color?: string; variant: VariantType }>`
       transform: scale(1.08);
     }
   }
+
+  @media (max-width: 768px) {
+    min-width: 220px;
+    height: ${({ variant }) => (variant === 'slider' ? '260px' : variant === 'large' ? '220px' : '180px')};
+  }
 `
 
-const Title = SC.div<{ variant: VariantType }>`
+const Title = styled.div<{ variant: VariantType }>`
   font-size: ${({ variant }) => (variant === 'large' ? '14px' : '12px')};
-  line-height: ${({ variant }) => (variant === 'large' ? '12px' : '10px')};
+  line-height: 1.2;
   color: #333;
   margin: 0;
   position: absolute;
   left: 15px;
   bottom: 15px;
   text-align: left;
-  transition: transform 0.3s ease, font-weight 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    font-weight 0.3s ease;
 
-  @media ${minDevice.laptop} {
-    font-size: ${({ variant }) => (variant === 'large' ? '18px' : '14px')};
-    line-height: ${({ variant }) => (variant === 'large' ? '18px' : '14px')};
+  @media (max-width: 768px) {
+    font-size: ${({ variant }) => (variant === 'large' ? '13px' : '11px')};
   }
 `
 
 const ContentWidth = {
-  large: '240px',
-  small: '140px',
-  slider: '240px',
+  large: 240,
+  small: 140,
+  slider: 240,
 }
 
 const ContentHeight = {
-  large: '220px',
-  small: '120px',
-  slider: '220px',
+  large: 220,
+  small: 120,
+  slider: 220,
 }
 
-const Content = SC.div<{ variant: VariantType }>`
+const Content = styled.div<{ variant: VariantType }>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,21 +88,24 @@ const Content = SC.div<{ variant: VariantType }>`
   transition: transform 0.3s ease;
 
   img {
-    width: ${({ variant }) => ContentWidth[variant]};
-    height: ${({ variant }) => ContentHeight[variant]};
+    width: ${({ variant }) => ContentWidth[variant]}px;
+    height: ${({ variant }) => ContentHeight[variant]}px;
     object-fit: contain;
+
+    @media (max-width: 768px) {
+      width: ${({ variant }) => ContentWidth[variant] * 0.8}px;
+      height: ${({ variant }) => ContentHeight[variant] * 0.8}px;
+    }
   }
 `
 
 export const CategoryCard = ({
-  key,
   img,
   label,
   color,
   name,
   variant = 'large',
 }: {
-  key: string
   img: string | null
   label: string
   color: string
@@ -105,18 +113,10 @@ export const CategoryCard = ({
   variant?: VariantType
 }) => {
   return (
-    <Link href={`/categories/${name}`} style={{ textDecoration: 'none' }} passHref legacyBehavior>
+    <Link href={`/categories/${name}`} passHref legacyBehavior>
       <Card color={color} variant={variant}>
         <Content className="card-image" variant={variant}>
-          {img && (
-            <Image
-              width={variant === 'large' ? 240 : 160}
-              height={variant === 'large' ? 220 : 140}
-              src={img}
-              alt="icon"
-              priority
-            />
-          )}
+          {img && <Image width={ContentWidth[variant]} height={ContentHeight[variant]} src={img} alt="icon" priority />}
         </Content>
         <Title className="card-title" variant={variant}>
           {label}

@@ -14,6 +14,10 @@ spacing: 4px;
 const InfoBlockTitle = SC.span`
 font-size: 0.9rem;
 color: #999;
+
+@media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
 `
 const InfoBlockValue = SC.span`
 font-size: 1.1rem;
@@ -24,6 +28,10 @@ flex-direction: row;
 justify-content: flex-start;
 align-items: center;
 gap: 8px;
+
+@media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
 `
 
 export const InfoBlock = ({ name, value, gauge }: { name: string; value: number; gauge: string }) => {
