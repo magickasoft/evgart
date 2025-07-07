@@ -35,7 +35,7 @@ const GREANS = {
   dill: {
     name: 'Укроп',
     gauge: 'пуч.',
-    img: null,
+    img: '/static/ingredients/dill.jpg',
   },
   parsley: {
     name: 'Петрушка',
