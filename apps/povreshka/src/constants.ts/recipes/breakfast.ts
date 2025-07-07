@@ -12,11 +12,11 @@ export const BREAKFAST = [
       'og:description':
         'Нежная и воздушная яичница-болтунья — идеальный вариант для тех, кто ценит вкус и простоту. Это блюдо быстро готовится, легко усваивается и дарит приятное ощущение сытости без тяжести. Главное — не перегревать сковороду и не взбивать яйца слишком сильно, чтобы сохранить кремовую текстуру.',
       'og:url': 'https://povreshka.ru/recipe/scrambled-eggs',
-      'og:image': '/static/recipes/scrambled-eggs.webp',
+      'og:image': '/static/recipes/breakfast/scrambled-eggs.jpeg',
       twitterTitle: 'Яичница-болтунья',
       twitterDescription:
         'Нежная и воздушная яичница-болтунья — идеальный вариант для тех, кто ценит вкус и простоту. Это блюдо быстро готовится, легко усваивается и дарит приятное ощущение сытости без тяжести. Главное — не перегревать сковороду и не взбивать яйца слишком сильно, чтобы сохранить кремовую текстуру.',
-      twitterImage: '/static/recipes/scrambled-eggs.webp',
+      twitterImage: '/static/recipes/breakfast/scrambled-eggs.jpeg',
       twitterUrl: 'https://povreshka.ru/recipe/scrambled-eggs',
       'twitter:card': 'summary_large_image',
       canonicalUrl: 'https://povreshka.ru/recipe/scrambled-eggs',
@@ -33,7 +33,7 @@ export const BREAKFAST = [
     categories: [{ name: 'breakfast' }],
     key: 'scrambled-eggs',
     name: 'scrambled-eggs',
-    img: '/static/recipes/scrambled-eggs.webp',
+    img: '/static/recipes/breakfast/scrambled-eggs.jpeg',
     title: 'Яичница-болтунья',
     description:
       'Нежная и воздушная яичница-болтунья — идеальный вариант для тех, кто ценит вкус и простоту. Это блюдо быстро готовится, легко усваивается и дарит приятное ощущение сытости без тяжести. Главное — не перегревать сковороду и не взбивать яйца слишком сильно, чтобы сохранить кремовую текстуру.',
@@ -115,11 +115,11 @@ export const BREAKFAST = [
       'og:description':
         'Яичница с брокколи — отличный способ начать утро с порции витаминов. Хрустящие соцветия и мягкие яйца создают интересный контраст текстур, а зелень и перец добавляют свежести. Готовится за считанные минуты и выглядит как настоящее ресторанное блюдо.',
       'og:url': 'https://povreshka.ru/recipe/scrambled-eggs-with-broccoli',
-      'og:image': '/static/recipes/scrambled-eggs-with-broccoli.webp',
+      'og:image': '/static/recipes/breakfast/scrambled-eggs-with-broccoli.webp',
       twitterTitle: 'Яичница с брокколи',
       twitterDescription:
         'Яичница с брокколи — отличный способ начать утро с порции витаминов. Хрустящие соцветия и мягкие яйца создают интересный контраст текстур, а зелень и перец добавляют свежести. Готовится за считанные минуты и выглядит как настоящее ресторанное блюдо.',
-      twitterImage: '/static/recipes/scrambled-eggs-with-broccoli.webp',
+      twitterImage: '/static/recipes/breakfast/scrambled-eggs-with-broccoli.webp',
       twitterUrl: 'https://povreshka.ru/recipe/scrambled-eggs-with-broccoli',
       'twitter:card': 'summary_large_image',
       canonicalUrl: 'https://povreshka.ru/recipe/scrambled-eggs-with-broccoli',
@@ -136,7 +136,7 @@ export const BREAKFAST = [
     categories: [{ name: 'breakfast' }],
     key: 'scrambled-eggs-with-broccoli',
     name: 'scrambled-eggs-with-broccoli',
-    img: null,
+    img: '/static/recipes/breakfast/scrambled-eggs-with-broccoli.jpeg',
     title: 'Яичница с брокколи',
     description:
       'Яичница с брокколи — отличный способ начать утро с порции витаминов. Хрустящие соцветия и мягкие яйца создают интересный контраст текстур, а зелень и перец добавляют свежести. Готовится за считанные минуты и выглядит как настоящее ресторанное блюдо.',
@@ -258,11 +258,11 @@ export const BREAKFAST = [
       'og:description':
         'Начните день с ароматной овсянки — нежной, сытной и с витаминным зарядом! Этот простой рецепт сочетает полезные злаки, сладкие яблоки и согревающую корицу. Без сахара, на молоке или воде — идеально для правильного питания и худеющих.',
       'og:url': 'https://povreshka.ru/recipe/ovsyanaya-kasha-s-yablokami-i-koritsej',
-      'og:image': '/static/recipes/ovsyanaya-kasha-s-yablokami-i-koritsej.webp',
+      'og:image': '/static/recipes/breakfast/ovsyanaya-kasha-s-yablokami-i-koritsej.webp',
       twitterTitle: 'Овсяная каша с яблоками и корицей',
       twitterDescription:
         'Начните день с ароматной овсянки — нежной, сытной и с витаминным зарядом! Этот простой рецепт сочетает полезные злаки, сладкие яблоки и согревающую корицу. Без сахара, на молоке или воде — идеально для правильного питания и худеющих.',
-      twitterImage: '/static/recipes/ovsyanaya-kasha-s-yablokami-i-koritsej.webp',
+      twitterImage: '/static/recipes/breakfast/ovsyanaya-kasha-s-yablokami-i-koritsej.webp',
       twitterUrl: 'https://povreshka.ru/recipe/ovsyanaya-kasha-s-yablokami-i-koritsej',
       'twitter:card': 'summary_large_image',
       canonicalUrl: 'https://povreshka.ru/recipe/ovsyanaya-kasha-s-yablokami-i-koritsej',
@@ -279,7 +279,7 @@ export const BREAKFAST = [
     categories: [{ name: 'breakfast' }],
     key: 'ovsjanaja-kasha-s-jablokami-i-koricej',
     name: 'ovsjanaja-kasha-s-jablokami-i-koricej',
-    img: null,
+    img: '/static/recipes/breakfast/ovsyanaya-kasha-s-yablokami-i-koritsej.jpeg',
     title: 'Овсяная каша с яблоками и корицей',
     description:
       'Начните день с ароматной овсянки — нежной, сытной и с витаминным зарядом! Этот простой рецепт сочетает полезные злаки, сладкие яблоки и согревающую корицу. Без сахара, на молоке или воде — идеально для правильного питания и худеющих.',

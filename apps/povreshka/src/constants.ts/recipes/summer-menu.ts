@@ -12,11 +12,11 @@ export const SUMMER_MENU = [
       'og:description':
         'Это классика средиземноморской кухни: сочные помидоры, хрустящие огурцы, сладкий болгарский перец, красный лук, маслины и нежный сыр фета. Всё заправляется ароматным оливковым маслом и щепоткой орегано. Лёгкий, освежающий и невероятно вкусный салат, который идеально подходит как к мясным блюдам, так и в качестве самостоятельного приёма пищи.',
       'og:url': 'https://povreshka.ru/recipe/grecheskij-salat',
-      'og:image': '/static/recipes/grecheskij-salat.webp',
+      'og:image': '/static/recipes/summer-menu/grecheskij-salat.jpeg',
       twitterTitle: 'Греческий салат',
       twitterDescription:
         'Это классика средиземноморской кухни: сочные помидоры, хрустящие огурцы, сладкий болгарский перец, красный лук, маслины и нежный сыр фета. Всё заправляется ароматным оливковым маслом и щепоткой орегано. Лёгкий, освежающий и невероятно вкусный салат, который идеально подходит как к мясным блюдам, так и в качестве самостоятельного приёма пищи.',
-      twitterImage: '/static/recipes/grecheskij-salat.webp',
+      twitterImage: '/static/recipes/summer-menu/grecheskij-salat.jpeg',
       twitterUrl: 'https://povreshka.ru/recipe/grecheskij-salat',
       'twitter:card': 'summary_large_image',
       canonicalUrl: 'https://povreshka.ru/recipe/grecheskij-salat',
@@ -30,11 +30,10 @@ export const SUMMER_MENU = [
       'theme-color': '#ffffff',
     },
     searchRequests: ['салат', 'лук', 'помидоры', 'огурцы', 'сыр', 'маслины', 'перец', 'оливки'],
-    categories: [{ name: 'salads' }, { name: 'summerMenu' }],
+    categories: [{ name: 'salads' }, { name: 'summer-menu' }],
     key: 'grecheskij-salat',
     name: 'grecheskij-salat',
-    // img: '/static/recipes/grecheskij-salat.webp',
-    img: null,
+    img: '/static/recipes/summer-menu/grecheskij-salat.jpeg',
     title: 'Греческий салат',
     description:
       'Это классика средиземноморской кухни: сочные помидоры, хрустящие огурцы, сладкий болгарский перец, красный лук, маслины и нежный сыр фета. Всё заправляется ароматным оливковым маслом и щепоткой орегано. Лёгкий, освежающий и невероятно вкусный салат, который идеально подходит как к мясным блюдам, так и в качестве самостоятельного приёма пищи.',

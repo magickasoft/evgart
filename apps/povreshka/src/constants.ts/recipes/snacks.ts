@@ -12,11 +12,11 @@ export const SNACKS = [
       'og:description':
         'Рулетики из ветчины с сырно-чесночной начинкой — отличная идея для закуски на фуршет или праздничный стол. Они эффектно выглядят, получаются сытными и яркими на вкус, а готовятся очень просто. Такой рецепт легко адаптировать под свой вкус — вариантов начинки множество. Мы предлагаем попробовать майонез с добавлением карри — он придаёт рулетикам красивый цвет и оригинальную нотку. А немного мелко нарезанного белого лука добавит пикантности и легкую свежесть. Если времени в обрез, можно ограничиться классикой — натертым сыром, чесноком и обычным майонезом. А если добавить ещё и отварные яйца, измельчённые на мелкой тёрке, начинка получится особенно нежной и в то же время выразительной.',
       'og:url': 'https://povreshka.ru/recipe/rulety-iz-vetchiny-s-syrnom-i-chesnokom',
-      'og:image': '/static/recipes/rulety-iz-vetchiny-s-syrnom-i-chesnokom.webp',
+      'og:image': '/static/recipes/snacks/rulety-iz-vetchiny-s-syrnom-i-chesnokom.jpeg',
       twitterTitle: 'Рулетики из ветчины с сыром и чесноком',
       twitterDescription:
         'Рулетики из ветчины с сырно-чесночной начинкой — отличная идея для закуски на фуршет или праздничный стол. Они эффектно выглядят, получаются сытными и яркими на вкус, а готовятся очень просто. Такой рецепт легко адаптировать под свой вкус — вариантов начинки множество. Мы предлагаем попробовать майонез с добавлением карри — он придаёт рулетикам красивый цвет и оригинальную нотку. А немного мелко нарезанного белого лука добавит пикантности и легкую свежесть. Если времени в обрез, можно ограничиться классикой — натертым сыром, чесноком и обычным майонезом. А если добавить ещё и отварные яйца, измельчённые на мелкой тёрке, начинка получится особенно нежной и в то же время выразительной.',
-      twitterImage: '/static/recipes/rulety-iz-vetchiny-s-syrnom-i-chesnokom.webp',
+      twitterImage: '/static/recipes/snacks/rulety-iz-vetchiny-s-syrnom-i-chesnokom.jpeg',
       twitterUrl: 'https://povreshka.ru/recipe/rulety-iz-vetchiny-s-syrnom-i-chesnokom',
       'twitter:card': 'summary_large_image',
       canonicalUrl: 'https://povreshka.ru/recipe/rulety-iz-vetchiny-s-syrnom-i-chesnokom',
@@ -33,7 +33,7 @@ export const SNACKS = [
     categories: [{ name: 'snacks' }],
     key: 'rulety-iz-vetchiny-s-syrnom-i-chesnokom',
     name: 'rulety-iz-vetchiny-s-syrnom-i-chesnokom',
-    img: null,
+    img: '/static/recipes/snacks/rulety-iz-vetchiny-s-syrnom-i-chesnokom.jpeg',
     title: 'Рулетики из ветчины с сыром и чесноком',
     description:
       'Рулетики из ветчины с сырно-чесночной начинкой — отличная идея для закуски на фуршет или праздничный стол. Они эффектно выглядят, получаются сытными и яркими на вкус, а готовятся очень просто. Такой рецепт легко адаптировать под свой вкус — вариантов начинки множество. Мы предлагаем попробовать майонез с добавлением карри — он придаёт рулетикам красивый цвет и оригинальную нотку. А немного мелко нарезанного белого лука добавит пикантности и легкую свежесть. Если времени в обрез, можно ограничиться классикой — натертым сыром, чесноком и обычным майонезом. А если добавить ещё и отварные яйца, измельчённые на мелкой тёрке, начинка получится особенно нежной и в то же время выразительной.',
@@ -80,11 +80,11 @@ export const SNACKS = [
       'og:description':
         'Любите домашние чипсы, но не хотите возиться с фритюром? Попробуйте этот простой рецепт картофельных чипсов в микроволновке — хрустящие, ароматные и гораздо полезнее магазинных! Всего 3 ингредиента, 5 минут — и вкусная закуска готова.',
       'og:url': 'https://povreshka.ru/recipe/kartofelnye-chipsy-v-mikrovolnovke',
-      'og:image': '/static/recipes/kartofelnye-chipsy-v-mikrovolnovke.webp',
+      'og:image': '/static/recipes/snacks/kartofelnye-chipsy-v-mikrovolnovke.jpeg',
       twitterTitle: 'Картофельные чипсы в микроволновке',
       twitterDescription:
         'Любите домашние чипсы, но не хотите возиться с фритюром? Попробуйте этот простой рецепт картофельных чипсов в микроволновке — хрустящие, ароматные и гораздо полезнее магазинных! Всего 3 ингредиента, 5 минут — и вкусная закуска готова.',
-      twitterImage: '/static/recipes/kartofelnye-chipsy-v-mikrovolnovke.webp',
+      twitterImage: '/static/recipes/snacks/kartofelnye-chipsy-v-mikrovolnovke.jpeg',
       twitterUrl: 'https://povreshka.ru/recipe/kartofelnye-chipsy-v-mikrovolnovke',
       'twitter:card': 'summary_large_image',
       canonicalUrl: 'https://povreshka.ru/recipe/kartofelnye-chipsy-v-mikrovolnovke',
@@ -101,7 +101,7 @@ export const SNACKS = [
     categories: [{ name: 'snacks' }],
     key: 'kartofelnye-chipsy-v-mikrovolnovke',
     name: 'kartofelnye-chipsy-v-mikrovolnovke',
-    img: null,
+    img: '/static/recipes/snacks/kartofelnye-chipsy-v-mikrovolnovke.jpeg',
     title: 'Картофельные чипсы в микроволновке',
     description:
       'Любите домашние чипсы, но не хотите возиться с фритюром? Попробуйте этот простой рецепт картофельных чипсов в микроволновке — хрустящие, ароматные и гораздо полезнее магазинных! Всего 3 ингредиента, 5 минут — и вкусная закуска готова.',
