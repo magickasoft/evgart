@@ -49,7 +49,7 @@ const App = ({ Component, emotionCache = clientSideEmotionCache, pageProps }: an
       />
       <GlobalStyle />
       <Head>
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.svg" type="image/x-icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="max-image-preview:large" />
         <meta name="selfwork.ru" content="yPNRxy8hvJZM09awafRV5OISIDa8inoa7qNJBdS2tUQB1RVPha" />
